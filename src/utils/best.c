@@ -1,0 +1,32 @@
+/*
+** EPITECH PROJECT, 2022
+** MyRunner
+** File description:
+** No file there , just an epitech header example
+*/
+
+#include <stdio.h>
+#include "../../include/utils.h"
+
+void get_best_score(my_defender_t *my_defender, char *buffer)
+{
+    my_defender->best_score = my_atoi(buffer);
+}
+
+void set_best_score(my_defender_t *my_defender)
+{
+    FILE * inputFile = fopen("data/data", "w");
+
+    if (inputFile == NULL) {
+        my_putstr("Cannot open file 'data/data'\n");
+        exit(84);
+    }
+    if (my_defender->score > my_defender->best_score) {
+        fwrite(my_itoa(my_defender->score), 1,
+        my_strlen(my_itoa(my_defender->score)), inputFile);
+    } else {
+        fwrite(my_itoa(my_defender->best_score), 1,
+        my_strlen(my_itoa(my_defender->best_score)), inputFile);
+    }
+    fclose(inputFile);
+}

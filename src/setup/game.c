@@ -1,0 +1,19 @@
+/*
+** EPITECH PROJECT, 2022
+** my_defender
+** File description:
+** No file there , just an epitech header example
+*/
+
+#include "struct.h"
+#include "setup.h"
+
+void setup_game(my_defender_t *my_defender)
+{
+    my_defender->window = setup_window(my_defender);
+    my_defender->list_img = malloc(sizeof(list_img_t));
+    my_defender->list_buttons = malloc(sizeof(list_buttons_t));
+    setup_all_img(my_defender->list_img);
+    setup_buttons(my_defender->list_buttons);
+    my_defender->step = 0;
+}
