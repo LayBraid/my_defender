@@ -60,7 +60,6 @@ typedef struct list_img {
 typedef struct node_button_struct {
     int id;
     hovered_button *button;
-    struct node_button_struct *prev;
     struct node_button_struct *next;
 } node_button;
 
