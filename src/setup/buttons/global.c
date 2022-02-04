@@ -24,7 +24,7 @@
 */
 
 const float PLAY[10] = {683, (float) 875.5, 0, 0, 141, 434, 2, 713, (float) 915.5, 0};
-const float QUIT[10] = {100, (float) 875.5, 0, 0, 100, 100, 2, 713, (float) 915.5, 0};
+const float QUIT[10] = {1715, 993, 0, 0, 100, 100, 2, 1750, 1026, 0};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
