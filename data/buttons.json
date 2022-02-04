@@ -1,0 +1,34 @@
+{
+  "buttons": {
+    "play": {
+      "path": "resources/play.png",
+      "rect": [
+        10,
+        10
+      ],
+      "position_display": [
+        100,
+        10
+      ],
+      "click_position": [
+        100,
+        10
+      ]
+    },
+    "quit": {
+      "path": "resources/play.png",
+      "rect": [
+        10,
+        10
+      ],
+      "position_display": [
+        100,
+        10
+      ],
+      "click_position": [
+        100,
+        10
+      ]
+    }
+  }
+}
