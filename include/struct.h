@@ -40,6 +40,8 @@ typedef struct hovered_button_struct {
     anim_img *button;
     float x_click;
     float y_click;
+    float x_max;
+    float y_max;
     int step_display;
     void (* function)(my_defender_pointer *defender);
 } hovered_button;

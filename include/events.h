@@ -18,4 +18,6 @@ void buttons_event(my_defender_t *my_defender, sfVector2f vector);
 
 void mouse_pressed_event(my_defender_t *my_defender);
 
+void check_on_hover(my_defender_t *defender);
+
 #endif

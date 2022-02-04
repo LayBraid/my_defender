@@ -25,4 +25,6 @@ void get_best_score(my_defender_t *my_defender, char *buffer);
 
 void quit_game(my_defender_t *defender);
 
+void switch_anim_button(node_button *button, int anim);
+
 #endif

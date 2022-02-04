@@ -17,14 +17,16 @@
  * 3: Position du rect de l'image en position Y
  * 4: Height du rect
  * 5: Width du rect
- * 6: Position max de l'animation
+ * 6: Position max de l'animations
  * 7: Position X de la zone cliquable du bouton
  * 8: Position Y de la zone cliquable du bouton
- * 9: Step où il va être display
+ * 9: Taille max en X pour la zone cliquable
+ * 10: Taille max en Y pour la zone cliquable
+ * 11: Step où il va être display
 */
 
-const float PLAY[10] = {683, (float) 875.5, 0, 0, 141, 434, 2, 713, (float) 915.5, 0};
-const float QUIT[10] = {1715, 993, 0, 0, 100, 100, 2, 1750, 1026, 0};
+const float PLAY[12] = {683, (float) 875.5, 0, 0, 141, 434, 2, 713, (float) 915.5, 374, 61, 0};
+const float QUIT[12] = {1715, 993, 0, 0, 100, 100, 2, 1750, 1026, 30, 34, 0};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -78,7 +80,9 @@ void setup_first(node_button **node, hovered_button *button)
 node_button *setup_buttons(void)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_a_hovered_button("resources/play.png", PLAY, play_button));
-    add_to_list(&node, setup_a_hovered_button("resources/quit.png", QUIT, quit_button));
+    setup_first(&node, setup_a_hovered_button("resources/play.png",
+    PLAY, play_button));
+    add_to_list(&node, setup_a_hovered_button("resources/quit.png",
+    QUIT, quit_button));
     return node;
 }

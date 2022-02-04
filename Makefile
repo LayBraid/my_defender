@@ -27,6 +27,7 @@ SRC = src/game/game.c \
 	  src/setup/cursor.c \
 	  src/utils/texts/best.c \
 	  src/utils/texts/score.c \
+	  src/utils/animations/button.c \
 	  src/utils/best.c \
 	  src/utils/quit.c \
 	  src/utils/cursor.c \
@@ -57,6 +58,7 @@ clean:
 	rm -f src/*.o
 	rm -f src/utils/*.o
 	rm -f src/utils/texts/*.o
+	rm -f src/utils/animations/*.o
 	rm -f src/game/*.o
 	rm -f src/game/display/img/*.o
 	rm -f src/game/display/*.o

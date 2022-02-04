@@ -24,10 +24,10 @@
  * 3: Position du rect de l'image en position Y
  * 4: Height du rect
  * 5: Width du rect
- * 6: Position max de l'animation (Mettre à -1 pour annuler l'animation)
+ * 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
  */
 
-//TODO Gérer le '-1' dans le max de l'animation >> cancel l'animation
+//TODO Gérer le '-1' dans le max de l'animations >> cancel l'animations
 //TODO Vérifier si enfaite mettre 0 ne cancel déjà pas l'annimation
 
 anim_img *setup_a_anim_img(char *path, const float info[7])
@@ -47,8 +47,8 @@ anim_img *setup_a_anim_img(char *path, const float info[7])
     rect.width = (int) info[5];
     img->anim_pos = 0;
     img->anim_max = (int) info[6];
-    img->x_power_anim = (int) info[4];
-    img->y_power_anim = (int) info[5];
+    img->x_power_anim = (int) info[5];
+    img->y_power_anim = (int) info[4];
     sfSprite_setTextureRect(img->sprite, rect);
     sfSprite_setPosition(img->sprite, vector);
     return img;

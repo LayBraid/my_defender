@@ -10,12 +10,15 @@
 
 void display_buttons(my_defender_t *defender)
 {
-    while (defender->list_buttons->id < defender->list_buttons->next->id) {
-        if (defender->list_buttons->button->step_display == defender->step)
-            sfRenderWindow_drawSprite(defender->window->window, defender->list_buttons->button->button->sprite, NULL);
-        defender->list_buttons = defender->list_buttons->next;
+    node_button *tmp = defender->list_buttons;
+    
+    while (tmp->id < tmp->next->id) {
+        if (tmp->button->step_display == defender->step)
+            sfRenderWindow_drawSprite(defender->window->window,
+            tmp->button->button->sprite, NULL);
+        tmp = tmp->next;
     }
-    if (defender->list_buttons->button->step_display == defender->step)
-        sfRenderWindow_drawSprite(defender->window->window, defender->list_buttons->button->button->sprite, NULL);
-    defender->list_buttons = defender->list_buttons->next;
+    if (tmp->button->step_display == defender->step)
+        sfRenderWindow_drawSprite(defender->window->window,
+        tmp->button->button->sprite, NULL);
 }
