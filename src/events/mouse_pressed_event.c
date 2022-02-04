@@ -15,6 +15,6 @@ void mouse_pressed_event(my_defender_t *my_defender)
         mouse = sfMouse_getPositionRenderWindow(my_defender->window->window);
         vector.x = mouse.x;
         vector.y = mouse.y;
-        //buttons_event(my_defender, vector);
+        //TODO Fonction auto pour les fonctions pointers des bouttons
     }
 }

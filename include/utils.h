@@ -23,4 +23,6 @@ void draw_best_score(my_defender_t *my_defender);
 
 void get_best_score(my_defender_t *my_defender, char *buffer);
 
+void quit_game(my_defender_t *defender);
+
 #endif

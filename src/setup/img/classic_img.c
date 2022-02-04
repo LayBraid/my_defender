@@ -5,8 +5,17 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../../include/struct.h"
-#include "../../../include/setup.h"
+#include "setup.h"
+#include "my.h"
+
+/*
+ * Création d'une image classique
+ *
+ * Arguments:
+ * - path >> path de la ressource
+ * - x >> position x de l'image
+ * - y >> position x de l'image
+ */
 
 classic_img *setup_a_classic_img(char *path, float x, float y)
 {

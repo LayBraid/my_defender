@@ -9,6 +9,10 @@
 #include "my.h"
 #include "game.h"
 
+/*
+ * Setup automatique du curseur si on active l'option dans le fichier 'game.h'
+ */
+
 void setup_cursor(my_defender_t *my_defender)
 {
     my_defender->cursor = malloc(sizeof(cursor_t));

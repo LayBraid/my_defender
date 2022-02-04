@@ -14,6 +14,8 @@
     #include <SFML/Graphics.h>
     #include <SFML/Audio.h>
 
+typedef struct my_defender_t my_defender_pointer;
+
 typedef struct sprite_cursor {
     sfSprite* sprite;
     sfTexture* texture;
@@ -38,6 +40,8 @@ typedef struct hovered_button_struct {
     anim_img *button;
     float x_click;
     float y_click;
+    int step_display;
+    void (* function)(my_defender_pointer *defender);
 } hovered_button;
 
 typedef struct window_struct {
@@ -51,9 +55,12 @@ typedef struct list_img {
     anim_img *play_button;
 } list_img_t;
 
-typedef struct list_buttons_struct {
-    hovered_button *play;
-} list_buttons_t;
+typedef struct node_button_struct {
+    int id;
+    hovered_button *button;
+    struct node_button_struct *prev;
+    struct node_button_struct *next;
+} node_button;
 
 typedef struct clocks_struct {
     sfClock *clock;
@@ -65,7 +72,7 @@ typedef struct my_defender_data {
     window_t *window;
     cursor_t *cursor;
     list_img_t *list_img;
-    list_buttons_t *list_buttons;
+    node_button *list_buttons;
     int step;
     int score;
     clocks_t *clocks;

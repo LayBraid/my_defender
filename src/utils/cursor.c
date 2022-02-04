@@ -5,7 +5,13 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../include/utils.h"
+#include "utils.h"
+
+/*
+ * Fonction qui switch le rect du cursor si la personnalisation est activée
+ * Il faut penser à appeler cette fonction lors du switch step avec le bon
+ * int du left
+ */
 
 int switch_cursor(my_defender_t *my_defender, int nb)
 {

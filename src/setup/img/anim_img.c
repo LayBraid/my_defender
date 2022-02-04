@@ -5,8 +5,29 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../../include/struct.h"
-#include "../../../include/setup.h"
+#include "setup.h"
+#include "my.h"
+
+/*
+ * Création d'une image animée
+ *
+ * Utilisée aussi pour les 'hovered_button'
+ *
+ * Arguments:
+ * - path de la resource
+ * - informations de l'image
+ *
+ * Informations de l'image:
+ * 0: Position de l'image en X une fois display
+ * 1: Position de l'image en Y une fois display
+ * 2: Position du rect de l'image en position X
+ * 3: Position du rect de l'image en position Y
+ * 4: Height du rect
+ * 5: Width du rect
+ * 6: Position max de l'animation (Mettre à -1 pour annuler l'animation)
+ */
+
+//TODO Gérer le '-1' dans le max de l'animation >> cancel l'animation
 
 anim_img *setup_a_anim_img(char *path, const float info[7])
 {

@@ -11,9 +11,12 @@ SRC = src/game/game.c \
 	  src/game/steps/global.c \
 	  src/game/steps/step_0.c \
 	  src/game/display/img/step_0.c \
+	  src/game/display/buttons.c \
+	  src/game/actions/buttons.c \
 	  src/events/poll_events.c \
 	  src/events/mouse_pressed_event.c \
 	  src/events/close_event.c \
+	  src/events/hovered/hover.c \
 	  src/setup/game.c \
 	  src/setup/buttons/global.c \
 	  src/setup/buttons/hovered_button.c \
@@ -25,6 +28,7 @@ SRC = src/game/game.c \
 	  src/utils/texts/best.c \
 	  src/utils/texts/score.c \
 	  src/utils/best.c \
+	  src/utils/quit.c \
 	  src/utils/cursor.c \
 	  src/utils/steps.c \
 
@@ -54,9 +58,10 @@ clean:
 	rm -f src/utils/*.o
 	rm -f src/utils/texts/*.o
 	rm -f src/game/*.o
-	rm -f src/game/display/button/*.o
 	rm -f src/game/display/img/*.o
+	rm -f src/game/display/*.o
 	rm -f src/game/steps/*.o
+	rm -f src/game/actions/*.o
 	rm -f src/clocks/*.o
 	rm -f src/setup/*.o
 	rm -f src/setup/buttons/*.o

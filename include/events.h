@@ -8,12 +8,11 @@
 #ifndef MYRUNNER_EVENT_H
     #define MYRUNNER_EVENT_H
 
-    #include "game.h"
-    #include "utils.h"
+    #include "struct.h"
 
-int poll_events(my_defender_t *my_defender);
+void poll_events(my_defender_t *my_defender);
 
-int close_event(window_t* window);
+void close_event(window_t* window);
 
 void buttons_event(my_defender_t *my_defender, sfVector2f vector);
 

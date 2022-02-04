@@ -8,9 +8,7 @@
 #ifndef MYRUNNER_SETUP_H
     #define MYRUNNER_SETUP_H
 
-    #include "game.h"
     #include "struct.h"
-    #include "utils.h"
 
 window_t* setup_window(my_defender_t *my_defender);
 
@@ -24,8 +22,9 @@ classic_img *setup_a_classic_img(char *path, float x, float y);
 
 anim_img *setup_a_anim_img(char *path, const float info[7]);
 
-hovered_button *setup_a_hovered_button(char *path, float info[9]);
+hovered_button *setup_a_hovered_button(char *path, const float info[10],
+void (* function)(my_defender_pointer *defender));
 
-void setup_buttons(list_buttons_t *list);
+node_button *setup_buttons(void);
 
 #endif

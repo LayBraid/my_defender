@@ -5,7 +5,9 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../../include/utils.h"
+#include "utils.h"
+
+//TODO Refaire cette fonction pour ce jeu
 
 void draw_text_score(my_defender_t *my_defender)
 {

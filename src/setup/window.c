@@ -5,7 +5,19 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../include/setup.h"
+#include "setup.h"
+#include "game.h"
+
+/*
+ * Setup de notre window
+ *
+ * Les valeurs de Width et Height sont récupérées dans le fichier 'game.h'
+ *
+ * Window_name vient aussi du fichier 'game.h'
+ * Setup des FPS max. Récupéré aussi du fichier 'game.h'
+ *
+ * Initialisation ou non du curseur selon l'option Custom_cursor dans 'game.h'
+ */
 
 window_t* setup_window(my_defender_t *my_defender)
 {

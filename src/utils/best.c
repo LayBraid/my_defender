@@ -8,10 +8,18 @@
 #include <stdio.h>
 #include "../../include/utils.h"
 
+/*
+ * Récupération du meilleur score dans notre fichier 'data'
+ */
+
 void get_best_score(my_defender_t *my_defender, char *buffer)
 {
     my_defender->best_score = my_atoi(buffer);
 }
+
+/*
+ * Écriture d'un nouveau meileur score dans notre fichier 'data'
+ */
 
 void set_best_score(my_defender_t *my_defender)
 {

@@ -7,6 +7,10 @@
 
 #include "../include/game.h"
 
+/*
+ * Message d'help du jeu
+ */
+
 int help_message(void)
 {
     my_putstr("--- MyDefender [HELP] ---\n\n");
@@ -15,6 +19,13 @@ int help_message(void)
     my_putstr("--- Thanks for playing ---\n");
     return 1;
 }
+
+/*
+ * Fonction main
+ *
+ * Vérification du nombre d'argument
+ * Vérification du '-h'
+ */
 
 int main(int ac, char **av)
 {

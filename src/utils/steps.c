@@ -7,12 +7,18 @@
 
 #include "../../include/utils.h"
 
+/*
+ * Fonction qui nous permet de switch de step
+ *
+ * Si changement de cursor activé, il faut retiré la partie en commentaire
+ * dans la fonction
+ */
+
 void switch_step(my_defender_t *my_defender, int x)
 {
-    if (x == 0 || x == 1 || x == 4 || x == 5 || x == 6) {
-        my_defender->step = x;
-    }
-    if (x == 2 || x == 3) {
-        my_defender->step = x;
-    }
+    my_defender->step = x;
+    /*if (x == 0 || x == 1 || x == 4 || x == 5 || x == 6)
+        switch_cursor(my_defender, 64);
+    if (x == 2 || x == 3)
+        switch_cursor(my_defender, 64);*/
 }
