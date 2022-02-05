@@ -9,12 +9,6 @@
 
 void mouse_pressed_event(my_defender_t *my_defender)
 {
-    sfVector2i mouse;
-    sfVector2f vector;
-    if (my_defender->window->event.type == sfEvtMouseButtonPressed) {
-        mouse = sfMouse_getPositionRenderWindow(my_defender->window->window);
-        vector.x = mouse.x;
-        vector.y = mouse.y;
-        //TODO Fonction auto pour les fonctions pointers des bouttons
-    }
+    if (my_defender->window->event.type == sfEvtMouseButtonPressed)
+        check_on_click(my_defender);
 }

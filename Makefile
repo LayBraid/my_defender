@@ -17,6 +17,7 @@ SRC = src/game/game.c \
 	  src/events/mouse_pressed_event.c \
 	  src/events/close_event.c \
 	  src/events/hovered/hover.c \
+	  src/events/click/buttons.c \
 	  src/setup/game.c \
 	  src/setup/buttons/global.c \
 	  src/setup/buttons/hovered_button.c \
@@ -70,7 +71,7 @@ clean:
 	rm -f src/setup/img/*.o
 	rm -f src/events/*.o
 	rm -f src/events/keys/*.o
-	rm -f src/events/buttons/*.o
+	rm -f src/events/click/*.o
 	rm -f src/events/hovered/*.o
 	rm -rf *.gcda
 	rm -rf *.gcno
