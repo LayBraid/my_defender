@@ -14,6 +14,11 @@
     #include <SFML/Graphics.h>
     #include <SFML/Audio.h>
 
+/*
+ * Deuxieme typedef de la struct globale pour l'utiliser
+ * dans les pointeurs de fonction (à cause de l'ordre de déclaration)
+ */
+
 typedef struct my_defender_t my_defender_pointer;
 
 typedef struct sprite_cursor {
@@ -49,12 +54,10 @@ typedef struct hovered_button_struct {
 typedef struct window_struct {
     sfRenderWindow* window;
     sfEvent event;
-    classic_img *bg;
 } window_t;
 
 typedef struct list_img {
     classic_img *bg_open;
-    anim_img *play_button;
 } list_img_t;
 
 typedef struct node_button_struct {
