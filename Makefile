@@ -26,7 +26,9 @@ SRC = src/game/game.c \
 	  src/setup/img/anim_img.c \
 	  src/setup/window.c \
 	  src/setup/cursor.c \
-	  src/utils/texts/best.c \
+	  $(wildcard src/utils/*.c) \
+	  $(wildcard src/utils/animations/*.c)
+	  ##src/utils/texts/best.c \
 	  src/utils/texts/score.c \
 	  src/utils/animations/button.c \
 	  src/utils/best.c \
