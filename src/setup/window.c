@@ -7,6 +7,7 @@
 
 #include "setup.h"
 #include "game.h"
+#include "my.h"
 
 /*
  * Setup de notre window
