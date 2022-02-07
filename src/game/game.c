@@ -5,7 +5,11 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../include/game.h"
+#include "game.h"
+#include "my.h"
+#include "setup.h"
+#include "events.h"
+#include "steps.h"
 
 /*
  * Fonction principale de notre jeu

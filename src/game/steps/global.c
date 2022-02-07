@@ -14,6 +14,6 @@
 
 void global_steps(my_defender_t *my_defender)
 {
-    if (my_defender->step == 0)
+    if (my_defender->step == OPEN)
         exe_step_0(my_defender);
 }

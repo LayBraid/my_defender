@@ -8,11 +8,7 @@
 #ifndef MYRUNNER_GAME_H
     #define MYRUNNER_GAME_H
 
-    #include "my.h"
-    #include "setup.h"
     #include "struct.h"
-    #include "events.h"
-    #include "steps.h"
 
     #define WINDOW_NAME "MyDefender"
     #define WIDTH 1800
@@ -21,6 +17,13 @@
     #define FPS_MAX 130
     #define CUSTOM_CURSOR 0
     #define STEP_START 0
+
+enum Steps {
+    OPEN,
+    MAIN,
+    HELP,
+    SETTINGS,
+};
 
 void game_launch(void);
 
