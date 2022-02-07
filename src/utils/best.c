@@ -6,7 +6,8 @@
 */
 
 #include <stdio.h>
-#include "../../include/utils.h"
+#include "utils.h"
+#include "my.h"
 
 /*
  * Récupération du meilleur score dans notre fichier 'data'

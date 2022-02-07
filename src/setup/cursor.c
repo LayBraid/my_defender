@@ -8,6 +8,7 @@
 #include "struct.h"
 #include "my.h"
 #include "game.h"
+#include "utils.h"
 
 /*
  * Setup automatique du curseur si on active l'option dans le fichier 'game.h'
