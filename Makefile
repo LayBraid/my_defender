@@ -13,11 +13,6 @@ SRC = src/game/game.c \
 	  src/game/display/img/step_0.c \
 	  src/game/display/buttons.c \
 	  src/game/actions/buttons.c \
-	  src/events/poll_events.c \
-	  src/events/mouse_pressed_event.c \
-	  src/events/close_event.c \
-	  src/events/hovered/hover.c \
-	  src/events/click/buttons.c \
 	  src/setup/game.c \
 	  src/setup/buttons/global.c \
 	  src/setup/buttons/hovered_button.c \
@@ -27,7 +22,10 @@ SRC = src/game/game.c \
 	  src/setup/window.c \
 	  src/setup/cursor.c \
 	  $(wildcard src/utils/*.c) \
-	  $(wildcard src/utils/animations/*.c)
+	  $(wildcard src/utils/animations/*.c) \
+	  $(wildcard src/events/*.c) \
+	  $(wildcard src/events/buttons/*.c) \
+	  $(wildcard src/events/keys/*.c)
 	  ##src/utils/texts/best.c \
 	  src/utils/texts/score.c \
 	  src/utils/animations/button.c \
@@ -73,8 +71,7 @@ clean:
 	rm -f src/setup/img/*.o
 	rm -f src/events/*.o
 	rm -f src/events/keys/*.o
-	rm -f src/events/click/*.o
-	rm -f src/events/hovered/*.o
+	rm -f src/events/buttons/*.o
 	rm -rf *.gcda
 	rm -rf *.gcno
 	rm -rf *.c.gcov
