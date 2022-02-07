@@ -16,7 +16,6 @@
     #define PATH_CURSOR "resources/cursor.png"
     #define FPS_MAX 130
     #define CUSTOM_CURSOR 0
-    #define STEP_START 0
 
 enum Steps {
     OPEN,
