@@ -5,7 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../../include/game.h"
+#include "game.h"
+#include "setup.h"
 
 //TODO Passer les images classiques en liste chaînée comme les images animées
 

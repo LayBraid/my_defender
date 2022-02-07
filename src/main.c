@@ -5,7 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include "../include/game.h"
+#include "game.h"
+#include "my.h"
 
 /*
  * Message d'help du jeu

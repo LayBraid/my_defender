@@ -22,4 +22,8 @@ void check_on_hover(my_defender_t *defender);
 
 void check_on_click(my_defender_t *defender);
 
+void check_on_un_click(my_defender_t *defender);
+
+void mouse_unpressed_event(my_defender_t *my_defender);
+
 #endif
