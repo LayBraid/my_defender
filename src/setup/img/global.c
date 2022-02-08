@@ -23,7 +23,7 @@
 const float TITLE[7] = {473, 386, 0, 0, 308, 854, OPEN};
 const float SEPARATORS[7] = {473, 386, 0, 0, 308, 854, MAIN};
 
-void add_to_list(node_img **node, anim_img *button)
+void add_to_list(node_img **node, anim_img *img)
 {
     int count = 0;
     node_img *new = malloc(sizeof(node_img));
@@ -37,7 +37,7 @@ void add_to_list(node_img **node, anim_img *button)
         }
     }
     new->id = count + 1;
-    new->img = button;
+    new->img = img;
     new->next = tmp;
     (*node)->next = new;
 }
