@@ -21,7 +21,7 @@
  */
 
 const float TITLE[7] = {473, 386, 0, 0, 308, 854, OPEN};
-const float SEPARATORS[7] = {473, 386, 0, 0, 308, 854, MAIN};
+const float SEPARATORS[7] = {0, 0, 0, 308, 1080, 1800, MAIN};
 
 void add_to_list(node_img **node, anim_img *img)
 {
