@@ -20,7 +20,7 @@ node_img *setup_img(void);
 
 classic_img *setup_a_classic_img(char *path, float x, float y);
 
-anim_img *setup_a_anim_img(char *path, const float info[7]);
+anim_img *setup_a_anim_img(char *path, const float info[8]);
 
 hovered_button *setup_a_hovered_button(char *path, const float info[12],
 void (* function)(my_defender_pointer *defender));

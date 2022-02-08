@@ -7,13 +7,7 @@
 
 MAIN = src/main.c
 
-SRC = src/game/game.c \
-	  src/game/steps/global.c \
-	  src/game/steps/step_0.c \
-	  src/game/display/img/step_0.c \
-	  src/game/display/buttons.c \
-	  src/game/actions/buttons.c \
-	  src/setup/game.c \
+SRC = src/setup/game.c \
 	  src/setup/buttons/global.c \
 	  src/setup/buttons/hovered_button.c \
 	  src/setup/img/global.c \
@@ -21,6 +15,10 @@ SRC = src/game/game.c \
 	  src/setup/img/anim_img.c \
 	  src/setup/window.c \
 	  src/setup/cursor.c \
+	  $(wildcard src/game/*.c) \
+	  $(wildcard src/game/display/*.c) \
+	  $(wildcard src/game/actions/*.c) \
+	  $(wildcard src/game/steps/*.c) \
 	  $(wildcard src/utils/*.c) \
 	  $(wildcard src/utils/animations/*.c) \
 	  $(wildcard src/events/*.c) \

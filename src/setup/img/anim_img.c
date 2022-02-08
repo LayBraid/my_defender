@@ -25,12 +25,16 @@
  * 4: Height du rect
  * 5: Width du rect
  * 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
+ * 7: step pour display
  */
 
 //TODO Gérer le '-1' dans le max de l'animations >> cancel l'animations
 //TODO Vérifier si enfaite mettre 0 ne cancel déjà pas l'annimation
 
-anim_img *setup_a_anim_img(char *path, const float info[7])
+//TODO Reduire cette fonction
+//TODO maybe en ajoutant une texture global du coup
+
+anim_img *setup_a_anim_img(char *path, const float info[8])
 {
     sfVector2f vector;
     sfIntRect rect;
@@ -49,6 +53,7 @@ anim_img *setup_a_anim_img(char *path, const float info[7])
     img->anim_max = (int) info[6];
     img->x_power_anim = (int) info[5];
     img->y_power_anim = (int) info[4];
+    img->step_display = (int) info[7];
     sfSprite_setTextureRect(img->sprite, rect);
     sfSprite_setPosition(img->sprite, vector);
     return img;

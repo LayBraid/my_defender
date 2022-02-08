@@ -39,6 +39,7 @@ typedef struct anim_img_struct {
     int anim_pos;
     int x_power_anim;
     int y_power_anim;
+    int step_display;
 } anim_img;
 
 typedef struct hovered_button_struct {

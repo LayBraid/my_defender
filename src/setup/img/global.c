@@ -18,12 +18,15 @@
  * 4: Height du rect
  * 5: Width du rect
  * 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
+ * 7: step pour display
  */
 
-const float TITLE[7] = {473, 386, 0, 0, 308, 854, OPEN};
-const float SEPARATORS[7] = {0, 0, 0, 308, 1080, 1800, MAIN};
+//TODO Ajouter un id pour les clocks pour savoir sur quel clock mettre l'animation
 
-void add_to_list(node_img **node, anim_img *img)
+const float TITLE[8] = {473, 386, 0, 0, 308, 854, 0, OPEN};
+const float LINES[8] = {0, 0, 0, 308, 1080, 1800, 0, MAIN};
+
+void add_to_list_img(node_img **node, anim_img *img)
 {
     int count = 0;
     node_img *new = malloc(sizeof(node_img));
@@ -42,7 +45,7 @@ void add_to_list(node_img **node, anim_img *img)
     (*node)->next = new;
 }
 
-void setup_first(node_img **node, anim_img *img)
+void setup_first_img(node_img **node, anim_img *img)
 {
     (*node)->id = 0;
     (*node)->img = img;
@@ -53,7 +56,7 @@ node_img *setup_img(void)
 {
     node_img *node = malloc(sizeof(node_img));
 
-    setup_first(&node, setup_a_anim_img("resources/global.png", TITLE));
-    add_to_list(&node, setup_a_anim_img("resources/global.png", SEPARATORS));
+    setup_first_img(&node, setup_a_anim_img("resources/global.png", TITLE));
+    add_to_list_img(&node, setup_a_anim_img("resources/global.png", LINES));
     return node;
 }

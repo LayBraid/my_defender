@@ -17,7 +17,6 @@
 
 void exe_step_0(my_defender_t *defender)
 {
-    sfRenderWindow_drawSprite(defender->window->window,
-                              defender->list_img->bg_open->sprite, NULL);
     display_buttons(defender);
+    display_img(defender);
 }
