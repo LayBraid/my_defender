@@ -56,15 +56,17 @@ typedef struct window_struct {
     sfEvent event;
 } window_t;
 
-typedef struct list_img {
-    classic_img *bg_open;
-} list_img_t;
-
 typedef struct node_button_struct {
     int id;
     hovered_button *button;
     struct node_button_struct *next;
 } node_button;
+
+typedef struct node_img_struct {
+    int id;
+    anim_img *img;
+    struct node_img_struct *next;
+} node_img;
 
 typedef struct clocks_struct {
     sfClock *clock;
@@ -75,7 +77,7 @@ typedef struct clocks_struct {
 typedef struct my_defender_data {
     window_t *window;
     cursor_t *cursor;
-    list_img_t *list_img;
+    node_img *list_img;
     node_button *list_buttons;
     int step;
     int score;

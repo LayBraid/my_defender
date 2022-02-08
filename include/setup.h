@@ -16,7 +16,7 @@ void setup_game(my_defender_t *my_defender);
 
 void setup_cursor(my_defender_t *my_defender);
 
-void setup_all_img(list_img_t *list);
+node_img *setup_img(void);
 
 classic_img *setup_a_classic_img(char *path, float x, float y);
 
