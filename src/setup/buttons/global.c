@@ -8,6 +8,7 @@
 #include "setup.h"
 #include "my.h"
 #include "actions.h"
+#include "game.h"
 
 /*
  * Informations d'un bouton:
@@ -25,8 +26,8 @@
  * 11: Step où il va être display
 */
 
-const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713, (float) 915.5, 374, 61, 0};
-const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34, 0};
+const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713, (float) 915.5, 374, 61, OPEN};
+const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34, OPEN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
