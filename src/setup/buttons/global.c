@@ -25,8 +25,8 @@
  * 11: Step où il va être display
 */
 
-const float PLAY[12] = {683, (float) 875.5, 0, 0, 141, 434, 2, 713, (float) 915.5, 374, 61, 0};
-const float QUIT[12] = {1715, 993, 0, 0, 100, 100, 2, 1750, 1026, 30, 34, 0};
+const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713, (float) 915.5, 374, 61, 0};
+const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34, 0};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -80,9 +80,9 @@ void setup_first(node_button **node, hovered_button *button)
 node_button *setup_buttons(void)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_a_hovered_button("resources/play.png",
+    setup_first(&node, setup_a_hovered_button("resources/global.png",
     PLAY, play_button));
-    add_to_list(&node, setup_a_hovered_button("resources/quit.png",
+    add_to_list(&node, setup_a_hovered_button("resources/global.png",
     QUIT, quit_button));
     return node;
 }
