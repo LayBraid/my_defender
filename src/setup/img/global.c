@@ -31,8 +31,8 @@ const float TOWERS[8] = {1424, 211, 0, 2355, 263, 345, 0, MAIN};
 const float MISSILES[8] = {1424, 613, 345, 2355, 263, 345, 0, MAIN};
 const float TANKS[8] = {1424, 462, 0, 2618, 163, 345, 0, MAIN};
 const float PLANES[8] = {1424, 864, 345, 2618, 163, 345, 0, MAIN};
-const float EXIT_PLATE[8] = {61, 370, 1186, 0, 144, 61, 0, MAIN};
-const float ENTER_PLATE[8] = {1321, 370, 1246, 0, 144, 61, 0, MAIN};
+const float EXIT_PLATE[8] = {61, 370, 1246, 0, 144, 61, 0, MAIN};
+const float ENTER_PLATE[8] = {1321, 370, 1186, 0, 144, 61, 0, MAIN};
 
 int get_max_img(node_img **node)
 {
