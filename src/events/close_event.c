@@ -13,6 +13,6 @@
 
 void close_event(window_t* window)
 {
-    if (window->event.type == sfEvtClosed)
+    if (window->event->type == sfEvtClosed)
         sfRenderWindow_close(window->window);
 }

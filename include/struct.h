@@ -54,7 +54,7 @@ typedef struct hovered_button_struct {
 
 typedef struct window_struct {
     sfRenderWindow* window;
-    sfEvent event;
+    sfEvent *event;
 } window_t;
 
 typedef struct node_button_struct {
