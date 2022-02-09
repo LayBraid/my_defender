@@ -96,17 +96,11 @@ void setup_first(node_button **node, hovered_button *button)
 node_button *setup_buttons(void)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_a_hovered_button("resources/global.png", PLAY,
-    play_button));
-    add_to_list(&node, setup_a_hovered_button("resources/global.png", QUIT,
-    quit_button));
-    add_to_list(&node, setup_a_hovered_button("resources/global.png", HELPER,
-    quit_button));
-    add_to_list(&node, setup_a_hovered_button("resources/global.png", SETTING,
-    quit_button));
-    add_to_list(&node, setup_a_hovered_button("resources/global.png", HOME,
-    quit_button));
-    add_to_list(&node, setup_a_hovered_button("resources/global.png", QUIT2,
-    quit_button));
+    setup_first(&node, setup_a_hovered_button(PLAY, play_button));
+    add_to_list(&node, setup_a_hovered_button(QUIT, quit_button));
+    add_to_list(&node, setup_a_hovered_button(HELPER, quit_button));
+    add_to_list(&node, setup_a_hovered_button(SETTING, quit_button));
+    add_to_list(&node, setup_a_hovered_button(HOME, quit_button));
+    add_to_list(&node, setup_a_hovered_button(QUIT2, quit_button));
     return node;
 }
