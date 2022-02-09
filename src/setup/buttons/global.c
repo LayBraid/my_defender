@@ -29,7 +29,9 @@
 const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713,(float) 915.5, 374, 61, OPEN};
 const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34,OPEN};
 const float HELPER[12] = {5, 1005, 15, 1403, 80, 80, 2, 20, 1020, 50, 50, MAIN};
-const float SETTING[12] = {65, 1005, 15, 1498, 80, 80, 2, 20, 1020, 50, 50,MAIN};
+const float SETTING[12] = {65, 1005, 15, 1483, 80, 80, 2, 80, 1020, 50, 50,MAIN};
+const float HOME[12] = {125, 1005, 15, 1563, 80, 80, 2, 140, 1020, 50, 50,MAIN};
+const float QUIT2[12] = {185, 1005, 15, 1643, 80, 80, 2, 220, 1020, 50, 50,MAIN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -101,6 +103,10 @@ node_button *setup_buttons(void)
     add_to_list(&node, setup_a_hovered_button("resources/global.png", HELPER,
     quit_button));
     add_to_list(&node, setup_a_hovered_button("resources/global.png", SETTING,
+    quit_button));
+    add_to_list(&node, setup_a_hovered_button("resources/global.png", HOME,
+    quit_button));
+    add_to_list(&node, setup_a_hovered_button("resources/global.png", QUIT2,
     quit_button));
     return node;
 }
