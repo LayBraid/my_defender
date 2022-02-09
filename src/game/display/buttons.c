@@ -5,7 +5,6 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "game.h"
 
 void display_buttons(my_defender_t *defender)
