@@ -16,7 +16,6 @@ node_button *button, sfVector2i mouse)
          (float) mouse.x < button->button->x_click + button->button->x_max &&
          (float) mouse.y > button->button->y_click &&
          (float) mouse.y < button->button->y_click + button->button->y_max)) {
-        //button->button->function((my_defender_pointer *) defender);
         if (button->button->button->anim_pos == 1)
             switch_anim_button(button, 2);
         return;
