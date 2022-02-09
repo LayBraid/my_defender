@@ -27,11 +27,6 @@ typedef struct sprite_cursor {
     char **display;
 } cursor_t;
 
-typedef struct classic_img_struct {
-    sfSprite* sprite;
-    sfTexture* texture;
-} classic_img;
-
 typedef struct anim_img_struct {
     sfSprite *sprite;
     sfTexture *texture;
