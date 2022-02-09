@@ -12,14 +12,13 @@
  * Puis appelle à toutes les fonctions de vérifications des events
  */
 
-void poll_events(my_defender_t *my_defender)
+void poll_events(my_defender_t *my_defender, sfRenderWindow *window)
 {
-    while (sfRenderWindow_pollEvent(my_defender->window->window,
-        my_defender->window->event)) {
-        close_event(my_defender->window);
-        mouse_pressed_event(my_defender);
-        if (my_defender->window->event->type == sfEvtMouseButtonReleased)
+    sfEvent event;
+    while (sfRenderWindow_pollEvent(my_defender->window->window, &event)) {
+        close_event(my_defender->window, event);
+        mouse_pressed_event(my_defender, event);
+        if (event.type == sfEvtMouseButtonReleased)
             check_on_un_click(my_defender);
-        check_on_hover(my_defender);
     }
 }
