@@ -26,30 +26,40 @@
  * 11: Step où il va être display
 */
 
-const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713, (float) 915.5, 374, 61, OPEN};
-const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34, OPEN};
+const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713,(float) 915.5, 374, 61, OPEN};
+const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34,OPEN};
+const float HELPER[12] = {5, 1005, 15, 1403, 80, 80, 2, 20, 1020, 50, 50, MAIN};
+const float SETTING[12] = {65, 1005, 15, 1498, 80, 80, 2, 20, 1020, 50, 50,MAIN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
  */
 
-void add_to_list(node_button **node, hovered_button *button)
+int get_max(node_button **node)
 {
     int count = 0;
+    node_button *tmp = (*node);
+
+    tmp = tmp->next;
+    while (tmp->id != 0) {
+        if (tmp->id > count)
+            count = tmp->id;
+        tmp = tmp->next;
+    }
+    return count;
+}
+
+void add_to_list(node_button **node, hovered_button *button)
+{
     node_button *new = malloc(sizeof(node_button));
     node_button *tmp = (*node);
 
-    if ((*node)->id != (*node)->next->id) {
-        (*node) = (*node)->next;
-        while ((*node)->id != 0) {
-            count = ((*node)->id > count) ? (*node)->id : count;
-            (*node) = (*node)->next;
-        }
-    }
-    new->id = count + 1;
+    while (tmp->next->id != 0)
+        tmp = tmp->next;
+    new->id = get_max(node) + 1;
     new->button = button;
-    new->next = tmp;
-    (*node)->next = new;
+    new->next = (*node);
+    tmp->next = new;
 }
 
 /*
@@ -78,12 +88,19 @@ void setup_first(node_button **node, hovered_button *button)
  * Voir explication 'setup_a_hovered_button' pour les arguments
  */
 
+//TODO Split les lignes pour réduire
+//TODO Sinon texture global pour pas à avoir split les lignes
+
 node_button *setup_buttons(void)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_a_hovered_button("resources/global.png",
-    PLAY, play_button));
-    add_to_list(&node, setup_a_hovered_button("resources/global.png",
-    QUIT, quit_button));
+    setup_first(&node, setup_a_hovered_button("resources/global.png", PLAY,
+    play_button));
+    add_to_list(&node, setup_a_hovered_button("resources/global.png", QUIT,
+    quit_button));
+    add_to_list(&node, setup_a_hovered_button("resources/global.png", HELPER,
+    quit_button));
+    add_to_list(&node, setup_a_hovered_button("resources/global.png", SETTING,
+    quit_button));
     return node;
 }

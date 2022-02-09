@@ -41,7 +41,7 @@ anim_img *setup_a_anim_img(char *path, const float info[8])
     anim_img *img = malloc(sizeof(classic_img));
 
     img->sprite = sfSprite_create();
-    img->texture = sfTexture_createFromFile(path, NULL);
+    img->texture = sfTexture_createFromFile("resources/global.png", NULL);
     sfSprite_setTexture(img->sprite,img->texture, sfTrue);
     vector.x = info[0];
     vector.y = info[1];

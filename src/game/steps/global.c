@@ -5,7 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../../include/steps.h"
+#include "steps.h"
+#include "events.h"
 
 /*
  * Première fonction appelée pour appeler seulement les fonctions
@@ -14,8 +15,9 @@
 
 void global_steps(my_defender_t *my_defender)
 {
-    display_buttons(my_defender);
     display_img(my_defender);
+    display_buttons(my_defender);
+    check_on_hover(my_defender);
     /*if (my_defender->step == OPEN)
         exe_step_0(my_defender);*/
 }
