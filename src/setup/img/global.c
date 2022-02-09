@@ -26,23 +26,31 @@
 const float TITLE[8] = {473, 386, 0, 0, 308, 854, 0, OPEN};
 const float LINES[8] = {0, 0, 0, 308, 1080, 1800, 0, MAIN};
 
-void add_to_list_img(node_img **node, anim_img *img)
+int get_max_img(node_img **node)
 {
     int count = 0;
+    node_img *tmp = (*node);
+
+    tmp = tmp->next;
+    while (tmp->id != 0) {
+        if (tmp->id > count)
+            count = tmp->id;
+        tmp = tmp->next;
+    }
+    return count;
+}
+
+void add_to_list_img(node_img **node, anim_img *img)
+{
     node_img *new = malloc(sizeof(node_img));
     node_img *tmp = (*node);
 
-    if ((*node)->id != (*node)->next->id) {
-        (*node) = (*node)->next;
-        while ((*node)->id != 0) {
-            count = ((*node)->id > count) ? (*node)->id : count;
-            (*node) = (*node)->next;
-        }
-    }
-    new->id = count + 1;
+    while (tmp->next->id != 0)
+        tmp = tmp->next;
+    new->id = get_max_img(node) + 1;
     new->img = img;
-    new->next = tmp;
-    (*node)->next = new;
+    new->next = (*node);
+    tmp->next = new;
 }
 
 void setup_first_img(node_img **node, anim_img *img)
