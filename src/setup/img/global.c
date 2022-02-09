@@ -30,6 +30,7 @@ const float SHOP[8] = {1466, 44, 880, 10, 138, 260, 0, MAIN};
 const float TOWERS[8] = {1424, 211, 0, 2355, 263, 345, 0, MAIN};
 const float MISSILES[8] = {1424, 613, 345, 2355, 263, 345, 0, MAIN};
 const float TANKS[8] = {1424, 462, 0, 2618, 163, 345, 0, MAIN};
+const float PLANES[8] = {1424, 864, 345, 2618, 163, 345, 0, MAIN};
 
 int get_max_img(node_img **node)
 {
@@ -76,5 +77,6 @@ node_img *setup_img(void)
     add_to_list_img(&node, setup_a_anim_img(TOWERS));
     add_to_list_img(&node, setup_a_anim_img(MISSILES));
     add_to_list_img(&node, setup_a_anim_img(TANKS));
+    add_to_list_img(&node, setup_a_anim_img(PLANES));
     return node;
 }
