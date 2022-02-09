@@ -11,8 +11,8 @@
  * Vérification si l'event actuel correspond à la fermeture de la window
  */
 
-void close_event(window_t* window)
+void close_event(window_t* window, sfEvent event)
 {
-    if (window->event->type == sfEvtClosed)
+    if (event.type == sfEvtClosed)
         sfRenderWindow_close(window->window);
 }

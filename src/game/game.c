@@ -32,8 +32,8 @@ void game_launch(void)
     setup_game(my_defender);
     while (sfRenderWindow_isOpen(my_defender->window->window)) {
         sfRenderWindow_clear(my_defender->window->window, color);
-        poll_events(my_defender);
         global_steps(my_defender);
+        poll_events(my_defender, my_defender->window->window);
         sfRenderWindow_display(my_defender->window->window);
     }
     sfRenderWindow_destroy(my_defender->window->window);
