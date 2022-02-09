@@ -7,14 +7,14 @@
 
 #include "events.h"
 
-void mouse_pressed_event(my_defender_t *my_defender)
+void mouse_pressed_event(my_defender_t *my_defender, sfEvent event)
 {
-    if (my_defender->window->event->type == sfEvtMouseButtonPressed)
+    if (event.type == sfEvtMouseButtonPressed)
         check_on_click(my_defender);
 }
 
-void mouse_unpressed_event(my_defender_t *my_defender)
+void mouse_unpressed_event(my_defender_t *my_defender, sfEvent event)
 {
-    if (my_defender->window->event->type == sfEvtMouseButtonReleased)
+    if (event.type == sfEvtMouseButtonReleased)
         check_on_un_click(my_defender);
 }
