@@ -66,9 +66,9 @@ node_img *setup_img(void)
 {
     node_img *node = malloc(sizeof(node_img));
 
-    setup_first_img(&node, setup_a_anim_img("resources/global.png", TITLE));
-    add_to_list_img(&node, setup_a_anim_img("resources/global.png", LINES));
-    add_to_list_img(&node, setup_a_anim_img("resources/global.png", BORDER));
-    add_to_list_img(&node, setup_a_anim_img("resources/global.png", SHOP));
+    setup_first_img(&node, setup_a_anim_img(TITLE));
+    add_to_list_img(&node, setup_a_anim_img(LINES));
+    add_to_list_img(&node, setup_a_anim_img(BORDER));
+    add_to_list_img(&node, setup_a_anim_img(SHOP));
     return node;
 }
