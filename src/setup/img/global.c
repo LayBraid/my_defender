@@ -26,6 +26,7 @@
 const float TITLE[8] = {473, 386, 0, 0, 308, 854, 0, OPEN};
 const float LINES[8] = {0, 0, 0, 308, 1080, 1800, 0, MAIN};
 const float BORDER[8] = {594, 1000, 0, 2270, 90, 200, 0, MAIN};
+const float SHOP[8] = {1466, 44, 880, 10, 138, 260, 0, MAIN};
 
 int get_max_img(node_img **node)
 {
@@ -68,5 +69,6 @@ node_img *setup_img(void)
     setup_first_img(&node, setup_a_anim_img("resources/global.png", TITLE));
     add_to_list_img(&node, setup_a_anim_img("resources/global.png", LINES));
     add_to_list_img(&node, setup_a_anim_img("resources/global.png", BORDER));
+    add_to_list_img(&node, setup_a_anim_img("resources/global.png", SHOP));
     return node;
 }
