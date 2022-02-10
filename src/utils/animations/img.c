@@ -7,12 +7,12 @@
 
 #include "utils.h"
 
-void anim_img_id(dfd *df, int anim)
+void anim_img_id(dfd *df, int id, int anim)
 {
     sfIntRect rect;
     node_img *tmp = df->list_img;
 
-    while (tmp->id != anim)
+    while (tmp->id != id)
         tmp = tmp->next;
     rect = sfSprite_getTextureRect(tmp->img->sprite);
     if (anim <= tmp->img->anim_max) {
