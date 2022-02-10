@@ -10,7 +10,7 @@
 
     #include "struct.h"
 
-    #define WINDOW_NAME "MyDefender"
+    #define WINDOW_NAME "MyDefender | Simple Tower Defense game"
     #define WIDTH 1800
     #define HEIGHT 1080
     #define PATH_CURSOR "resources/cursor.png"
