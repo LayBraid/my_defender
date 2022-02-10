@@ -23,8 +23,8 @@ void setup_game(my_defender_t *defender)
     defender->window = setup_window(defender);
     defender->list_img = malloc(sizeof(node_img));
     defender->list_buttons = malloc(sizeof(node_button));
-    defender->list_img = setup_img();
-    defender->list_buttons = setup_buttons();
+    defender->list_img = setup_img(defender);
+    defender->list_buttons = setup_buttons(defender);
     defender->step = OPEN;
     defender->texture = sfTexture_createFromFile("resources/global.png", NULL);
 }
