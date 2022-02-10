@@ -92,24 +92,24 @@ void setup_first(node_button **node, hovered_button *button)
  * et pour les autres 'add_to_list'.
  *
  * Premier paramètre à passer à chaque fois c'est l'adresse de node '&node'
- * Ensuite le retour de la fonction 'setup_a_hovered_button'.
+ * Ensuite le retour de la fonction 'setup_button'.
  *
- * Voir explication 'setup_a_hovered_button' pour les arguments
+ * Voir explication 'setup_button' pour les arguments
  */
 
 node_button *setup_buttons(dfd *df)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_a_hovered_button(df, PLAY, play_button));
-    add_to_list(&node, setup_a_hovered_button(df, QUIT, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, HELPER, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, SETTING, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, HOME, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, QUIT2, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, TIME_DOWN, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, TIME_UP, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, PAUSE, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, TOWER_1, quit_button));
-    add_to_list(&node, setup_a_hovered_button(df, TOWER_2, quit_button));
+    setup_first(&node, setup_button(df, PLAY, play_button));
+    add_to_list(&node, setup_button(df, QUIT, quit_button));
+    add_to_list(&node, setup_button(df, HELPER, quit_button));
+    add_to_list(&node, setup_button(df, SETTING, quit_button));
+    add_to_list(&node, setup_button(df, HOME, quit_button));
+    add_to_list(&node, setup_button(df, QUIT2, quit_button));
+    add_to_list(&node, setup_button(df, TIME_DOWN, quit_button));
+    add_to_list(&node, setup_button(df, TIME_UP, quit_button));
+    add_to_list(&node, setup_button(df, PAUSE, quit_button));
+    add_to_list(&node, setup_button(df, TOWER_1, quit_button));
+    add_to_list(&node, setup_button(df, TOWER_2, quit_button));
     return node;
 }

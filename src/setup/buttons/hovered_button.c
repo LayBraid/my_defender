@@ -17,7 +17,7 @@
  * Ça retourne un objet 'hovered_button' setup auto
 */
 
-hovered_button *setup_a_hovered_button(dfd *defender, const float info[12],
+hovered_button *setup_button(dfd *defender, const float info[12],
 void (* function)(my_defender_pointer *defender))
 {
     hovered_button *button = malloc(sizeof(hovered_button));

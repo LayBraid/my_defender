@@ -22,7 +22,7 @@ node_img *setup_img(dfd *defender);
 
 anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8]);
 
-hovered_button *setup_a_hovered_button(dfd *defender, const float info[12],
+hovered_button *setup_button(dfd *defender, const float info[12],
 void (* function)(my_defender_pointer *defender));
 
 node_button *setup_buttons(dfd *defender);
