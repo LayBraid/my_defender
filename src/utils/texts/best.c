@@ -6,6 +6,7 @@
 */
 
 #include "utils.h"
+#include "my.h"
 
 //TODO Refaire cette fonction pour ce jeu
 
