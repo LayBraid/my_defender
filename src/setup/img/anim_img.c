@@ -31,9 +31,6 @@
 //TODO Gérer le '-1' dans le max de l'animations >> cancel l'animations
 //TODO Vérifier si enfaite mettre 0 ne cancel déjà pas l'annimation
 
-//TODO Reduire cette fonction
-//TODO maybe en ajoutant une texture global du coup
-
 anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8])
 {
     sfVector2f vector;
