@@ -12,6 +12,8 @@
 
 typedef my_defender_t dfd;
 
+typedef const float cf;
+
 window_t* setup_window(my_defender_t *my_defender);
 
 void setup_game(my_defender_t *my_defender);
