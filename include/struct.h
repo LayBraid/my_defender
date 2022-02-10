@@ -77,7 +77,8 @@ typedef struct my_defender_data {
     node_img *list_img;
     node_button *list_buttons;
     int step;
-    int score;
+    int coins;
+    int emeralds;
     clocks_t *clocks;
     int fps;
     int best_score;
