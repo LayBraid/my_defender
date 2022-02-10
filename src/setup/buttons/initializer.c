@@ -6,9 +6,9 @@
 */
 
 #include "setup.h"
+#include "game.h"
 #include "my.h"
 #include "actions.h"
-#include "game.h"
 
 /*
  * Informations d'un bouton:
@@ -49,48 +49,14 @@ cf MISSILE_3[12] = {1641, 655,580, 1733, 110, 110, 2, 1656, 670, 80, 80,MAIN};
 cf MISSILE_4[12] = {1441, 755,580, 1843, 110, 110, 2, 1456, 770, 80, 80,MAIN};
 
 /*
- * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
+ * Suite de l'initialisation des boutons
  */
 
-int get_max(node_button **node)
+node_button *next_buttons(dfd *df, node_button *node)
 {
-    int count = 0;
-    node_button *tmp = (*node);
-
-    tmp = tmp->next;
-    while (tmp->id != 0) {
-        if (tmp->id > count)
-            count = tmp->id;
-        tmp = tmp->next;
-    }
-    return count;
-}
-
-void add_to_list(node_button **node, hovered_button *button)
-{
-    node_button *new = malloc(sizeof(node_button));
-    node_button *tmp = (*node);
-
-    while (tmp->next->id != 0)
-        tmp = tmp->next;
-    new->id = get_max(node) + 1;
-    new->button = button;
-    new->next = (*node);
-    tmp->next = new;
-}
-
-/*
- * Setup le premier node de la liste chaînée circulaire
- * Pourquoi circulaire ? simplement pour pouvoir tourner en boucle
- * dans la liste et pas faire des copies à chaque fois et utiliser de la
- * mémoire supplémentaire.
- */
-
-void setup_first(node_button **node, hovered_button *button)
-{
-    (*node)->id = 0;
-    (*node)->button = button;
-    (*node)->next = (*node);
+    add_button(&node, setup_button(df, MISSILE_4, quit_button));
+    add_button(&node, setup_button(df, MISSILE_3, quit_button));
+    return node;
 }
 
 /*
@@ -108,24 +74,23 @@ void setup_first(node_button **node, hovered_button *button)
 node_button *setup_buttons(dfd *df)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_button(df, PLAY, play_button));
-    add_to_list(&node, setup_button(df, QUIT, quit_button));
-    add_to_list(&node, setup_button(df, HELPER, quit_button));
-    add_to_list(&node, setup_button(df, SETTING, quit_button));
-    add_to_list(&node, setup_button(df, HOME, quit_button));
-    add_to_list(&node, setup_button(df, QUIT2, quit_button));
-    add_to_list(&node, setup_button(df, TIME_DOWN, quit_button));
-    add_to_list(&node, setup_button(df, TIME_UP, quit_button));
-    add_to_list(&node, setup_button(df, PAUSE, quit_button));
-    add_to_list(&node, setup_button(df, TOWER_1, quit_button));
-    add_to_list(&node, setup_button(df, TOWER_2, quit_button));
-    add_to_list(&node, setup_button(df, TOWER_3, quit_button));
-    add_to_list(&node, setup_button(df, TOWER_4, quit_button));
-    add_to_list(&node, setup_button(df, TANK_1, quit_button));
-    add_to_list(&node, setup_button(df, TANK_2, quit_button));
-    add_to_list(&node, setup_button(df, MISSILE_1, quit_button));
-    add_to_list(&node, setup_button(df, MISSILE_2, quit_button));
-    add_to_list(&node, setup_button(df, MISSILE_3, quit_button));
-    add_to_list(&node, setup_button(df, MISSILE_4, quit_button));
-    return node;
+
+    setup_first_button(&node, setup_button(df, PLAY, play_button));
+    add_button(&node, setup_button(df, QUIT, quit_button));
+    add_button(&node, setup_button(df, HELPER, quit_button));
+    add_button(&node, setup_button(df, SETTING, quit_button));
+    add_button(&node, setup_button(df, HOME, quit_button));
+    add_button(&node, setup_button(df, QUIT2, quit_button));
+    add_button(&node, setup_button(df, TIME_DOWN, quit_button));
+    add_button(&node, setup_button(df, TIME_UP, quit_button));
+    add_button(&node, setup_button(df, PAUSE, quit_button));
+    add_button(&node, setup_button(df, TOWER_1, quit_button));
+    add_button(&node, setup_button(df, TOWER_2, quit_button));
+    add_button(&node, setup_button(df, TOWER_3, quit_button));
+    add_button(&node, setup_button(df, TOWER_4, quit_button));
+    add_button(&node, setup_button(df, TANK_1, quit_button));
+    add_button(&node, setup_button(df, TANK_2, quit_button));
+    add_button(&node, setup_button(df, MISSILE_1, quit_button));
+    add_button(&node, setup_button(df, MISSILE_2, quit_button));
+    return next_buttons(df, node);
 }

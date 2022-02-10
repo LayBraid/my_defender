@@ -18,6 +18,10 @@ void setup_game(my_defender_t *my_defender);
 
 void setup_cursor(my_defender_t *my_defender);
 
+void add_button(node_button **node, hovered_button *button);
+
+void setup_first_button(node_button **node, hovered_button *button);
+
 node_img *setup_img(dfd *defender);
 
 anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8]);
