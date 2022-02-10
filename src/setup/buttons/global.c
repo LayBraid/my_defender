@@ -28,8 +28,7 @@
 
 typedef const float cf;
 
-cf PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713,
-(float) 915.5, 374, 61, OPEN};
+cf PLAY[12] = {683, 875, 0, 2045, 141, 434, 2, 713,915, 374, 61, OPEN};
 cf QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34,OPEN};
 cf HELPER[12] = {5, 1005, 15, 1403, 80, 80, 2, 20, 1020, 50, 50, MAIN};
 cf SETTING[12] = {65, 1005, 15, 1483, 80, 80, 2, 80, 1020, 50, 50,MAIN};
@@ -38,7 +37,8 @@ cf QUIT2[12] = {185, 1005, 15, 1643, 80, 80, 2, 220, 1020, 50, 50,MAIN};
 cf TIME_DOWN[12] = {612, 1005, 0, 1883, 80, 80, 2, 633, 1033, 38, 24,MAIN};
 cf TIME_UP[12] = {698, 1005, 0, 1963, 80, 80, 2, 719, 1033, 38, 24,MAIN};
 cf PAUSE[12] = {655, 1005, 0, 1723, 80, 80, 2, 683, 1029, 32, 24,MAIN};
-cf TOWER_1[12] = {1441, 253, 250, 1403, 110, 110, 2, 1456, 268, 80, 80,MAIN};
+cf TOWER_1[12] = {1441, 253,250, 1403, 110, 110, 2, 1456, 268, 80, 80,MAIN};
+cf TOWER_2[12] = {1551, 253,0, 1513, 110, 110, 2, 1556, 268, 80, 80,MAIN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -100,18 +100,19 @@ void setup_first(node_button **node, hovered_button *button)
 //TODO Split les lignes pour réduire
 //TODO Sinon texture global pour pas à avoir split les lignes
 
-node_button *setup_buttons(void)
+node_button *setup_buttons(dfd *df)
 {
     node_button *node = malloc(sizeof(node_button));
-    setup_first(&node, setup_a_hovered_button(PLAY, play_button));
-    add_to_list(&node, setup_a_hovered_button(QUIT, quit_button));
-    add_to_list(&node, setup_a_hovered_button(HELPER, quit_button));
-    add_to_list(&node, setup_a_hovered_button(SETTING, quit_button));
-    add_to_list(&node, setup_a_hovered_button(HOME, quit_button));
-    add_to_list(&node, setup_a_hovered_button(QUIT2, quit_button));
-    add_to_list(&node, setup_a_hovered_button(TIME_DOWN, quit_button));
-    add_to_list(&node, setup_a_hovered_button(TIME_UP, quit_button));
-    add_to_list(&node, setup_a_hovered_button(PAUSE, quit_button));
-    add_to_list(&node, setup_a_hovered_button(TOWER_1, quit_button));
+    setup_first(&node, setup_a_hovered_button(df, PLAY, play_button));
+    add_to_list(&node, setup_a_hovered_button(df, QUIT, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, HELPER, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, SETTING, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, HOME, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, QUIT2, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, TIME_DOWN, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, TIME_UP, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, PAUSE, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, TOWER_1, quit_button));
+    add_to_list(&node, setup_a_hovered_button(df, TOWER_2, quit_button));
     return node;
 }

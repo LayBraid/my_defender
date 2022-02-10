@@ -34,15 +34,14 @@
 //TODO Reduire cette fonction
 //TODO maybe en ajoutant une texture global du coup
 
-anim_img *setup_a_anim_img(const float info[8])
+anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8])
 {
     sfVector2f vector;
     sfIntRect rect;
     anim_img *img = malloc(sizeof(anim_img));
 
     img->sprite = sfSprite_create();
-    img->texture = sfTexture_createFromFile("resources/global.png", NULL);
-    sfSprite_setTexture(img->sprite,img->texture, sfTrue);
+    sfSprite_setTexture(img->sprite,defender->texture, sfTrue);
     vector.x = info[0];
     vector.y = info[1];
     rect.left = (int) info[2];

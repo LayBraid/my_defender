@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_defender
+** defender
 ** File description:
 ** No file there , just an epitech header example
 */
@@ -18,12 +18,13 @@
  * Définition du step au démarrage du jeu
  */
 
-void setup_game(my_defender_t *my_defender)
+void setup_game(my_defender_t *defender)
 {
-    my_defender->window = setup_window(my_defender);
-    my_defender->list_img = malloc(sizeof(node_img));
-    my_defender->list_buttons = malloc(sizeof(node_button));
-    my_defender->list_img = setup_img();
-    my_defender->list_buttons = setup_buttons();
-    my_defender->step = OPEN;
+    defender->window = setup_window(defender);
+    defender->list_img = malloc(sizeof(node_img));
+    defender->list_buttons = malloc(sizeof(node_button));
+    defender->list_img = setup_img();
+    defender->list_buttons = setup_buttons();
+    defender->step = OPEN;
+    defender->texture = sfTexture_createFromFile("resources/global.png", NULL);
 }

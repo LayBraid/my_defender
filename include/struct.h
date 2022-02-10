@@ -79,6 +79,7 @@ typedef struct my_defender_data {
     clocks_t *clocks;
     int fps;
     int best_score;
+    sfTexture *texture;
 } my_defender_t;
 
 #endif

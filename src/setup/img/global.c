@@ -68,19 +68,19 @@ void setup_first_img(node_img **node, anim_img *img)
     (*node)->next = (*node);
 }
 
-node_img *setup_img(void)
+node_img *setup_img(dfd *defender)
 {
     node_img *node = malloc(sizeof(node_img));
 
-    setup_first_img(&node, setup_a_anim_img(TITLE));
-    add_to_list_img(&node, setup_a_anim_img(LINES));
-    add_to_list_img(&node, setup_a_anim_img(BORDER));
-    add_to_list_img(&node, setup_a_anim_img(SHOP));
-    add_to_list_img(&node, setup_a_anim_img(TOWERS));
-    add_to_list_img(&node, setup_a_anim_img(MISSILES));
-    add_to_list_img(&node, setup_a_anim_img(TANKS));
-    add_to_list_img(&node, setup_a_anim_img(PLANES));
-    add_to_list_img(&node, setup_a_anim_img(EXIT_PLATE));
-    add_to_list_img(&node, setup_a_anim_img(ENTER_PLATE));
+    setup_first_img(&node, setup_a_anim_img(defender, TITLE));
+    add_to_list_img(&node, setup_a_anim_img(defender, LINES));
+    add_to_list_img(&node, setup_a_anim_img(defender, BORDER));
+    add_to_list_img(&node, setup_a_anim_img(defender, SHOP));
+    add_to_list_img(&node, setup_a_anim_img(defender, TOWERS));
+    add_to_list_img(&node, setup_a_anim_img(defender, MISSILES));
+    add_to_list_img(&node, setup_a_anim_img(defender, TANKS));
+    add_to_list_img(&node, setup_a_anim_img(defender, PLANES));
+    add_to_list_img(&node, setup_a_anim_img(defender, EXIT_PLATE));
+    add_to_list_img(&node, setup_a_anim_img(defender, ENTER_PLATE));
     return node;
 }
