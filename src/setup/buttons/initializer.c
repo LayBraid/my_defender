@@ -54,8 +54,8 @@ cf MISSILE_4[12] = {1441, 755,580, 1843, 110, 110, 2, 1456, 770, 80, 80,MAIN};
 
 node_button *next_buttons(dfd *df, node_button *node)
 {
-    add_button(&node, setup_button(df, MISSILE_4, quit_button));
     add_button(&node, setup_button(df, MISSILE_3, quit_button));
+    add_button(&node, setup_button(df, MISSILE_4, quit_button));
     return node;
 }
 
