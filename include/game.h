@@ -31,6 +31,11 @@ enum Building {
     PLANE
 };
 
+enum DD_State {
+    NOTHING,
+    BUILDING,
+};
+
 void game_launch(void);
 
 void display_buttons(my_defender_t *defender);
