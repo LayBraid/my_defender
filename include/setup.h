@@ -26,7 +26,7 @@ void setup_first_button(node_button **node, hovered_button *button);
 
 node_img *setup_img(dfd *defender);
 
-anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8]);
+anim_img *setup_a_anim_img(my_defender_t *df, const float info[8]);
 
 hovered_button *setup_button(dfd *df, const float info[12],
 void (* function)(my_defender_pointer *defender));
