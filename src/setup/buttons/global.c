@@ -40,6 +40,7 @@ cf PAUSE[12] = {655, 1005, 0, 1723, 80, 80, 2, 683, 1029, 32, 24,MAIN};
 cf TOWER_1[12] = {1441, 253,250, 1403, 110, 110, 2, 1456, 268, 80, 80,MAIN};
 cf TOWER_2[12] = {1541, 253,250, 1513, 110, 110, 2, 1556, 268, 80, 80,MAIN};
 cf TOWER_3[12] = {1641, 253,250, 1623, 110, 110, 2, 1656, 268, 80, 80,MAIN};
+cf TOWER_4[12] = {1441, 353,250, 1733, 110, 110, 2, 1456, 368, 80, 80,MAIN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -113,5 +114,6 @@ node_button *setup_buttons(dfd *df)
     add_to_list(&node, setup_button(df, TOWER_1, quit_button));
     add_to_list(&node, setup_button(df, TOWER_2, quit_button));
     add_to_list(&node, setup_button(df, TOWER_3, quit_button));
+    add_to_list(&node, setup_button(df, TOWER_4, quit_button));
     return node;
 }
