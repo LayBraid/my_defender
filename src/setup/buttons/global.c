@@ -44,6 +44,8 @@ cf TOWER_4[12] = {1441, 353,250, 1733, 110, 110, 2, 1456, 368, 80, 80,MAIN};
 cf TANK_1[12] = {1441, 504,250, 1843, 110, 110, 2, 1456, 519, 80, 80,MAIN};
 cf TANK_2[12] = {1541, 504,580, 1403, 110, 110, 2, 1556, 519, 80, 80,MAIN};
 cf MISSILE_1[12] = {1441, 655,580, 1513, 110, 110, 2, 1456, 670, 80, 80,MAIN};
+cf MISSILE_2[12] = {1541, 655,580, 1623, 110, 110, 2, 1556, 670, 80, 80,MAIN};
+cf MISSILE_3[12] = {1641, 655,580, 1733, 110, 110, 2, 1656, 670, 80, 80,MAIN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -121,5 +123,7 @@ node_button *setup_buttons(dfd *df)
     add_to_list(&node, setup_button(df, TANK_1, quit_button));
     add_to_list(&node, setup_button(df, TANK_2, quit_button));
     add_to_list(&node, setup_button(df, MISSILE_1, quit_button));
+    add_to_list(&node, setup_button(df, MISSILE_2, quit_button));
+    add_to_list(&node, setup_button(df, MISSILE_3, quit_button));
     return node;
 }
