@@ -47,6 +47,8 @@ cf MISSILE_1[12] = {1441, 655,580, 1513, 110, 110, 2, 1456, 670, 80, 80,MAIN};
 cf MISSILE_2[12] = {1541, 655,580, 1623, 110, 110, 2, 1556, 670, 80, 80,MAIN};
 cf MISSILE_3[12] = {1641, 655,580, 1733, 110, 110, 2, 1656, 670, 80, 80,MAIN};
 cf MISSILE_4[12] = {1441, 755,580, 1843, 110, 110, 2, 1456, 770, 80, 80,MAIN};
+cf PLANE_1[12] = {1441, 906,910, 1403, 110, 110, 2, 1456, 921, 80, 80,MAIN};
+cf PLANE_2[12] = {1541, 906,910, 1513, 110, 110, 2, 1556, 921, 80, 80,MAIN};
 
 /*
  * Suite de l'initialisation des boutons
@@ -56,6 +58,8 @@ node_button *next_buttons(dfd *df, node_button *node)
 {
     add_button(&node, setup_button(df, MISSILE_3, quit_button));
     add_button(&node, setup_button(df, MISSILE_4, quit_button));
+    add_button(&node, setup_button(df, PLANE_1, quit_button));
+    add_button(&node, setup_button(df, PLANE_2, quit_button));
     return node;
 }
 
