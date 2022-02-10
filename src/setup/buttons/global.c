@@ -97,9 +97,6 @@ void setup_first(node_button **node, hovered_button *button)
  * Voir explication 'setup_a_hovered_button' pour les arguments
  */
 
-//TODO Split les lignes pour réduire
-//TODO Sinon texture global pour pas à avoir split les lignes
-
 node_button *setup_buttons(dfd *df)
 {
     node_button *node = malloc(sizeof(node_button));
