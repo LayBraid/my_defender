@@ -15,6 +15,6 @@
 
 void global_steps(my_defender_t *my_defender);
 
-void exe_step_0(my_defender_t *my_defender);
+void exe_step_main(my_defender_t *my_defender);
 
 #endif
