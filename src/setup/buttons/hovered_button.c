@@ -17,12 +17,12 @@
  * Ça retourne un objet 'hovered_button' setup auto
 */
 
-hovered_button *setup_button(dfd *defender, const float info[12],
+hovered_button *setup_button(dfd *df, const float info[12],
 void (* function)(my_defender_pointer *defender))
 {
     hovered_button *button = malloc(sizeof(hovered_button));
 
-    button->button = setup_a_anim_img(defender, info);
+    button->button = setup_a_anim_img(df, info);
     button->x_click = info[7];
     button->y_click = info[8];
     button->x_max = info[9];
