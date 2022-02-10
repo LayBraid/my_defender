@@ -26,15 +26,18 @@
  * 11: Step où il va être display
 */
 
-const float PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713,(float) 915.5, 374, 61, OPEN};
-const float QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34,OPEN};
-const float HELPER[12] = {5, 1005, 15, 1403, 80, 80, 2, 20, 1020, 50, 50, MAIN};
-const float SETTING[12] = {65, 1005, 15, 1483, 80, 80, 2, 80, 1020, 50, 50,MAIN};
-const float HOME[12] = {125, 1005, 15, 1563, 80, 80, 2, 140, 1020, 50, 50,MAIN};
-const float QUIT2[12] = {185, 1005, 15, 1643, 80, 80, 2, 220, 1020, 50, 50,MAIN};
-const float TIME_DOWN[12] = {612, 1005, 0, 1883, 80, 80, 2, 633, 1033, 38, 24,MAIN};
-const float TIME_UP[12] = {698, 1005, 0, 1963, 80, 80, 2, 719, 1033, 38, 24,MAIN};
-const float PAUSE[12] = {655, 1005, 0, 1723, 80, 80, 2, 683, 1029, 32, 24,MAIN};
+typedef const float cf;
+
+cf PLAY[12] = {683, (float) 875.5, 0, 2045, 141, 434, 2, 713,(float) 915.5, 374, 61, OPEN};
+cf QUIT[12] = {1715, 993, 0, 2186, 100, 100, 2, 1750, 1026, 30, 34,OPEN};
+cf HELPER[12] = {5, 1005, 15, 1403, 80, 80, 2, 20, 1020, 50, 50, MAIN};
+cf SETTING[12] = {65, 1005, 15, 1483, 80, 80, 2, 80, 1020, 50, 50,MAIN};
+cf HOME[12] = {125, 1005, 15, 1563, 80, 80, 2, 140, 1020, 50, 50,MAIN};
+cf QUIT2[12] = {185, 1005, 15, 1643, 80, 80, 2, 220, 1020, 50, 50,MAIN};
+cf TIME_DOWN[12] = {612, 1005, 0, 1883, 80, 80, 2, 633, 1033, 38, 24,MAIN};
+cf TIME_UP[12] = {698, 1005, 0, 1963, 80, 80, 2, 719, 1033, 38, 24,MAIN};
+cf PAUSE[12] = {655, 1005, 0, 1723, 80, 80, 2, 683, 1029, 32, 24,MAIN};
+cf TOWER_1[12] = {1441, 253, 250, 1403, 110, 110, 2, 1456, 268, 80, 80,MAIN};
 
 /*
  * Ajouter un node à la suite de notre liste chaînée circulaire de bouton
@@ -108,5 +111,6 @@ node_button *setup_buttons(void)
     add_to_list(&node, setup_a_hovered_button(TIME_DOWN, quit_button));
     add_to_list(&node, setup_a_hovered_button(TIME_UP, quit_button));
     add_to_list(&node, setup_a_hovered_button(PAUSE, quit_button));
+    add_to_list(&node, setup_a_hovered_button(TOWER_1, quit_button));
     return node;
 }
