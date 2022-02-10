@@ -13,6 +13,7 @@ void switch_anim_button(node_button *button, int anim)
     if (anim <= button->button->button->anim_max) {
         button->button->button->anim_pos = anim;
         rect.left = button->button->button->x_power_anim * anim;
+        rect.left += button->button->button->init_rect_x;
         sfSprite_setTextureRect(button->button->button->sprite, rect);
     }
 }

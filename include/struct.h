@@ -34,6 +34,8 @@ typedef struct anim_img_struct {
     int anim_pos;
     int x_power_anim;
     int y_power_anim;
+    int init_rect_x;
+    int init_rect_y;
     int step_display;
 } anim_img;
 

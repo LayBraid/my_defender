@@ -31,6 +31,8 @@
 //TODO Gérer le '-1' dans le max de l'animations >> cancel l'animations
 //TODO Vérifier si enfaite mettre 0 ne cancel déjà pas l'annimation
 
+//TODO Reduire
+
 anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8])
 {
     sfVector2f vector;
@@ -50,6 +52,8 @@ anim_img *setup_a_anim_img(my_defender_t *defender, const float info[8])
     img->x_power_anim = (int) info[5];
     img->y_power_anim = (int) info[4];
     img->step_display = (int) info[7];
+    img->init_rect_x = (int) info[2];
+    img->init_rect_y = (int) info[3];
     sfSprite_setTextureRect(img->sprite, rect);
     sfSprite_setPosition(img->sprite, vector);
     return img;
