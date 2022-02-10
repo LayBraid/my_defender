@@ -24,6 +24,13 @@ enum Steps {
     SETTINGS,
 };
 
+enum Building {
+    TOWER,
+    TANK,
+    MISSILE,
+    PLANE
+};
+
 void game_launch(void);
 
 void display_buttons(my_defender_t *defender);
