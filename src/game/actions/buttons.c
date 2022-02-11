@@ -25,3 +25,8 @@ void quit_button(my_defender_pointer *defender)
 {
     quit_game((my_defender_t *) defender);
 }
+
+void d_and_d(my_defender_pointer *defender)
+{
+    drag_and_drop((my_defender_t *) defender);
+}

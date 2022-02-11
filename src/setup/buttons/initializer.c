@@ -86,13 +86,13 @@ node_button *setup_buttons(dfd *df)
     add_button(&node, setup_button(df, TIME_DOWN, quit_button));
     add_button(&node, setup_button(df, TIME_UP, quit_button));
     add_button(&node, setup_button(df, PAUSE, quit_button));
-    add_button(&node, setup_button(df, TOWER_1, quit_button));
-    add_button(&node, setup_button(df, TOWER_2, quit_button));
-    add_button(&node, setup_button(df, TOWER_3, quit_button));
-    add_button(&node, setup_button(df, TOWER_4, quit_button));
-    add_button(&node, setup_button(df, TANK_1, quit_button));
-    add_button(&node, setup_button(df, TANK_2, quit_button));
-    add_button(&node, setup_button(df, MISSILE_1, quit_button));
-    add_button(&node, setup_button(df, MISSILE_2, quit_button));
+    add_button(&node, setup_button(df, TOWER_1, d_and_d));
+    add_button(&node, setup_button(df, TOWER_2, d_and_d));
+    add_button(&node, setup_button(df, TOWER_3, d_and_d));
+    add_button(&node, setup_button(df, TOWER_4, d_and_d));
+    add_button(&node, setup_button(df, TANK_1, d_and_d));
+    add_button(&node, setup_button(df, TANK_2, d_and_d));
+    add_button(&node, setup_button(df, MISSILE_1, d_and_d));
+    add_button(&node, setup_button(df, MISSILE_2, d_and_d));
     return next_buttons(df, node);
 }
