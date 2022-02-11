@@ -33,4 +33,6 @@ void anim_img_id(dfd *df, int id, int anim);
 
 void draw_coins(my_defender_t *my_defender);
 
+void draw_emeralds(dfd *my_defender);
+
 #endif

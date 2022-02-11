@@ -18,4 +18,5 @@
 void exe_step_main(my_defender_t *defender)
 {
     draw_coins(defender);
+    draw_emeralds(defender);
 }
