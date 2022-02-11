@@ -8,7 +8,24 @@
 #include "utils.h"
 #include "my.h"
 
-void draw_coins(my_defender_t *my_defender)
+float get_rect_x(dfd *defender, int length)
+{
+    switch (length) {
+        default:
+        case 1:
+        case 2:
+            anim_img_id(defender, 10, 2);
+            return 1327;
+        case 3:
+            anim_img_id(defender, 10, 1);
+            return 1302;
+        case 4:
+            anim_img_id(defender, 10, 0);
+            return 1284;
+    }
+}
+
+void draw_coins(dfd *my_defender)
 {
     sfFont* font = sfFont_createFromFile("resources/font.otf");
     sfColor color = sfColor_fromRGB(204, 153, 51);
@@ -21,21 +38,7 @@ void draw_coins(my_defender_t *my_defender)
     sfText_setFont(text, font);
     sfText_setCharacterSize(text, 21);
     sfText_setColor(text, color);
-    switch (my_strlen(str)) {
-        case 1:
-        case 2:
-            vector.x = 1327;
-            anim_img_id(my_defender, 10, 2);
-            break;
-        case 3:
-            vector.x = 1302;
-            anim_img_id(my_defender, 10, 1);
-            break;
-        case 4:
-            vector.x = 1284;
-            anim_img_id(my_defender, 10, 0);
-            break;
-    }
+    vector.x = get_rect_x(my_defender, my_strlen(str));
     vector.y = (float) 920.5;
     sfText_setPosition(text, vector);
     sfRenderWindow_drawText(my_defender->window->window, text, NULL);
