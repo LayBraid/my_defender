@@ -22,6 +22,7 @@ enum Steps {
     MAIN,
     HELP,
     SETTINGS,
+    NEVER,
 };
 
 enum Building {
