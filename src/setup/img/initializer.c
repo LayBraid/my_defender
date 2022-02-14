@@ -37,40 +37,6 @@ cf ENTER_PLATE[9] = {1321, 370, 1186, 0, 144, 61, 0, MAIN, -1};
 cf COINS[9] = {1220, 894, 1331, 0, 80, 150, 2, MAIN, -1};
 cf EMERALDS[9] = {1220, 954, 1331, 80, 80, 150, 2, MAIN, -1};
 
-int get_max_img(node_img **node)
-{
-    int count = 0;
-    node_img *tmp = (*node);
-
-    tmp = tmp->next;
-    while (tmp->id != 0) {
-        if (tmp->id > count)
-            count = tmp->id;
-        tmp = tmp->next;
-    }
-    return count;
-}
-
-void add_to_list_img(node_img **node, anim_img *img)
-{
-    node_img *new = malloc(sizeof(node_img));
-    node_img *tmp = (*node);
-
-    while (tmp->next->id != 0)
-        tmp = tmp->next;
-    new->id = get_max_img(node) + 1;
-    new->img = img;
-    new->next = (*node);
-    tmp->next = new;
-}
-
-void setup_first_img(node_img **node, anim_img *img)
-{
-    (*node)->id = 0;
-    (*node)->img = img;
-    (*node)->next = (*node);
-}
-
 node_img *setup_img(dfd *df)
 {
     node_img *node = malloc(sizeof(node_img));
