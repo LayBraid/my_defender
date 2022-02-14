@@ -8,8 +8,8 @@
 MAIN = src/main.c
 
 SRC = $(wildcard src/setup/*.c) \
-	  $(wildcard src/setup/buttons/*.c) \
 	  $(wildcard src/setup/img/*.c) \
+	  $(wildcard src/setup/buttons/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/game/steps/*.c) \
 	  $(wildcard src/game/display/*.c) \
