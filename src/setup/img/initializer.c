@@ -36,6 +36,30 @@ cf EXIT_PLATE[9] = {0, 370, 1246, 0, 144, 61, 0, MAIN, -1};
 cf ENTER_PLATE[9] = {1321, 370, 1186, 0, 144, 61, 0, MAIN, -1};
 cf COINS[9] = {1220, 894, 1331, 0, 80, 150, 2, MAIN, -1};
 cf EMERALDS[9] = {1220, 954, 1331, 80, 80, 150, 2, MAIN, -1};
+cf TOWER_D_1[9] = {1441, 253, 1460, 1403, 110, 110, 0, NEVER, -1};
+cf TOWER_D_2[9] = {1541, 253, 1460, 1513, 110, 110, 0, NEVER, -1};
+cf TOWER_D_3[9] = {1641, 253, 1460, 1623, 110, 110, 0, NEVER, -1};
+cf TOWER_D_4[9] = {1441, 353, 1460, 1733, 110, 110, 0, NEVER, -1};
+cf TANK_D_1[9] = {1441, 504, 1460, 1843, 110, 110, 0, NEVER, -1};
+cf TANK_D_2[9] = {1541, 504, 1570, 1403, 110, 110, 0, NEVER, -1};
+cf MISSILE_D_1[9] = {1441, 655, 1570, 1403, 110, 110, 0, NEVER, -1};
+cf MISSILE_D_2[9] = {1541, 655, 1570, 1513, 110, 110, 0, NEVER, -1};
+cf MISSILE_D_3[9] = {1641, 655, 1570, 1623, 110, 110, 0, NEVER, -1};
+cf MISSILE_D_4[9] = {1441, 755, 1570, 1733, 110, 110, 0, NEVER, -1};
+cf PLANE_D_1[9] = {1441, 906, 1680, 1403, 110, 110, 0, NEVER, -1};
+cf PLANE_D_2[9] = {1541, 906, 1680, 1513, 110, 110, 0, NEVER, -1};
+
+node_img *next_img(dfd *df, node_img *node)
+{
+    add_to_list_img(&node, setup_a_anim_img(df, TANK_D_2));
+    add_to_list_img(&node, setup_a_anim_img(df, MISSILE_D_1));
+    add_to_list_img(&node, setup_a_anim_img(df, MISSILE_D_2));
+    add_to_list_img(&node, setup_a_anim_img(df, MISSILE_D_3));
+    add_to_list_img(&node, setup_a_anim_img(df, MISSILE_D_4));
+    add_to_list_img(&node, setup_a_anim_img(df, PLANE_D_1));
+    add_to_list_img(&node, setup_a_anim_img(df, PLANE_D_2));
+    return node;
+}
 
 node_img *setup_img(dfd *df)
 {
@@ -53,5 +77,10 @@ node_img *setup_img(dfd *df)
     add_to_list_img(&node, setup_a_anim_img(df, ENTER_PLATE));
     add_to_list_img(&node, setup_a_anim_img(df, COINS));
     add_to_list_img(&node, setup_a_anim_img(df, EMERALDS));
-    return node;
+    add_to_list_img(&node, setup_a_anim_img(df, TOWER_D_1));
+    add_to_list_img(&node, setup_a_anim_img(df, TOWER_D_2));
+    add_to_list_img(&node, setup_a_anim_img(df, TOWER_D_3));
+    add_to_list_img(&node, setup_a_anim_img(df, TOWER_D_4));
+    add_to_list_img(&node, setup_a_anim_img(df, TANK_D_1));
+    return next_img(df, node);
 }
