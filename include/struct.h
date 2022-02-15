@@ -71,6 +71,11 @@ typedef struct clocks_struct {
     float seconds;
 } clocks_t;
 
+typedef struct drag_and_drop_struct {
+    int state;
+    int id_building;
+} d_d_t;
+
 typedef struct my_defender_data {
     window_t *window;
     cursor_t *cursor;
@@ -83,6 +88,7 @@ typedef struct my_defender_data {
     int fps;
     int best_score;
     sfTexture *texture;
+    d_d_t *drag;
 } my_defender_t;
 
 #endif

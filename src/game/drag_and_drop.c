@@ -9,6 +9,8 @@
 #include "struct.h"
 #include "game.h"
 
+//TODO Bouton 9 == Image 12
+
 void check_on_button(my_defender_t *defender,
 node_button *button, sfVector2i mouse)
 {
@@ -27,6 +29,9 @@ void drag_and_drop(my_defender_t *defender)
     sfVector2i mu = sfMouse_getPositionRenderWindow(defender->window->window);
     node_button *tmp = defender->list_buttons;
 
+    if (defender->drag->state != NOTHING)
+        return;
+    defender->drag->state = BUILDING;
     while (tmp->id < tmp->next->id) {
         check_on_button(defender, tmp, mu);
         tmp = tmp->next;
