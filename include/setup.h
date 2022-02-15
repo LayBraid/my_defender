@@ -33,4 +33,8 @@ void (* function)(my_defender_pointer *defender));
 
 node_button *setup_buttons(dfd *defender);
 
+void add_to_list_img(node_img **node, anim_img *img);
+
+void setup_first_img(node_img **node, anim_img *img);
+
 #endif
