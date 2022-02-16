@@ -6,6 +6,7 @@
 */
 
 #include "events.h"
+#include "game.h"
 
 /*
  * Récupération des events de la window
@@ -18,7 +19,7 @@ void poll_events(my_defender_t *my_defender, sfRenderWindow *window)
     while (sfRenderWindow_pollEvent(my_defender->window->window, &event)) {
         close_event(my_defender->window, event);
         mouse_pressed_event(my_defender, event);
-        if (event.type == sfEvtMouseButtonReleased)
+        if (event.type == sfEvtMouseButtonReleased && my_defender->drag->state == NOTHING)
             check_on_un_click(my_defender);
     }
 }
