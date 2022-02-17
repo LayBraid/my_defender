@@ -7,6 +7,7 @@
 
 #include "actions.h"
 #include "utils.h"
+#include "game.h"
 
 /*
  * Fonction appelée quand on clique sur le bouton play au début du jeu
