@@ -19,7 +19,7 @@ node_button *button, sfVector2i mouse)
          (float) mouse.x < button->button->x_click + button->button->x_max &&
          (float) mouse.y > button->button->y_click &&
          (float) mouse.y < button->button->y_click + button->button->y_max)) {
-        printf("%d\n", button->id);
+        defender->drag->id_building = button->id + 3;
         return;
     }
 }
@@ -32,6 +32,7 @@ void drag_and_drop(my_defender_t *defender)
     if (defender->drag->state != NOTHING)
         return;
     defender->drag->state = BUILDING;
+    printf("\nswitch\n");
     while (tmp->id < tmp->next->id) {
         check_on_button(defender, tmp, mu);
         tmp = tmp->next;

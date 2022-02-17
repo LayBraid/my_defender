@@ -17,9 +17,9 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/utils/*.c) \
 	  $(wildcard src/utils/texts/*.c) \
 	  $(wildcard src/utils/animations/*.c) \
-	  $(wildcard src/events/buttons/*.c) \
 	  $(wildcard src/events/*.c) \
-	  $(wildcard src/events/keys/*.c)
+	  $(wildcard src/events/buttons/*.c) \
+	  $(wildcard src/events/keys/*.c) \
 
 TESTS =
 
