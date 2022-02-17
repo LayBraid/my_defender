@@ -8,12 +8,10 @@
 #ifndef MYRUNNER_UTILS_H
     #define MYRUNNER_UTILS_H
 
-    #include "game.h"
+    #include "struct.h"
 
     #include <sys/stat.h>
     #include <sys/fcntl.h>
-
-typedef my_defender_t dfd;
 
 int switch_cursor(my_defender_t *my_defender, int nb);
 

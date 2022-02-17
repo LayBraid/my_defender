@@ -91,4 +91,6 @@ typedef struct my_defender_data {
     d_d_t *drag;
 } my_defender_t;
 
+typedef my_defender_t dfd;
+
 #endif
