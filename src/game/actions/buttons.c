@@ -27,6 +27,12 @@ void quit_button(my_defender_pointer *defender)
     quit_game((my_defender_t *) defender);
 }
 
+/*
+ * Redirection pour la fonction de drag and drop
+ * je dois passer par une redirection pour que le cast de la structure
+ * ne bug pas
+ */
+
 void d_and_d(my_defender_pointer *defender)
 {
     drag_and_drop((my_defender_t *) defender);
