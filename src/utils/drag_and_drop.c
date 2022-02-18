@@ -31,9 +31,6 @@ void draw_image(dfd *df, int id)
 void draw_my_drag(dfd *df)
 {
     sfVector2i mu = sfMouse_getPositionRenderWindow(df->window->window);
-    sfVector2f muf;
-    muf.x = (float) mu.x;
-    muf.y = (float) mu.y;
-    update_position_img(df, muf, df->drag->id_building);
+    update_position_img(df, vector_if(mu), df->drag->id_building);
     draw_image(df, df->drag->id_building);
 }
