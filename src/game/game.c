@@ -28,8 +28,8 @@
 void game_launch(void)
 {
     my_defender_t *my_defender = malloc(sizeof(my_defender_t));
-    sfColor color = sfColor_fromRGB(60, 63, 78);
     setup_game(my_defender);
+    sfColor color = sfColor_fromRGB(60, 63, 78);
     while (sfRenderWindow_isOpen(my_defender->window->window)) {
         sfRenderWindow_clear(my_defender->window->window, color);
         global_steps(my_defender);
