@@ -8,13 +8,14 @@
 #include <printf.h>
 #include "struct.h"
 #include "game.h"
+#include "utils.h"
 
 //TODO Bouton 9 == Image 12
 
 void check_on_button(my_defender_t *defender,
 node_button *button, sfVector2i mouse)
 {
-    if (button->button->step_display == defender->step &&
+    if (display(button->button->step_display, defender->step) &&
         ((float) mouse.x > button->button->x_click &&
          (float) mouse.x < button->button->x_click + button->button->x_max &&
          (float) mouse.y > button->button->y_click &&
@@ -31,11 +32,10 @@ void drag_and_drop(my_defender_t *defender)
 
     if (defender->drag->state != NOTHING)
         return;
-    defender->drag->state = BUILDING;
-    printf("\nswitch\n");
     while (tmp->id < tmp->next->id) {
         check_on_button(defender, tmp, mu);
         tmp = tmp->next;
     }
     check_on_button(defender, tmp, mu);
+    defender->drag->state = BUILDING;
 }
