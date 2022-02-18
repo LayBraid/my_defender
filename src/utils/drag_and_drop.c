@@ -5,7 +5,6 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "game.h"
 #include "utils.h"
 
@@ -15,6 +14,8 @@ void update_position_img(dfd * df, sfVector2f mouse, int id)
 
     while (tmp->id != id)
         tmp = tmp->next;
+    mouse.x += df->drag->x_correction;
+    mouse.y += df->drag->y_correction;
     sfSprite_setPosition(tmp->img->sprite, mouse);
 }
 
