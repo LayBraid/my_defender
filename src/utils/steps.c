@@ -5,7 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include "../../include/utils.h"
+#include "utils.h"
+#include "game.h"
 
 /*
  * Fonction qui nous permet de switch de step
@@ -21,4 +22,13 @@ void switch_step(my_defender_t *my_defender, int x)
         switch_cursor(my_defender, 64);
     if (x == 2 || x == 3)
         switch_cursor(my_defender, 64);*/
+}
+
+int display(int step, int actual)
+{
+    if (step == actual)
+        return 1;
+    if (step == MAIN_DRAG && (actual == MAIN || actual == DRAG))
+        return 1;
+    return 0;
 }

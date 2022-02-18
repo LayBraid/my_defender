@@ -35,4 +35,6 @@ void draw_emeralds(dfd *my_defender);
 
 void draw_my_drag(dfd *df);
 
+int display(int step, int actual);
+
 #endif
