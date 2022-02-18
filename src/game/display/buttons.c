@@ -1,23 +1,24 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_defender
+** my_df
 ** File description:
 ** No file there , just an epitech header example
 */
 
 #include "game.h"
+#include "utils.h"
 
-void display_buttons(my_defender_t *defender)
+void display_buttons(dfd *df)
 {
-    node_button *tmp = defender->list_buttons;
+    node_button *tmp = df->list_buttons;
 
     while (tmp->id < tmp->next->id) {
-        if (tmp->button->step_display == defender->step)
-            sfRenderWindow_drawSprite(defender->window->window,
+        if (display(tmp->button->step_display, df->step))
+            sfRenderWindow_drawSprite(df->window->window,
             tmp->button->button->sprite, NULL);
         tmp = tmp->next;
     }
-    if (tmp->button->step_display == defender->step)
-        sfRenderWindow_drawSprite(defender->window->window,
+    if (display(tmp->button->step_display, df->step))
+        sfRenderWindow_drawSprite(df->window->window,
         tmp->button->button->sprite, NULL);
 }

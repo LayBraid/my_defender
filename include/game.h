@@ -22,6 +22,8 @@ enum Steps {
     MAIN,
     HELP,
     SETTINGS,
+    DRAG,
+    MAIN_DRAG,
     NEVER,
 };
 

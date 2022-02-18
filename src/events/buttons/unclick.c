@@ -11,7 +11,7 @@
 void un_click_button(my_defender_t *defender,
 node_button *button, sfVector2i mouse)
 {
-    if (button->button->step_display == defender->step &&
+    if (display(button->button->step_display, defender->step) &&
         ((float) mouse.x > button->button->x_click &&
          (float) mouse.x < button->button->x_click + button->button->x_max &&
          (float) mouse.y > button->button->y_click &&

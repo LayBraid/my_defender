@@ -10,7 +10,7 @@
 
 void check_button(node_button *button, int step, sfVector2i mouse)
 {
-    if (button->button->step_display == step &&
+    if (display(button->button->step_display, step) &&
         ((float) mouse.x > button->button->x_click &&
          (float) mouse.x < button->button->x_click + button->button->x_max &&
          (float) mouse.y > button->button->y_click &&
