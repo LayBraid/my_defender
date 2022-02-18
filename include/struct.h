@@ -74,6 +74,8 @@ typedef struct clocks_struct {
 typedef struct drag_and_drop_struct {
     int state;
     int id_building;
+    float x_correction;
+    float y_correction;
 } d_d_t;
 
 typedef struct my_defender_data {
