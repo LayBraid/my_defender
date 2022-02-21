@@ -37,4 +37,5 @@ void drag_and_drop(dfd *df)
     }
     check_on_button(df, tmp, mu);
     df->drag->state = BUILDING;
+    switch_step(df, DRAG);
 }

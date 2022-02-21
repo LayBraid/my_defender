@@ -48,6 +48,168 @@ cf MISSILE_4[12] = {1441, 755,580, 1843, 110, 110, 2, 1456, 770, 80, 80,MAIN_DRA
 cf PLANE_1[12] = {1441, 906,910, 1403, 110, 110, 2, 1456, 921, 80, 80,MAIN_DRAG};
 cf PLANE_2[12] = {1541, 906,910, 1513, 110, 110, 2, 1556, 921, 80, 80,MAIN_DRAG};
 
+cf P_1_1[12] = {13, 3, 0, 2805, 110, 110, 2, 28, 18, 80, 80, DRAG};
+cf P_2_1[12] = {109, 3, 0, 2805, 110, 110, 2, 124, 18, 80, 80, DRAG};
+cf P_3_1[12] = {205, 3, 0, 2805, 110, 110, 2, 220, 18, 80, 80, DRAG};
+cf P_4_1[12] = {301, 3, 0, 2805, 110, 110, 2, 316, 18, 80, 80, DRAG};
+cf P_5_1[12] = {397, 3, 0, 2805, 110, 110, 2, 412, 18, 80, 80, DRAG};
+cf P_6_1[12] = {493, 3, 0, 2805, 110, 110, 2, 508, 18, 80, 80, DRAG};
+cf P_7_1[12] = {589, 3, 0, 2805, 110, 110, 2, 604, 18, 80, 80, DRAG};
+cf P_8_1[12] = {685, 3, 0, 2805, 110, 110, 2, 700, 18, 80, 80, DRAG};
+cf P_9_1[12] = {781, 3, 0, 2805, 110, 110, 2, 796, 18, 80, 80, DRAG};
+cf P_10_1[12] = {877, 3, 0, 2805, 110, 110, 2, 892, 18, 80, 80, DRAG};
+cf P_11_1[12] = {973, 3, 0, 2805, 110, 110, 2, 988, 18, 80, 80, DRAG};
+cf P_12_1[12] = {1069, 3, 0, 2805, 110, 110, 2, 1084, 18, 80, 80, DRAG};
+cf P_13_1[12] = {1165, 3, 0, 2805, 110, 110, 2, 1180, 18, 80, 80, DRAG};
+cf P_14_1[12] = {1261, 3, 0, 2805, 110, 110, 2, 1276, 18, 80, 80, DRAG};
+
+cf P_1_2[12] = {13, 99, 0, 2805, 110, 110, 2, 28, 104, 80, 80, DRAG};
+cf P_2_2[12] = {109, 99, 0, 2805, 110, 110, 2, 124, 104, 80, 80, DRAG};
+cf P_3_2[12] = {205, 99, 0, 2805, 110, 110, 2, 220, 104, 80, 80, DRAG};
+cf P_4_2[12] = {301, 99, 0, 2805, 110, 110, 2, 316, 104, 80, 80, DRAG};
+cf P_5_2[12] = {397, 99, 0, 2805, 110, 110, 2, 412, 104, 80, 80, DRAG};
+cf P_6_2[12] = {493, 99, 0, 2805, 110, 110, 2, 508, 104, 80, 80, DRAG};
+cf P_7_2[12] = {589, 99, 0, 2805, 110, 110, 2, 604, 104, 80, 80, DRAG};
+cf P_8_2[12] = {685, 99, 0, 2805, 110, 110, 2, 700, 104, 80, 80, DRAG};
+cf P_9_2[12] = {781, 99, 0, 2805, 110, 110, 2, 796, 104, 80, 80, DRAG};
+cf P_10_2[12] = {877, 99, 0, 2805, 110, 110, 2, 892, 104, 80, 80, DRAG};
+cf P_11_2[12] = {973, 99, 0, 2805, 110, 110, 2, 988, 104, 80, 80, DRAG};
+cf P_12_2[12] = {1069, 99, 0, 2805, 110, 110, 2, 1084, 104, 80, 80, DRAG};
+cf P_13_2[12] = {1165, 99, 0, 2805, 110, 110, 2, 1180, 104, 80, 80, DRAG};
+cf P_14_2[12] = {1261, 99, 0, 2805, 110, 110, 2, 1276, 104, 80, 80, DRAG};
+
+cf P_1_3[12] = {13, 195, 0, 2805, 110, 110, 2, 28, 200, 80, 80, DRAG};
+cf P_2_3[12] = {109, 195, 0, 2805, 110, 110, 2, 124, 200, 80, 80, DRAG};
+cf P_3_3[12] = {205, 195, 0, 2805, 110, 110, 2, 220, 200, 80, 80, DRAG};
+cf P_4_3[12] = {301, 195, 0, 2805, 110, 110, 2, 316, 200, 80, 80, DRAG};
+cf P_5_3[12] = {397, 195, 0, 2805, 110, 110, 2, 412, 200, 80, 80, DRAG};
+cf P_6_3[12] = {493, 195, 0, 2805, 110, 110, 2, 508, 200, 80, 80, DRAG};
+cf P_7_3[12] = {589, 195, 0, 2805, 110, 110, 2, 604, 200, 80, 80, DRAG};
+cf P_8_3[12] = {685, 195, 0, 2805, 110, 110, 2, 700, 200, 80, 80, DRAG};
+cf P_9_3[12] = {781, 195, 0, 2805, 110, 110, 2, 796, 200, 80, 80, DRAG};
+cf P_10_3[12] = {877, 195, 0, 2805, 110, 110, 2, 892, 200, 80, 80, DRAG};
+cf P_11_3[12] = {973, 195, 0, 2805, 110, 110, 2, 988, 200, 80, 80, DRAG};
+cf P_12_3[12] = {1069, 195, 0, 2805, 110, 110, 2, 1084, 200, 80, 80, DRAG};
+cf P_13_3[12] = {1165, 195, 0, 2805, 110, 110, 2, 1180, 200, 80, 80, DRAG};
+cf P_14_3[12] = {1261, 195, 0, 2805, 110, 110, 2, 1276, 200, 80, 80, DRAG};
+
+cf P_1_4[12] = {13, 291, 0, 2805, 110, 110, 2, 28, 296, 80, 80, DRAG};
+cf P_2_4[12] = {109, 291, 0, 2805, 110, 110, 2, 124, 296, 80, 80, DRAG};
+cf P_3_4[12] = {205, 291, 0, 2805, 110, 110, 2, 220, 296, 80, 80, DRAG};
+cf P_4_4[12] = {301, 291, 0, 2805, 110, 110, 2, 316, 296, 80, 80, DRAG};
+cf P_5_4[12] = {397, 291, 0, 2805, 110, 110, 2, 412, 296, 80, 80, DRAG};
+cf P_6_4[12] = {493, 291, 0, 2805, 110, 110, 2, 508, 296, 80, 80, DRAG};
+cf P_7_4[12] = {589, 291, 0, 2805, 110, 110, 2, 604, 296, 80, 80, DRAG};
+cf P_8_4[12] = {685, 291, 0, 2805, 110, 110, 2, 700, 296, 80, 80, DRAG};
+cf P_9_4[12] = {781, 291, 0, 2805, 110, 110, 2, 796, 296, 80, 80, DRAG};
+cf P_10_4[12] = {877, 291, 0, 2805, 110, 110, 2, 892, 296, 80, 80, DRAG};
+cf P_11_4[12] = {973, 291, 0, 2805, 110, 110, 2, 988, 296, 80, 80, DRAG};
+cf P_12_4[12] = {1069, 291, 0, 2805, 110, 110, 2, 1084, 296, 80, 80, DRAG};
+cf P_13_4[12] = {1165, 291, 0, 2805, 110, 110, 2, 1180, 296, 80, 80, DRAG};
+cf P_14_4[12] = {1261, 291, 0, 2805, 110, 110, 2, 1276, 296, 80, 80, DRAG};
+
+cf P_1_5[12] = {13, 387, 0, 2805, 110, 110, 2, 28, 392, 80, 80, DRAG};
+cf P_2_5[12] = {109, 387, 0, 2805, 110, 110, 2, 124, 392, 80, 80, DRAG};
+cf P_3_5[12] = {205, 387, 0, 2805, 110, 110, 2, 220, 392, 80, 80, DRAG};
+cf P_4_5[12] = {301, 387, 0, 2805, 110, 110, 2, 316, 392, 80, 80, DRAG};
+cf P_5_5[12] = {397, 387, 0, 2805, 110, 110, 2, 412, 392, 80, 80, DRAG};
+cf P_6_5[12] = {493, 387, 0, 2805, 110, 110, 2, 508, 392, 80, 80, DRAG};
+cf P_7_5[12] = {589, 387, 0, 2805, 110, 110, 2, 604, 392, 80, 80, DRAG};
+cf P_8_5[12] = {685, 387, 0, 2805, 110, 110, 2, 700, 392, 80, 80, DRAG};
+cf P_9_5[12] = {781, 387, 0, 2805, 110, 110, 2, 796, 392, 80, 80, DRAG};
+cf P_10_5[12] = {877, 387, 0, 2805, 110, 110, 2, 892, 392, 80, 80, DRAG};
+cf P_11_5[12] = {973, 387, 0, 2805, 110, 110, 2, 988, 392, 80, 80, DRAG};
+cf P_12_5[12] = {1069, 387, 0, 2805, 110, 110, 2, 1084, 392, 80, 80, DRAG};
+cf P_13_5[12] = {1165, 387, 0, 2805, 110, 110, 2, 1180, 392, 80, 80, DRAG};
+cf P_14_5[12] = {1261, 387, 0, 2805, 110, 110, 2, 1276, 392, 80, 80, DRAG};
+
+cf P_1_6[12] = {13, 483, 0, 2805, 110, 110, 2, 28, 488, 80, 80, DRAG};
+cf P_2_6[12] = {109, 483, 0, 2805, 110, 110, 2, 124, 488, 80, 80, DRAG};
+
+/*
+ * Suite de l'initialisation des boutons
+ */
+
+node_button *re3_next_buttons(dfd *df, node_button *node)
+{
+    add_button(&node, setup_button(df, P_12_4, nothing));
+    add_button(&node, setup_button(df, P_13_4, nothing));
+    add_button(&node, setup_button(df, P_14_4, nothing));
+    add_button(&node, setup_button(df, P_1_5, nothing));
+    add_button(&node, setup_button(df, P_2_5, nothing));
+    add_button(&node, setup_button(df, P_3_5, nothing));
+    add_button(&node, setup_button(df, P_4_5, nothing));
+    add_button(&node, setup_button(df, P_5_5, nothing));
+    add_button(&node, setup_button(df, P_6_5, nothing));
+    add_button(&node, setup_button(df, P_7_5, nothing));
+    add_button(&node, setup_button(df, P_8_5, nothing));
+    add_button(&node, setup_button(df, P_9_5, nothing));
+    add_button(&node, setup_button(df, P_10_5, nothing));
+    add_button(&node, setup_button(df, P_11_5, nothing));
+    add_button(&node, setup_button(df, P_12_5, nothing));
+    add_button(&node, setup_button(df, P_13_5, nothing));
+    add_button(&node, setup_button(df, P_14_5, nothing));
+    add_button(&node, setup_button(df, P_1_6, nothing));
+    add_button(&node, setup_button(df, P_2_6, nothing));
+    return re4_next_buttons(df, node);
+}
+
+/*
+ * Suite de l'initialisation des boutons
+ */
+
+node_button *re2_next_buttons(dfd *df, node_button *node)
+{
+    add_button(&node, setup_button(df, P_7_3, nothing));
+    add_button(&node, setup_button(df, P_8_3, nothing));
+    add_button(&node, setup_button(df, P_9_3, nothing));
+    add_button(&node, setup_button(df, P_10_3, nothing));
+    add_button(&node, setup_button(df, P_11_3, nothing));
+    add_button(&node, setup_button(df, P_12_3, nothing));
+    add_button(&node, setup_button(df, P_13_3, nothing));
+    add_button(&node, setup_button(df, P_14_3, nothing));
+    add_button(&node, setup_button(df, P_1_4, nothing));
+    add_button(&node, setup_button(df, P_2_4, nothing));
+    add_button(&node, setup_button(df, P_3_4, nothing));
+    add_button(&node, setup_button(df, P_4_4, nothing));
+    add_button(&node, setup_button(df, P_5_4, nothing));
+    add_button(&node, setup_button(df, P_6_4, nothing));
+    add_button(&node, setup_button(df, P_7_4, nothing));
+    add_button(&node, setup_button(df, P_8_4, nothing));
+    add_button(&node, setup_button(df, P_9_4, nothing));
+    add_button(&node, setup_button(df, P_10_4, nothing));
+    add_button(&node, setup_button(df, P_11_4, nothing));
+    return re3_next_buttons(df, node);
+}
+
+/*
+ * Suite de l'initialisation des boutons
+ */
+
+node_button *re_next_buttons(dfd *df, node_button *node)
+{
+    add_button(&node, setup_button(df, P_2_2, nothing));
+    add_button(&node, setup_button(df, P_3_2, nothing));
+    add_button(&node, setup_button(df, P_4_2, nothing));
+    add_button(&node, setup_button(df, P_5_2, nothing));
+    add_button(&node, setup_button(df, P_6_2, nothing));
+    add_button(&node, setup_button(df, P_7_2, nothing));
+    add_button(&node, setup_button(df, P_8_2, nothing));
+    add_button(&node, setup_button(df, P_9_2, nothing));
+    add_button(&node, setup_button(df, P_10_2, nothing));
+    add_button(&node, setup_button(df, P_11_2, nothing));
+    add_button(&node, setup_button(df, P_12_2, nothing));
+    add_button(&node, setup_button(df, P_13_2, nothing));
+    add_button(&node, setup_button(df, P_14_2, nothing));
+    add_button(&node, setup_button(df, P_1_3, nothing));
+    add_button(&node, setup_button(df, P_2_3, nothing));
+    add_button(&node, setup_button(df, P_3_3, nothing));
+    add_button(&node, setup_button(df, P_4_3, nothing));
+    add_button(&node, setup_button(df, P_5_3, nothing));
+    add_button(&node, setup_button(df, P_6_3, nothing));
+    return re2_next_buttons(df, node);
+}
+
 /*
  * Suite de l'initialisation des boutons
  */
@@ -58,7 +220,22 @@ node_button *next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, MISSILE_4, quit_button));
     add_button(&node, setup_button(df, PLANE_1, quit_button));
     add_button(&node, setup_button(df, PLANE_2, quit_button));
-    return node;
+    add_button(&node, setup_button(df, P_1_1, nothing));
+    add_button(&node, setup_button(df, P_2_1, nothing));
+    add_button(&node, setup_button(df, P_3_1, nothing));
+    add_button(&node, setup_button(df, P_4_1, nothing));
+    add_button(&node, setup_button(df, P_5_1, nothing));
+    add_button(&node, setup_button(df, P_6_1, nothing));
+    add_button(&node, setup_button(df, P_7_1, nothing));
+    add_button(&node, setup_button(df, P_8_1, nothing));
+    add_button(&node, setup_button(df, P_9_1, nothing));
+    add_button(&node, setup_button(df, P_10_1, nothing));
+    add_button(&node, setup_button(df, P_11_1, nothing));
+    add_button(&node, setup_button(df, P_12_1, nothing));
+    add_button(&node, setup_button(df, P_13_1, nothing));
+    add_button(&node, setup_button(df, P_14_1, nothing));
+    add_button(&node, setup_button(df, P_1_2, nothing));
+    return re_next_buttons(df, node);
 }
 
 /*
