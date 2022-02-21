@@ -30,9 +30,9 @@ void set_best_score(my_defender_t *my_defender)
         my_putstr("Cannot open file 'data/data'\n");
         exit(84);
     }
-    if (my_defender->score > my_defender->best_score) {
-        fwrite(my_itoa(my_defender->score), 1,
-        my_strlen(my_itoa(my_defender->score)), inputFile);
+    if (my_defender->wave > my_defender->best_score) {
+        fwrite(my_itoa(my_defender->wave), 1,
+        my_strlen(my_itoa(my_defender->wave)), inputFile);
     } else {
         fwrite(my_itoa(my_defender->best_score), 1,
         my_strlen(my_itoa(my_defender->best_score)), inputFile);

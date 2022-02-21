@@ -86,6 +86,7 @@ typedef struct my_defender_data {
     int step;
     int coins;
     int emeralds;
+    int wave;
     clocks_t *clocks;
     int fps;
     int best_score;

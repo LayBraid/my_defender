@@ -29,6 +29,7 @@ void setup_game(my_defender_t *defender)
     defender->texture = sfTexture_createFromFile("resources/global.png", NULL);
     defender->coins = 0;
     defender->emeralds = 0;
+    defender->wave = 0;
     defender->list_img = setup_img(defender);
     defender->list_buttons = setup_buttons(defender);
     defender->step = OPEN;
