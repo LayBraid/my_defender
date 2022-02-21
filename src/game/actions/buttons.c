@@ -37,3 +37,12 @@ void d_and_d(my_defender_pointer *defender)
 {
     drag_and_drop((my_defender_t *) defender);
 }
+
+/*
+ * Quand on veut que ça ne fasse rien mais qu'on souhaite l'animation hover
+ */
+
+void nothing(my_defender_pointer *defender)
+{
+    (void) defender;
+}

@@ -16,4 +16,6 @@ void quit_button(my_defender_pointer *defender);
 
 void d_and_d(my_defender_pointer *defender);
 
+void nothing(my_defender_pointer *defender);
+
 #endif
