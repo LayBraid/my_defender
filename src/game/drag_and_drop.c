@@ -5,6 +5,7 @@
 ** No file there , just an epitech header example
 */
 
+#include <printf.h>
 #include "struct.h"
 #include "game.h"
 #include "utils.h"
@@ -42,5 +43,10 @@ void drag_and_drop(dfd *df)
 
 void drag_and_drop_launch(dfd *df)
 {
-
+    if (df->drag->state == NOTHING)
+        return;
+    df->drag->state = NOTHING;
+    df->drag->id_building = -1;
+    df->drag->x_correction = 0;
+    df->drag->y_correction = 0;
 }
