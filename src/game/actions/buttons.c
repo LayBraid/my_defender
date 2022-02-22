@@ -46,3 +46,8 @@ void nothing(my_defender_pointer *defender)
 {
     (void) defender;
 }
+
+void drag_unclick(my_defender_pointer *defender)
+{
+    drag_and_drop_launch((my_defender_t *) defender);
+}

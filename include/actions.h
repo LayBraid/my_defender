@@ -18,4 +18,6 @@ void d_and_d(my_defender_pointer *defender);
 
 void nothing(my_defender_pointer *defender);
 
+void drag_unclick(my_defender_pointer *defender);
+
 #endif

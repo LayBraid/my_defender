@@ -39,3 +39,8 @@ void drag_and_drop(dfd *df)
     df->drag->state = BUILDING;
     switch_step(df, DRAG);
 }
+
+void drag_and_drop_launch(dfd *df)
+{
+
+}

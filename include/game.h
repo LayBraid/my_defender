@@ -47,4 +47,6 @@ void display_img(my_defender_t *defender);
 
 void drag_and_drop(my_defender_t *defender);
 
+void drag_and_drop_launch(dfd *df);
+
 #endif

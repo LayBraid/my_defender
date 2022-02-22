@@ -91,22 +91,22 @@ cf P_14_9[12] = {1261, 771, 0, 2805, 110, 110, 2, 1276, 776, 80, 80, DRAG};
 
 node_button *re6_next_buttons(dfd *df, node_button *node)
 {
-    add_button(&node, setup_button(df, P_13_8, nothing));
-    add_button(&node, setup_button(df, P_14_8, nothing));
-    add_button(&node, setup_button(df, P_1_9, nothing));
-    add_button(&node, setup_button(df, P_2_9, nothing));
-    add_button(&node, setup_button(df, P_3_9, nothing));
-    add_button(&node, setup_button(df, P_4_9, nothing));
-    add_button(&node, setup_button(df, P_5_9, nothing));
-    add_button(&node, setup_button(df, P_6_9, nothing));
-    add_button(&node, setup_button(df, P_7_9, nothing));
-    add_button(&node, setup_button(df, P_8_9, nothing));
-    add_button(&node, setup_button(df, P_9_9, nothing));
-    add_button(&node, setup_button(df, P_10_9, nothing));
-    add_button(&node, setup_button(df, P_11_9, nothing));
-    add_button(&node, setup_button(df, P_12_9, nothing));
-    add_button(&node, setup_button(df, P_13_9, nothing));
-    add_button(&node, setup_button(df, P_14_9, nothing));
+    add_button(&node, setup_button(df, P_13_8, drag_unclick));
+    add_button(&node, setup_button(df, P_14_8, drag_unclick));
+    add_button(&node, setup_button(df, P_1_9, drag_unclick));
+    add_button(&node, setup_button(df, P_2_9, drag_unclick));
+    add_button(&node, setup_button(df, P_3_9, drag_unclick));
+    add_button(&node, setup_button(df, P_4_9, drag_unclick));
+    add_button(&node, setup_button(df, P_5_9, drag_unclick));
+    add_button(&node, setup_button(df, P_6_9, drag_unclick));
+    add_button(&node, setup_button(df, P_7_9, drag_unclick));
+    add_button(&node, setup_button(df, P_8_9, drag_unclick));
+    add_button(&node, setup_button(df, P_9_9, drag_unclick));
+    add_button(&node, setup_button(df, P_10_9, drag_unclick));
+    add_button(&node, setup_button(df, P_11_9, drag_unclick));
+    add_button(&node, setup_button(df, P_12_9, drag_unclick));
+    add_button(&node, setup_button(df, P_13_9, drag_unclick));
+    add_button(&node, setup_button(df, P_14_9, drag_unclick));
     return node;
 }
 
@@ -116,25 +116,25 @@ node_button *re6_next_buttons(dfd *df, node_button *node)
 
 node_button *re5_next_buttons(dfd *df, node_button *node)
 {
-    add_button(&node, setup_button(df, P_8_7, nothing));
-    add_button(&node, setup_button(df, P_9_7, nothing));
-    add_button(&node, setup_button(df, P_10_7, nothing));
-    add_button(&node, setup_button(df, P_11_7, nothing));
-    add_button(&node, setup_button(df, P_12_7, nothing));
-    add_button(&node, setup_button(df, P_13_7, nothing));
-    add_button(&node, setup_button(df, P_14_7, nothing));
-    add_button(&node, setup_button(df, P_1_8, nothing));
-    add_button(&node, setup_button(df, P_2_8, nothing));
-    add_button(&node, setup_button(df, P_3_8, nothing));
-    add_button(&node, setup_button(df, P_4_8, nothing));
-    add_button(&node, setup_button(df, P_5_8, nothing));
-    add_button(&node, setup_button(df, P_6_8, nothing));
-    add_button(&node, setup_button(df, P_7_8, nothing));
-    add_button(&node, setup_button(df, P_8_8, nothing));
-    add_button(&node, setup_button(df, P_9_8, nothing));
-    add_button(&node, setup_button(df, P_10_8, nothing));
-    add_button(&node, setup_button(df, P_11_8, nothing));
-    add_button(&node, setup_button(df, P_12_8, nothing));
+    add_button(&node, setup_button(df, P_8_7, drag_unclick));
+    add_button(&node, setup_button(df, P_9_7, drag_unclick));
+    add_button(&node, setup_button(df, P_10_7, drag_unclick));
+    add_button(&node, setup_button(df, P_11_7, drag_unclick));
+    add_button(&node, setup_button(df, P_12_7, drag_unclick));
+    add_button(&node, setup_button(df, P_13_7, drag_unclick));
+    add_button(&node, setup_button(df, P_14_7, drag_unclick));
+    add_button(&node, setup_button(df, P_1_8, drag_unclick));
+    add_button(&node, setup_button(df, P_2_8, drag_unclick));
+    add_button(&node, setup_button(df, P_3_8, drag_unclick));
+    add_button(&node, setup_button(df, P_4_8, drag_unclick));
+    add_button(&node, setup_button(df, P_5_8, drag_unclick));
+    add_button(&node, setup_button(df, P_6_8, drag_unclick));
+    add_button(&node, setup_button(df, P_7_8, drag_unclick));
+    add_button(&node, setup_button(df, P_8_8, drag_unclick));
+    add_button(&node, setup_button(df, P_9_8, drag_unclick));
+    add_button(&node, setup_button(df, P_10_8, drag_unclick));
+    add_button(&node, setup_button(df, P_11_8, drag_unclick));
+    add_button(&node, setup_button(df, P_12_8, drag_unclick));
     return re6_next_buttons(df, node);
 }
 
@@ -144,24 +144,24 @@ node_button *re5_next_buttons(dfd *df, node_button *node)
 
 node_button *re4_next_buttons(dfd *df, node_button *node)
 {
-    add_button(&node, setup_button(df, P_3_6, nothing));
-    add_button(&node, setup_button(df, P_4_6, nothing));
-    add_button(&node, setup_button(df, P_5_6, nothing));
-    add_button(&node, setup_button(df, P_6_6, nothing));
-    add_button(&node, setup_button(df, P_7_6, nothing));
-    add_button(&node, setup_button(df, P_8_6, nothing));
-    add_button(&node, setup_button(df, P_9_6, nothing));
-    add_button(&node, setup_button(df, P_10_6, nothing));
-    add_button(&node, setup_button(df, P_11_6, nothing));
-    add_button(&node, setup_button(df, P_12_6, nothing));
-    add_button(&node, setup_button(df, P_13_6, nothing));
-    add_button(&node, setup_button(df, P_14_6, nothing));
-    add_button(&node, setup_button(df, P_1_7, nothing));
-    add_button(&node, setup_button(df, P_2_7, nothing));
-    add_button(&node, setup_button(df, P_3_7, nothing));
-    add_button(&node, setup_button(df, P_4_7, nothing));
-    add_button(&node, setup_button(df, P_5_7, nothing));
-    add_button(&node, setup_button(df, P_6_7, nothing));
-    add_button(&node, setup_button(df, P_7_7, nothing));
+    add_button(&node, setup_button(df, P_3_6, drag_unclick));
+    add_button(&node, setup_button(df, P_4_6, drag_unclick));
+    add_button(&node, setup_button(df, P_5_6, drag_unclick));
+    add_button(&node, setup_button(df, P_6_6, drag_unclick));
+    add_button(&node, setup_button(df, P_7_6, drag_unclick));
+    add_button(&node, setup_button(df, P_8_6, drag_unclick));
+    add_button(&node, setup_button(df, P_9_6, drag_unclick));
+    add_button(&node, setup_button(df, P_10_6, drag_unclick));
+    add_button(&node, setup_button(df, P_11_6, drag_unclick));
+    add_button(&node, setup_button(df, P_12_6, drag_unclick));
+    add_button(&node, setup_button(df, P_13_6, drag_unclick));
+    add_button(&node, setup_button(df, P_14_6, drag_unclick));
+    add_button(&node, setup_button(df, P_1_7, drag_unclick));
+    add_button(&node, setup_button(df, P_2_7, drag_unclick));
+    add_button(&node, setup_button(df, P_3_7, drag_unclick));
+    add_button(&node, setup_button(df, P_4_7, drag_unclick));
+    add_button(&node, setup_button(df, P_5_7, drag_unclick));
+    add_button(&node, setup_button(df, P_6_7, drag_unclick));
+    add_button(&node, setup_button(df, P_7_7, drag_unclick));
     return re5_next_buttons(df, node);
 }
