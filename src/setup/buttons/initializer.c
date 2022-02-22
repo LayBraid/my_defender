@@ -218,10 +218,10 @@ node_button *re_next_buttons(dfd *df, node_button *node)
 
 node_button *next_buttons(dfd *df, node_button *node)
 {
-    add_button(&node, setup_button(df, MISSILE_3, quit_button));
-    add_button(&node, setup_button(df, MISSILE_4, quit_button));
-    add_button(&node, setup_button(df, PLANE_1, quit_button));
-    add_button(&node, setup_button(df, PLANE_2, quit_button));
+    add_button(&node, setup_button(df, MISSILE_3, d_and_d));
+    add_button(&node, setup_button(df, MISSILE_4, d_and_d));
+    add_button(&node, setup_button(df, PLANE_1, d_and_d));
+    add_button(&node, setup_button(df, PLANE_2, d_and_d));
     add_button(&node, setup_button(df, P_1_1, drag_unclick));
     add_button(&node, setup_button(df, P_2_1, drag_unclick));
     add_button(&node, setup_button(df, P_3_1, drag_unclick));
