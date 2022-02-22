@@ -49,4 +49,5 @@ void drag_and_drop_launch(dfd *df)
     df->drag->id_building = -1;
     df->drag->x_correction = 0;
     df->drag->y_correction = 0;
+    switch_step(df, MAIN);
 }
