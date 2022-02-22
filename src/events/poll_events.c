@@ -19,7 +19,7 @@ void poll_events(my_defender_t *my_defender, sfRenderWindow *window)
     while (sfRenderWindow_pollEvent(my_defender->window->window, &event)) {
         close_event(my_defender->window, event);
         mouse_pressed_event(my_defender, event);
-        if (event.type == sfEvtMouseButtonReleased && my_defender->drag->state == NOTHING)
+        if (event.type == sfEvtMouseButtonReleased)
             check_on_un_click(my_defender);
     }
 }
