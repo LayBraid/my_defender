@@ -65,6 +65,20 @@ typedef struct node_img_struct {
     struct node_img_struct *next;
 } node_img;
 
+typedef struct building_struct {
+    int type;
+    int id_box;
+    int level;
+    int life;
+    int rate_fire;
+} building_t;
+
+typedef struct node_building_struct {
+    int id;
+    building_t *building;
+    struct node_building_struct *next;
+} node_building;
+
 typedef struct clocks_struct {
     sfClock *clock;
     sfTime time;
