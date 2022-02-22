@@ -23,6 +23,8 @@ void setup_game(my_defender_t *defender)
     defender->drag = malloc(sizeof(d_d_t));
     defender->drag->state = NOTHING;
     defender->drag->id_building = -1;
+    defender->drag->x_correction = 0;
+    defender->drag->y_correction = 0;
     defender->window = setup_window(defender);
     defender->list_img = malloc(sizeof(node_img));
     defender->list_buttons = malloc(sizeof(node_button));
