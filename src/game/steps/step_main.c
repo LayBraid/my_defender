@@ -6,6 +6,7 @@
 */
 
 #include "steps.h"
+#include "utils.h"
 #include "display.h"
 
 /*

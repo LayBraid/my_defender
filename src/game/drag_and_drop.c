@@ -37,7 +37,7 @@ void drag_and_drop(dfd *df)
     }
     check_on_button(df, tmp, mu);
     df->drag->state = BUILDING;
-    switch_step(df, DRAG);
+    switch_step(df, DRAG_1);
 }
 
 void drag_and_drop_launch(dfd *df)
@@ -45,6 +45,9 @@ void drag_and_drop_launch(dfd *df)
     if (df->drag->state == NOTHING)
         return;
     df->drag->state = NOTHING;
+    df->tmp_create->id_box = df->last_unclick;
+    df->tmp_create->type = get_type_building(df->drag->id_building);
+    df->tmp_create->id_build = df->tmp_create->id_box - 12;
     df->drag->id_building = -1;
     df->drag->x_correction = 0;
     df->drag->y_correction = 0;

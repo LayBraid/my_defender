@@ -65,19 +65,33 @@ typedef struct node_img_struct {
     struct node_img_struct *next;
 } node_img;
 
-typedef struct building_struct {
+typedef struct build_struct {
+    anim_img *img;
     int type;
+    int id_build;
     int id_box;
     int level;
     int life;
     int rate_fire;
-} building_t;
+} build_t;
 
-typedef struct node_building_struct {
+typedef struct node_earthly_build_struct {
     int id;
-    building_t *building;
-    struct node_building_struct *next;
-} node_building;
+    build_t *build;
+    struct node_earthly_build_struct *next;
+} node_earthly_build;
+
+typedef struct node_flying_build_struct {
+    int id;
+    build_t *build;
+    struct node_earthly_build_struct *next;
+} node_flying_build;
+
+typedef struct node_movement_struct {
+    int id;
+    int type;
+    struct node_movement_struct *next;
+} node_movement;
 
 typedef struct clocks_struct {
     sfClock *clock;
@@ -97,6 +111,9 @@ typedef struct my_defender_data {
     cursor_t *cursor;
     node_img *list_img;
     node_button *list_buttons;
+    node_earthly_build *earthly_build;
+    node_flying_build *flying_build;
+    build_t *tmp_create;
     int step;
     int coins;
     int emeralds;
@@ -106,6 +123,8 @@ typedef struct my_defender_data {
     int best_score;
     sfTexture *texture;
     d_d_t *drag;
+    int last_unclick;
+    node_movement *movement;
 } my_defender_t;
 
 typedef my_defender_t dfd;
