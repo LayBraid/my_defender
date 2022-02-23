@@ -14,7 +14,7 @@ void exit_finder(int ** map)
         if (map[index][i] == 0) {
             map[index][i] = 1;
         }
-        if(index == maxDeLaMap) {
+        if(index == 3) {
             index--;
         }
         for(i = 0; map[index][i] == '\0'; i = 0 ) {

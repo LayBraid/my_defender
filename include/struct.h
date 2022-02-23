@@ -71,8 +71,7 @@ typedef struct build_struct {
     int id_build;
     int id_box;
     int level;
-    int life;
-    int rate_fire;
+    float life;
 } build_t;
 
 typedef struct node_earthly_build_struct {
@@ -113,6 +112,7 @@ typedef struct my_defender_data {
     node_button *list_buttons;
     node_earthly_build *earthly_build;
     node_flying_build *flying_build;
+    node_movement *movement;
     build_t *tmp_create;
     int step;
     int coins;
@@ -124,7 +124,6 @@ typedef struct my_defender_data {
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
-    node_movement *movement;
 } my_defender_t;
 
 typedef my_defender_t dfd;

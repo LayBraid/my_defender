@@ -47,4 +47,8 @@ float get_y_box(dfd *df, int box);
 
 float get_r_x_build(int type);
 
+float get_r_y_build(int type);
+
+float get_initial_life(int id_build);
+
 #endif
