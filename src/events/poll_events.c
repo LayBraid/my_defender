@@ -6,7 +6,6 @@
 */
 
 #include "events.h"
-#include "game.h"
 
 /*
  * Récupération des events de la window

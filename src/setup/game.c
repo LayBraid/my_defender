@@ -20,16 +20,18 @@
 
 void setup_game(dfd *df)
 {
-    df->drag = malloc(sizeof(d_d_t));
-    df->drag->state = NOTHING;
-    df->drag->id_building = -1;
-    df->drag->x_correction = 0;
-    df->drag->y_correction = 0;
-    df->last_unclick = -1;
     df->tmp_create = malloc(sizeof(build_t));
     df->window = setup_window(df);
     df->list_img = malloc(sizeof(node_img));
     df->list_buttons = malloc(sizeof(node_button));
+    df->earthly_build = malloc(sizeof(node_earthly_build));
+    df->flying_build = malloc(sizeof(node_flying_build));
+    df->drag = malloc(sizeof(d_d_t));
+    df->drag->id_building = -1;
+    df->drag->state = NOTHING;
+    df->drag->x_correction = 0;
+    df->drag->y_correction = 0;
+    df->last_unclick = -1;
     df->texture = sfTexture_createFromFile("resources/global.png", NULL);
     df->coins = 0;
     df->emeralds = 0;
