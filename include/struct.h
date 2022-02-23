@@ -87,6 +87,12 @@ typedef struct node_flying_build_struct {
     struct node_earthly_build_struct *next;
 } node_flying_build;
 
+typedef struct node_movement_struct {
+    int id;
+    int type;
+    struct node_movement_struct *next;
+} node_movement;
+
 typedef struct clocks_struct {
     sfClock *clock;
     sfTime time;
@@ -118,6 +124,7 @@ typedef struct my_defender_data {
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
+    node_movement *movement;
 } my_defender_t;
 
 typedef my_defender_t dfd;

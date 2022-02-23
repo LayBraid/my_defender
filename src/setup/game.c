@@ -8,6 +8,7 @@
 #include "setup.h"
 #include "my.h"
 #include "game.h"
+#include "roads.h"
 
 /*
  * Fonction appelée pour setup là game au début du programme
@@ -26,6 +27,8 @@ void setup_game(dfd *df)
     df->list_buttons = malloc(sizeof(node_button));
     df->earthly_build = malloc(sizeof(node_earthly_build));
     df->flying_build = malloc(sizeof(node_flying_build));
+    df->movement = malloc(sizeof(node_movement));
+    setup_first_movement(&df->movement, START);
     df->drag = malloc(sizeof(d_d_t));
     df->drag->id_building = -1;
     df->drag->state = NOTHING;

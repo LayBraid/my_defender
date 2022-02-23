@@ -22,6 +22,7 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/events/*.c) \
 	  $(wildcard src/events/buttons/*.c) \
 	  $(wildcard src/events/keys/*.c) \
+	  $(wildcard src/game/roads/logs/*.c) \
 
 TESTS =
 
