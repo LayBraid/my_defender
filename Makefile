@@ -15,6 +15,7 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/buildings/earthly/*.c) \
 	  $(wildcard src/game/display/*.c) \
+	  $(wildcard src/game/display/buildings/*.c) \
 	  $(wildcard src/game/actions/*.c) \
 	  $(wildcard src/utils/*.c) \
 	  $(wildcard src/utils/animations/*.c) \

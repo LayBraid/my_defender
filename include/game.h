@@ -60,10 +60,6 @@ enum DD_State {
 
 void game_launch(void);
 
-void display_buttons(my_defender_t *defender);
-
-void display_img(my_defender_t *defender);
-
 void drag_and_drop(my_defender_t *defender);
 
 void drag_and_drop_launch(dfd *df);

@@ -30,6 +30,10 @@ void add_to_list_build(node_earthly_build **node, build_t *build);
 
 void setup_first_build(node_earthly_build **node, build_t *build);
 
+int get_max_build(node_earthly_build **node);
+
 void add_building(dfd *df);
+
+int numbers_earthly(dfd *df);
 
 #endif

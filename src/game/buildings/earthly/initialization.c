@@ -23,12 +23,20 @@
  * 7: step pour display
  */
 
+int numbers_earthly(dfd *df)
+{
+    if (df->earthly_build->build == NULL)
+        return -1;
+    else
+        return get_max_build(&df->earthly_build);
+}
+
 void add_building(dfd *df)
 {
     cf info[8] = {get_x_box(df, df->tmp_create->id_box),
     get_y_box(df, df->tmp_create->id_box),
     get_r_x_build(df->tmp_create->id_build),
-    get_r_y_build(df->tmp_create->id_build),80,80,0,MAINA};
+    get_r_y_build(df->tmp_create->id_build),110,110,0,MAINA};
     build_t *build = malloc(sizeof(build_t));
     build->id_build = df->tmp_create->id_build;
     build->id_box = df->tmp_create->id_box;

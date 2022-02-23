@@ -57,12 +57,12 @@ float get_r_x_build(int type)
 float get_r_y_build(int type)
 {
     if (type == TOWER_n1 || type == TANK_n2 || type == PLANE_n1)
-        return 1403;
+        return 1403 + 1510;
     if (type == TOWER_n2 || type == MISSILE_n1 || type == PLANE_n2)
-        return 1513;
+        return 1513 + 1510;
     if (type == TOWER_n3 || type == MISSILE_n2)
-        return 1623;
+        return 1623 + 1510;
     if (type == TOWER_n4 || type == MISSILE_n3)
-        return 1733;
-    return 1843;
+        return 1733 + 1510;
+    return 1843 + 1510;
 }

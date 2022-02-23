@@ -12,4 +12,14 @@
 
 void display_img_step_0(my_defender_t *my_defender);
 
+void display_buttons(my_defender_t *defender);
+
+void display_img(my_defender_t *defender);
+
+void display_earthly_building(dfd *df);
+
+void display_flying_building(dfd *df);
+
+void display_buildings(dfd *df);
+
 #endif

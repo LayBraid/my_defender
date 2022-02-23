@@ -8,6 +8,7 @@
 #include "struct.h"
 #include "game.h"
 #include "utils.h"
+#include "buildings.h"
 
 void check_on_button(dfd *df,
 node_button *button, sfVector2i mouse)
@@ -47,9 +48,10 @@ void drag_and_drop_launch(dfd *df)
     df->drag->state = NOTHING;
     df->tmp_create->id_box = df->last_unclick;
     df->tmp_create->type = get_type_building(df->drag->id_building);
-    df->tmp_create->id_build = df->tmp_create->id_box - 12;
+    df->tmp_create->id_build = df->drag->id_building - 12;
     df->drag->id_building = -1;
     df->drag->x_correction = 0;
     df->drag->y_correction = 0;
     switch_step(df, MAIN);
+    add_building(df);
 }
