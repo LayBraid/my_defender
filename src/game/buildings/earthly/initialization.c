@@ -26,12 +26,7 @@ void add_building(dfd *df)
 {
     cf info[8] = {get_x_box(df, df->tmp_create->id_box),
     get_y_box(df, df->tmp_create->id_box),
-    0,
-    0,
-    80,
-    80,
-    0,
-    MAINA};
+    get_r_x_build(df->tmp_create->id_build),0,80,80,0,MAINA};
     anim_img *img = setup_a_anim_img(df, info);
 
 }

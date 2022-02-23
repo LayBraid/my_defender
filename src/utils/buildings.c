@@ -44,3 +44,18 @@ int get_type_building(int id_img)
         return PLANE;
     return -1;
 }
+
+float get_r_x_build(int type)
+{
+    if (type < 5)
+        return 250;
+    if (type < 10)
+        return 580;
+    return 910;
+}
+
+float get_r_y_build(int type)
+{
+    if (type == TOWER_n1 || type == TANK_n2 || type == PLANE_n1)
+        return 1403;
+}

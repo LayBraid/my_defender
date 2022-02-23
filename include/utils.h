@@ -45,4 +45,6 @@ float get_x_box(dfd *df, int box);
 
 float get_y_box(dfd *df, int box);
 
+float get_r_x_build(int type);
+
 #endif

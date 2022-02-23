@@ -22,6 +22,6 @@ void global_steps(my_defender_t *my_defender)
     check_on_hover(my_defender);
     if (my_defender->step == MAIN)
         exe_step_main(my_defender);
-    if (my_defender->drag->state != NOTHING)
-        draw_my_drag(my_defender);
+    //if (my_defender->drag->state == BUILDING)
+        //draw_my_drag(my_defender);
 }
