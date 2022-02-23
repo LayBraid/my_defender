@@ -39,4 +39,10 @@ int display(int step, int actual);
 
 sfVector2f vector_if(sfVector2i vector);
 
+int get_type_building(int id_img);
+
+float get_x_box(dfd *df, int box);
+
+float get_y_box(dfd *df, int box);
+
 #endif

@@ -66,7 +66,9 @@ typedef struct node_img_struct {
 } node_img;
 
 typedef struct build_struct {
+    anim_img *img;
     int type;
+    int id_build;
     int id_box;
     int level;
     int life;
@@ -103,6 +105,9 @@ typedef struct my_defender_data {
     cursor_t *cursor;
     node_img *list_img;
     node_button *list_buttons;
+    node_earthly_build *earthly_build;
+    node_flying_build *flying_build;
+    build_t *tmp_create;
     int step;
     int coins;
     int emeralds;
@@ -112,6 +117,7 @@ typedef struct my_defender_data {
     int best_score;
     sfTexture *texture;
     d_d_t *drag;
+    int last_unclick;
 } my_defender_t;
 
 typedef my_defender_t dfd;

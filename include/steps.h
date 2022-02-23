@@ -8,10 +8,7 @@
 #ifndef MYRUNNER_STEPS_H
     #define MYRUNNER_STEPS_H
 
-    #include "game.h"
     #include "struct.h"
-    #include "utils.h"
-    #include "clocks.h"
 
 void global_steps(my_defender_t *my_defender);
 

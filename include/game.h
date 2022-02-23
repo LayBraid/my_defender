@@ -22,9 +22,25 @@ enum Steps {
     MAIN,
     HELP,
     SETTINGS,
-    DRAG,
-    MAIN_DRAG,
+    DRAG_1,
+    DRAG_2,
+    MAINA,
     NEVER,
+};
+
+enum All_building {
+    TOWER_n1,
+    TOWER_n2,
+    TOWER_n3,
+    TOWER_n4,
+    TANK_n1,
+    TANK_n2,
+    MISSILE_n1,
+    MISSILE_n2,
+    MISSILE_n3,
+    MISSILE_n4,
+    PLANE_n1,
+    PLANE_n2,
 };
 
 enum Earthly_Building {

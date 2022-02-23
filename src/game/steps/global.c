@@ -7,6 +7,8 @@
 
 #include "steps.h"
 #include "events.h"
+#include "game.h"
+#include "utils.h"
 
 /*
  * Première fonction appelée pour appeler seulement les fonctions
