@@ -27,11 +27,14 @@ enum Steps {
     NEVER,
 };
 
-enum Building {
+enum Earthly_Building {
     TOWER,
     TANK,
     MISSILE,
-    PLANE
+};
+
+enum Flying_Building {
+    PLANE,
 };
 
 enum DD_State {

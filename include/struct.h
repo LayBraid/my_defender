@@ -65,19 +65,25 @@ typedef struct node_img_struct {
     struct node_img_struct *next;
 } node_img;
 
-typedef struct building_struct {
+typedef struct build_struct {
     int type;
     int id_box;
     int level;
     int life;
     int rate_fire;
-} building_t;
+} build_t;
 
-typedef struct node_building_struct {
+typedef struct node_earthly_build_struct {
     int id;
-    building_t *building;
-    struct node_building_struct *next;
-} node_building;
+    build_t *build;
+    struct node_earthly_build_struct *next;
+} node_earthly_build;
+
+typedef struct node_flying_build_struct {
+    int id;
+    build_t *build;
+    struct node_earthly_build_struct *next;
+} node_flying_build;
 
 typedef struct clocks_struct {
     sfClock *clock;
