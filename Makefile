@@ -12,6 +12,8 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/setup/img/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/game/steps/*.c) \
+	  $(wildcard src/game/buildings/earthly/*.c) \
+	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/display/*.c) \
 	  $(wildcard src/game/actions/*.c) \
 	  $(wildcard src/utils/*.c) \
@@ -34,14 +36,17 @@ $(NAME): $(OBJ)
 	cd lib/my && make
 	gcc $(OBJ) $(SRC_LIB) $(C_SFML) -o./$(NAME) -g3
 
+.PHONY: all
 all: $(NAME)
 
+.PHONY: fclean
 fclean:
 	cd lib/my && make fclean
 	make clean
 	rm -f $(NAME)
 	rm -f u
 
+.PHONY: clean
 clean:
 	rm -f src/*.o
 	rm -f src/utils/*.o
@@ -63,21 +68,26 @@ clean:
 	rm -rf *.gcno
 	rm -rf *.c.gcov
 
+.PHONY: re
 re:
 	make fclean
 	make
 
+.PHONY: tests_run
 tests_run:
 	gcc $(SRC) $(TESTS_SRC) $(SRC_LIB) $(CFLAGS) -lcriterion -o./u --coverage
 	./unit-tests
 
+.PHONY: debug
 debug:
 	gcc $(SRC) $(SRC_LIB) -o./$(NAME) -g
 
+.PHONY: valgrind
 valgrind:
 	gcc $(SRC) $(SRC_LIB) -o./$(NAME) -g3
 	valgrind ./$(NAME)
 
+.PHONY: gdb
 gdb:
 	gcc $(SRC) $(SRC_LIB) -o./$(NAME) -g
 	gdb ./$(NAME)
