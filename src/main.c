@@ -30,9 +30,10 @@ int help_message(void)
 
 int main(int ac, char **av)
 {
-    if (ac == 2 && my_strcmp(av[1], "-h") == 0)
-        return help_message();
-    if (ac == 1)
-        game_launch();
-    return (1);
+    exit_finder(av[2]);
+    // if (ac == 2 && my_strcmp(av[1], "-h") == 0)
+    //     return help_message();
+    // if (ac == 1)
+    //     game_launch();
+    // return (1);
 }
