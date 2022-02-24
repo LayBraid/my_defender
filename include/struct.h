@@ -92,6 +92,25 @@ typedef struct node_movement_struct {
     struct node_movement_struct *next;
 } node_movement;
 
+typedef struct node_movement_clock_struct {
+    sfSprite *sprite;
+    sfVector2f position;
+    struct node_movement_clock_struct *next;
+} node_movement_clock;
+
+typedef struct enemy_struct {
+    int type;
+    anim_img *img;
+    int id_box;
+    float life;
+} enemy_t;
+
+typedef struct node_enemy_struct {
+    int id;
+    enemy_t *enemy;
+    struct node_enemy_struct *next;
+} node_enemy;
+
 typedef struct clocks_struct {
     sfClock *clock;
     sfTime time;
@@ -113,17 +132,20 @@ typedef struct my_defender_data {
     node_earthly_build *earthly_build;
     node_flying_build *flying_build;
     node_movement *movement;
+    node_movement_clock *move_clock;
+    node_enemy *enemies;
     build_t *tmp_create;
     int step;
     int coins;
     int emeralds;
     int wave;
-    clocks_t *clocks;
+    clocks_t *clock_enemy;
     int fps;
     int best_score;
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
+    int test;
 } my_defender_t;
 
 typedef my_defender_t dfd;

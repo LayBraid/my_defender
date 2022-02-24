@@ -10,4 +10,6 @@
 
     #include "struct.h"
 
+void clock_movement_enemies(dfd *df);
+
 #endif
