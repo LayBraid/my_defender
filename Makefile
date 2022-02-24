@@ -61,9 +61,18 @@ clean:
 	rm -f src/utils/animations/*.o
 	rm -f src/game/*.o
 	rm -f src/game/display/img/*.o
+	rm -f src/game/display/buildings/*.o
+	rm -f src/game/display/enemies/*.o
 	rm -f src/game/display/*.o
 	rm -f src/game/steps/*.o
 	rm -f src/game/actions/*.o
+	rm -f src/game/enemies/*.o
+	rm -f src/game/buildings/*.o
+	rm -f src/game/buildings/earthly/*.o
+	rm -f src/game/buildings/flying/*.o
+	rm -f src/game/roads/*.o
+	rm -f src/game/roads/array/*.o
+	rm -f src/game/roads/logs/*.o
 	rm -f src/clocks/*.o
 	rm -f src/setup/*.o
 	rm -f src/setup/buttons/*.o

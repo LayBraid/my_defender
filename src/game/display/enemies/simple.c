@@ -12,7 +12,7 @@ void display_enemies(dfd *df)
 {
     node_enemy *tmp= df->enemies;
 
-    if (!(df->step == MAIN || df->step == PAUSE || df->step == DRAG_1 ||
+    if (!(df->step == MAIN || df->step == PAUSE_GAME || df->step == DRAG_1 ||
         df->step == DRAG_2) || df->enemies == NULL)
         return;
     while (tmp->id < tmp->next->id) {

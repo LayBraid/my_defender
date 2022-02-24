@@ -26,7 +26,7 @@ enum Steps {
     DRAG_2,
     MAINA,
     NEVER,
-    PAUSE,
+    PAUSE_GAME,
     ENEMY,
 };
 
