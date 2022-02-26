@@ -20,6 +20,8 @@ void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector);
 
 void move_enemy_right(dfd *df, int id_enemy);
 
+void move_enemy_left(dfd *df, int id_enemy);
+
 void spawn_enemy(dfd *df);
 
 void exe_movement_enemy(dfd *df);

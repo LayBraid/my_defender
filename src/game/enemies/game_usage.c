@@ -46,6 +46,26 @@ void move_enemy_right(dfd *df, int id_enemy)
     }
 }
 
+void move_enemy_left(dfd *df, int id_enemy)
+{
+    node_enemy *tmp = df->enemies;
+    node_button *button = df->list_buttons;
+    sfVector2f vector;
+    sfVector2f vector_2;
+
+    while (tmp->id != id_enemy)
+        tmp = tmp->next;
+    while (button->id != tmp->enemy->id_box)
+        button = button->next;
+    vector = sfSprite_getPosition(button->button->button->sprite);
+    vector_2 = vector;
+    tmp->enemy->id_box--;
+    while (vector.x - 96 <= vector_2.x) {
+        vector_2.x -= 2;
+        add_movement_enemy(df, tmp->enemy->img->sprite, vector_2);
+    }
+}
+
 void spawn_enemy(dfd *df)
 {
     enemy_t *tmp= malloc(sizeof(enemy_t));
