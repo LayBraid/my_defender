@@ -40,7 +40,7 @@ void move_enemy_right(dfd *df, int id_enemy)
         tmp->enemy->id_box = 77;
     else
         tmp->enemy->id_box++;
-    while (vector.x + 96 >= vector_2.x) {
+    while (vector.x + 95 >= vector_2.x) {
         vector_2.x += 2;
         add_movement_enemy(df, tmp->enemy->img->sprite, vector_2);
     }
@@ -60,7 +60,7 @@ void move_enemy_left(dfd *df, int id_enemy)
     vector = sfSprite_getPosition(button->button->button->sprite);
     vector_2 = vector;
     tmp->enemy->id_box--;
-    while (vector.x - 96 <= vector_2.x) {
+    while (vector.x - 95 <= vector_2.x) {
         vector_2.x -= 2;
         add_movement_enemy(df, tmp->enemy->img->sprite, vector_2);
     }
@@ -80,8 +80,28 @@ void move_enemy_up(dfd *df, int id_enemy)
     vector = sfSprite_getPosition(button->button->button->sprite);
     vector_2 = vector;
     tmp->enemy->id_box -= 14;
-    while (vector.y - 96 <= vector_2.y) {
+    while (vector.y - 95 <= vector_2.y) {
         vector_2.y -= 2;
+        add_movement_enemy(df, tmp->enemy->img->sprite, vector_2);
+    }
+}
+
+void move_enemy_down(dfd *df, int id_enemy)
+{
+    node_enemy *tmp = df->enemies;
+    node_button *button = df->list_buttons;
+    sfVector2f vector;
+    sfVector2f vector_2;
+
+    while (tmp->id != id_enemy)
+        tmp = tmp->next;
+    while (button->id != tmp->enemy->id_box)
+        button = button->next;
+    vector = sfSprite_getPosition(button->button->button->sprite);
+    vector_2 = vector;
+    tmp->enemy->id_box += 14;
+    while (vector.y + 95 >= vector_2.y) {
+        vector_2.y += 2;
         add_movement_enemy(df, tmp->enemy->img->sprite, vector_2);
     }
 }
