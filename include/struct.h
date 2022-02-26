@@ -65,15 +65,22 @@ typedef struct node_img_struct {
     struct node_img_struct *next;
 } node_img;
 
+/*
+ * Contenu d'un batiment
+ */
+
 typedef struct build_struct {
     anim_img *img;
     int type;
     int id_build;
     int id_box;
     int level;
-    int life;
-    int rate_fire;
+    float life;
 } build_t;
+
+/*
+ * Structure de node des batiments terrestres
+ */
 
 typedef struct node_earthly_build_struct {
     int id;
@@ -81,17 +88,49 @@ typedef struct node_earthly_build_struct {
     struct node_earthly_build_struct *next;
 } node_earthly_build;
 
+/*
+ * Structure de node des batiments aériens
+ */
+
 typedef struct node_flying_build_struct {
     int id;
     build_t *build;
     struct node_earthly_build_struct *next;
 } node_flying_build;
 
+/*
+ * Structure pour les logs des mouvements
+ * Pour l'algo de labyrinthe
+ */
+
 typedef struct node_movement_struct {
     int id;
     int type;
     struct node_movement_struct *next;
 } node_movement;
+
+/*
+ * Structure pour que les mouvements soient executés avec une clock
+ */
+
+typedef struct node_movement_clock_struct {
+    sfSprite *sprite;
+    sfVector2f position;
+    struct node_movement_clock_struct *next;
+} node_movement_clock;
+
+typedef struct enemy_struct {
+    int type;
+    anim_img *img;
+    int id_box;
+    float life;
+} enemy_t;
+
+typedef struct node_enemy_struct {
+    int id;
+    enemy_t *enemy;
+    struct node_enemy_struct *next;
+} node_enemy;
 
 typedef struct clocks_struct {
     sfClock *clock;
@@ -113,18 +152,21 @@ typedef struct my_defender_data {
     node_button *list_buttons;
     node_earthly_build *earthly_build;
     node_flying_build *flying_build;
+    node_movement *movement;
+    node_movement_clock *move_clock;
+    node_enemy *enemies;
     build_t *tmp_create;
     int step;
     int coins;
     int emeralds;
     int wave;
-    clocks_t *clocks;
+    clocks_t *clock_enemy;
     int fps;
     int best_score;
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
-    node_movement *movement;
+    int test;
 } my_defender_t;
 
 typedef my_defender_t dfd;

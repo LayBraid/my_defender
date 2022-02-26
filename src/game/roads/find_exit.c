@@ -5,7 +5,6 @@
 ** Find a exit in the map 
 */
 
-
 void exit_finder(int ** map)
 {
     int index = 0;
@@ -21,6 +20,6 @@ void exit_finder(int ** map)
             }
             if (map[index][i] == 4) {
                 return 0;
-            }   
+            }
     }
 }

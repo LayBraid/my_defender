@@ -10,11 +10,15 @@ MAIN = src/main.c
 SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/setup/buttons/*.c) \
 	  $(wildcard src/setup/img/*.c) \
+	  $(wildcard src/clocks/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/game/steps/*.c) \
 	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/buildings/earthly/*.c) \
 	  $(wildcard src/game/display/*.c) \
+	  $(wildcard src/game/display/buildings/*.c) \
+	  $(wildcard src/game/display/enemies/*.c) \
+	  $(wildcard src/game/enemies/*.c) \
 	  $(wildcard src/game/actions/*.c) \
 	  $(wildcard src/utils/*.c) \
 	  $(wildcard src/utils/animations/*.c) \
@@ -22,8 +26,9 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/events/*.c) \
 	  $(wildcard src/events/buttons/*.c) \
 	  $(wildcard src/events/keys/*.c) \
-	  $(wildcard src/game/roads/*.c)	\
+	  $(wildcard src/game/roads/*.c) \
 	  $(wildcard src/game/roads/logs/*.c) \
+	  $(wildcard src/game/roads/array/*.c) \
 
 TESTS =
 
@@ -56,9 +61,18 @@ clean:
 	rm -f src/utils/animations/*.o
 	rm -f src/game/*.o
 	rm -f src/game/display/img/*.o
+	rm -f src/game/display/buildings/*.o
+	rm -f src/game/display/enemies/*.o
 	rm -f src/game/display/*.o
 	rm -f src/game/steps/*.o
 	rm -f src/game/actions/*.o
+	rm -f src/game/enemies/*.o
+	rm -f src/game/buildings/*.o
+	rm -f src/game/buildings/earthly/*.o
+	rm -f src/game/buildings/flying/*.o
+	rm -f src/game/roads/*.o
+	rm -f src/game/roads/array/*.o
+	rm -f src/game/roads/logs/*.o
 	rm -f src/clocks/*.o
 	rm -f src/setup/*.o
 	rm -f src/setup/buttons/*.o

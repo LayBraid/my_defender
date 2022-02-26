@@ -19,6 +19,17 @@
  * Définition du step au démarrage du jeu
  */
 
+void next_setup(dfd *df)
+{
+    df->list_buttons = setup_buttons(df);
+    df->step = OPEN;
+    df->enemies = NULL;
+    df->move_clock = NULL;
+    df->test = 0;
+    df->clock_enemy = malloc(sizeof(clocks_t));
+    df->clock_enemy->clock = sfClock_create();
+}
+
 void setup_game(dfd *df)
 {
     df->tmp_create = malloc(sizeof(build_t));
@@ -40,6 +51,5 @@ void setup_game(dfd *df)
     df->emeralds = 0;
     df->wave = 0;
     df->list_img = setup_img(df);
-    df->list_buttons = setup_buttons(df);
-    df->step = OPEN;
+    next_setup(df);
 }

@@ -9,6 +9,8 @@
 #include "events.h"
 #include "game.h"
 #include "utils.h"
+#include "display.h"
+#include "clocks.h"
 
 /*
  * Première fonction appelée pour appeler seulement les fonctions
@@ -19,7 +21,10 @@ void global_steps(dfd *df)
 {
     display_buttons(df);
     display_img(df);
+    display_buildings(df);
+    display_enemies(df);
     check_on_hover(df);
+    clock_movement_enemies(df);
     if (df->step == MAIN)
         exe_step_main(df);
     if (df->drag->state == BUILDING)

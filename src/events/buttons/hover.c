@@ -22,14 +22,14 @@ void check_button(node_button *button, int step, sfVector2i mouse)
     switch_anim_button(button, 0);
 }
 
-void check_on_hover(my_defender_t *defender)
+void check_on_hover(dfd *df)
 {
-    sfVector2i mu = sfMouse_getPositionRenderWindow(defender->window->window);
-    node_button *tmp = defender->list_buttons;
+    sfVector2i mu = sfMouse_getPositionRenderWindow(df->window->window);
+    node_button *tmp = df->list_buttons;
 
     while (tmp->id < tmp->next->id) {
-        check_button(tmp, defender->step, mu);
+        check_button(tmp, df->step, mu);
         tmp = tmp->next;
     }
-    check_button(tmp, defender->step, mu);
+    check_button(tmp, df->step, mu);
 }

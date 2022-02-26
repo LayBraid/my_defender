@@ -9,6 +9,7 @@
 #include "setup.h"
 #include "utils.h"
 #include "game.h"
+#include "my.h"
 
 /*
  * Informations de l'image:
@@ -22,11 +23,30 @@
  * 7: step pour display
  */
 
+int numbers_earthly(dfd *df)
+{
+    if (df->earthly_build->build == NULL)
+        return -1;
+    else
+        return get_max_build(&df->earthly_build);
+}
+
 void add_building(dfd *df)
 {
     cf info[8] = {get_x_box(df, df->tmp_create->id_box),
     get_y_box(df, df->tmp_create->id_box),
-    get_r_x_build(df->tmp_create->id_build),0,80,80,0,MAINA};
-    anim_img *img = setup_a_anim_img(df, info);
+    get_r_x_build(df->tmp_create->id_build),
+    get_r_y_build(df->tmp_create->id_build),110,110,0,MAINA};
+    build_t *build = malloc(sizeof(build_t));
+    build->id_build = df->tmp_create->id_build;
+    build->id_box = df->tmp_create->id_box;
+    build->type = df->tmp_create->type;
+    build->img = setup_a_anim_img(df, info);
+    build->life = get_initial_life(build->id_build);
+    build->level = 0;
 
+    if (df->earthly_build->build == NULL)
+        setup_first_build(&df->earthly_build, build);
+    else
+        add_to_list_build(&df->earthly_build, build);
 }

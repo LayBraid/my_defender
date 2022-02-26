@@ -13,23 +13,23 @@
     #include <sys/stat.h>
     #include <sys/fcntl.h>
 
-int switch_cursor(my_defender_t *my_defender, int nb);
+int switch_cursor(dfd *my_defender, int nb);
 
-void switch_step(my_defender_t *my_defender, int x);
+void switch_step(dfd *my_defender, int x);
 
-void set_best_score(my_defender_t *my_defender);
+void set_best_score(dfd *my_defender);
 
-void draw_best_score(my_defender_t *my_defender);
+void draw_best_score(dfd *my_defender);
 
-void get_best_score(my_defender_t *my_defender, char *buffer);
+void get_best_score(dfd *my_defender, char *buffer);
 
-void quit_game(my_defender_t *defender);
+void quit_game(dfd *defender);
 
 void switch_anim_button(node_button *button, int anim);
 
 void anim_img_id(dfd *df, int id, int anim);
 
-void draw_coins(my_defender_t *my_defender);
+void draw_coins(dfd *my_defender);
 
 void draw_emeralds(dfd *my_defender);
 
@@ -46,5 +46,9 @@ float get_x_box(dfd *df, int box);
 float get_y_box(dfd *df, int box);
 
 float get_r_x_build(int type);
+
+float get_r_y_build(int type);
+
+float get_initial_life(int id_build);
 
 #endif
