@@ -28,4 +28,6 @@ void add_movement(dfd *df, int type);
 
 int get_delete_last(dfd *df);
 
+void convert_board(dfd *df);
+
 #endif
