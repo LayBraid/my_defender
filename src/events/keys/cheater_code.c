@@ -16,4 +16,6 @@ void my_key_cheat_code(dfd *df)
         move_enemy_right(df, 0);
     if (sfKeyboard_isKeyPressed(sfKeyQ))
         move_enemy_left(df, 0);
+    if (sfKeyboard_isKeyPressed(sfKeyZ))
+        move_enemy_up(df, 0);
 }

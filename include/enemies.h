@@ -22,6 +22,8 @@ void move_enemy_right(dfd *df, int id_enemy);
 
 void move_enemy_left(dfd *df, int id_enemy);
 
+void move_enemy_up(dfd *df, int id_enemy);
+
 void spawn_enemy(dfd *df);
 
 void exe_movement_enemy(dfd *df);
