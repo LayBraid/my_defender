@@ -65,6 +65,10 @@ typedef struct node_img_struct {
     struct node_img_struct *next;
 } node_img;
 
+/*
+ * Contenu d'un batiment
+ */
+
 typedef struct build_struct {
     anim_img *img;
     int type;
@@ -74,11 +78,19 @@ typedef struct build_struct {
     float life;
 } build_t;
 
+/*
+ * Structure de node des batiments terrestres
+ */
+
 typedef struct node_earthly_build_struct {
     int id;
     build_t *build;
     struct node_earthly_build_struct *next;
 } node_earthly_build;
+
+/*
+ * Structure de node des batiments aériens
+ */
 
 typedef struct node_flying_build_struct {
     int id;
@@ -86,11 +98,20 @@ typedef struct node_flying_build_struct {
     struct node_earthly_build_struct *next;
 } node_flying_build;
 
+/*
+ * Structure pour les logs des mouvements
+ * Pour l'algo de labyrinthe
+ */
+
 typedef struct node_movement_struct {
     int id;
     int type;
     struct node_movement_struct *next;
 } node_movement;
+
+/*
+ * Structure pour que les mouvements soient executés avec une clock
+ */
 
 typedef struct node_movement_clock_struct {
     sfSprite *sprite;
