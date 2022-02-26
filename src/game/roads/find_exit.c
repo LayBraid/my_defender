@@ -16,10 +16,12 @@ void exit_finder(int ** map)
                 index++;
             }
             if (map[index][i -1] != 0 && map[index][i +1] != 0 && map[index+ 1 ][i] != 0 && map[index - 1 ][i -1] != 0 && map[index][i +1]!= 0) {
-                return 64;
+                //return 64;
+                return;
             }
             if (map[index][i] == 4) {
-                return 0;
+                //return 0;
+                return;
             }
     }
 }
