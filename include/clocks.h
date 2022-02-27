@@ -12,4 +12,6 @@
 
 void clock_movement_enemies(dfd *df);
 
+void clock_lasers_animation(dfd *df);
+
 #endif

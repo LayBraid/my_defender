@@ -25,9 +25,11 @@ void next_setup(dfd *df)
     df->step = OPEN;
     df->enemies = NULL;
     df->move_clock = NULL;
-    df->test = 0;
+    df->laser_clock = NULL;
     df->clock_enemy = malloc(sizeof(clocks_t));
     df->clock_enemy->clock = sfClock_create();
+    df->clock_lasers = malloc(sizeof(clocks_t));
+    df->clock_lasers->clock = sfClock_create();
 }
 
 void setup_game(dfd *df)

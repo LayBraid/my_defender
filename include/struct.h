@@ -168,7 +168,6 @@ typedef struct my_defender_data {
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
-    int test;
 } my_defender_t;
 
 typedef my_defender_t dfd;
