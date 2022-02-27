@@ -37,5 +37,6 @@ void game_launch(void)
         sfRenderWindow_display(my_defender->window->window);
     }
     sfRenderWindow_destroy(my_defender->window->window);
-    //TODO rajouter un free global de toutes les variables
 }
+
+//TODO rajouter un free global de toutes les variables
