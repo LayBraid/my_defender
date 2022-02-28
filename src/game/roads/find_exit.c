@@ -20,8 +20,7 @@ int exit_finder(int ** map)
             }
             if (map[index][i] == 4) {
                 //return 0;
-                return;
+                return 1;
             }
-            return 1;
     }
 }
