@@ -31,6 +31,7 @@ void next_setup(dfd *df)
     df->wave = 0;
     df->fps = 130;
     df->list_img = setup_img(df);
+    df->click = sfMusic_createFromFile("resources/click.ogg");
 }
 
 void setup_game(dfd *df)
