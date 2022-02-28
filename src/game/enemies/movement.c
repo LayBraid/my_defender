@@ -23,7 +23,6 @@ void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector)
     while (tmp->next != NULL)
         tmp = tmp->next;
     tmp->next = new;
-    df->test++;
 }
 
 void exe_movement_enemy(dfd *df)

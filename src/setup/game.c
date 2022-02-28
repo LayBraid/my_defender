@@ -26,14 +26,18 @@ void next_setup(dfd *df)
     df->enemies = NULL;
     df->move_clock = NULL;
     df->laser_clock = NULL;
-    df->clock_enemy = malloc(sizeof(clocks_t));
-    df->clock_enemy->clock = sfClock_create();
-    df->clock_lasers = malloc(sizeof(clocks_t));
-    df->clock_lasers->clock = sfClock_create();
+    df->coins = 0;
+    df->emeralds = 0;
+    df->wave = 0;
+    df->list_img = setup_img(df);
 }
 
 void setup_game(dfd *df)
 {
+    df->clock_enemy = malloc(sizeof(clocks_t));
+    df->clock_enemy->clock = sfClock_create();
+    df->clock_lasers = malloc(sizeof(clocks_t));
+    df->clock_lasers->clock = sfClock_create();
     df->tmp_create = malloc(sizeof(build_t));
     df->window = setup_window(df);
     df->list_img = malloc(sizeof(node_img));
@@ -49,9 +53,5 @@ void setup_game(dfd *df)
     df->drag->y_correction = 0;
     df->last_unclick = -1;
     df->texture = sfTexture_createFromFile("resources/global.png", NULL);
-    df->coins = 0;
-    df->emeralds = 0;
-    df->wave = 0;
-    df->list_img = setup_img(df);
     next_setup(df);
 }
