@@ -64,4 +64,5 @@ void convert_board(dfd *df)
         }
         printf("\n");
     }
+    printf("result: %d", exit_finder(tmp));
 }

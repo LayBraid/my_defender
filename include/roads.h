@@ -30,4 +30,6 @@ int get_delete_last(dfd *df);
 
 void convert_board(dfd *df);
 
+int exit_finder(int ** map);
+
 #endif
