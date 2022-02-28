@@ -33,8 +33,10 @@ int main(int ac, char **av)
     if (ac == 2 && my_strcmp(av[1], "-h") == 0)
         return help_message();
     if (ac == 1)
-        game_launch("none");
+        game_launch("none", -1);
     if (ac == 2)
-        game_launch(av[1]);
+        game_launch(av[1], -1);
+    if (ac == 3)
+        game_launch(av[1], my_atoi(av[2]));
     return (1);
 }

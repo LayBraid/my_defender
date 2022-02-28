@@ -25,14 +25,23 @@
  * Destroy tout à la fin
  */
 
-void game_launch(char *path_texture)
+void update_with_argument(dfd *df, char *path_texture, int fps)
+{
+    if (my_strcmp(path_texture, "none") != 0) {
+        df->step = OPEN;
+        df->texture = sfTexture_createFromFile(path_texture, NULL);
+    }
+    if (fps != -1) {
+        df->fps = fps;
+        sfRenderWindow_setFramerateLimit(df->window->window,df->fps);
+    }
+}
+
+void game_launch(char *path_texture, int fps)
 {
     my_defender_t *my_defender = malloc(sizeof(my_defender_t));
     setup_game(my_defender);
-    if (my_strcmp(path_texture, "none") != 0) {
-        my_defender->step = OPEN;
-        my_defender->texture = sfTexture_createFromFile(path_texture, NULL);
-    }
+    update_with_argument(my_defender, path_texture, fps);
     sfColor color = sfColor_fromRGB(60, 63, 78);
     while (sfRenderWindow_isOpen(my_defender->window->window)) {
         sfRenderWindow_clear(my_defender->window->window, color);

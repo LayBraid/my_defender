@@ -29,6 +29,7 @@ void next_setup(dfd *df)
     df->coins = 0;
     df->emeralds = 0;
     df->wave = 0;
+    df->fps = 130;
     df->list_img = setup_img(df);
 }
 
