@@ -51,4 +51,8 @@ float get_r_y_build(int type);
 
 float get_initial_life(int id_build);
 
+void select_normal_texture(dfd *df);
+
+void select_RU_UK_texture(dfd *df);
+
 #endif

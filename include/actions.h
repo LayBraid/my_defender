@@ -20,4 +20,8 @@ void nothing(my_defender_pointer *defender);
 
 void drag_unclick(my_defender_pointer *defender);
 
+void select_normal(my_defender_pointer *defender);
+
+void select_RU_UK(my_defender_pointer *defender);
+
 #endif
