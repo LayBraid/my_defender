@@ -25,10 +25,14 @@
  * Destroy tout à la fin
  */
 
-void game_launch(void)
+void game_launch(char *path_texture)
 {
     my_defender_t *my_defender = malloc(sizeof(my_defender_t));
     setup_game(my_defender);
+    if (my_strcmp(path_texture, "none") != 0) {
+        my_defender->step = OPEN;
+        my_defender->texture = sfTexture_createFromFile(path_texture, NULL);
+    }
     sfColor color = sfColor_fromRGB(60, 63, 78);
     while (sfRenderWindow_isOpen(my_defender->window->window)) {
         sfRenderWindow_clear(my_defender->window->window, color);

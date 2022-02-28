@@ -67,7 +67,7 @@ enum Enemies_Type {
     SIMPLE,
 };
 
-void game_launch(void);
+void game_launch(char *path_texture);
 
 void drag_and_drop(dfd *defender);
 
