@@ -30,6 +30,7 @@ enum Steps {
     ENEMY,
     SELECT,
     SEL_OP,
+    SEL_HEL,
 };
 
 enum All_building {

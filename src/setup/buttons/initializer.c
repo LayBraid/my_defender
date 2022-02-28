@@ -258,13 +258,13 @@ node_button *setup_buttons(dfd *df)
 
     setup_first_button(&node, setup_button(df, PLAY, play_button));
     add_button(&node, setup_button(df, QUIT, quit_button));
-    add_button(&node, setup_button(df, HELPER, quit_button));
-    add_button(&node, setup_button(df, SETTING, quit_button));
-    add_button(&node, setup_button(df, HOME, quit_button));
+    add_button(&node, setup_button(df, HELPER, help_menu));
+    add_button(&node, setup_button(df, SETTING, nothing));
+    add_button(&node, setup_button(df, HOME, nothing));
     add_button(&node, setup_button(df, QUIT2, quit_button));
-    add_button(&node, setup_button(df, TIME_DOWN, quit_button));
-    add_button(&node, setup_button(df, TIME_UP, quit_button));
-    add_button(&node, setup_button(df, PAUSE, quit_button));
+    add_button(&node, setup_button(df, TIME_DOWN, nothing));
+    add_button(&node, setup_button(df, TIME_UP, nothing));
+    add_button(&node, setup_button(df, PAUSE, nothing));
     add_button(&node, setup_button(df, TOWER_1, d_and_d));
     add_button(&node, setup_button(df, TOWER_2, d_and_d));
     add_button(&node, setup_button(df, TOWER_3, d_and_d));

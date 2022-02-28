@@ -50,7 +50,10 @@ cf PLANE_D_1[9] = {1441, 906, 1680, 1403, 110, 110, 0, NEVER, -1};
 cf PLANE_D_2[9] = {1541, 906, 1680, 1513, 110, 110, 0, NEVER, -1};
 
 cf DLC[12] = {390, 63, 0, 3603, 157, 1020, 0, SELECT, -1};
-cf NAME[12] = {711, 961, 0, 4090, 110, 313, 0, SELECT, -1};
+cf NAME[12] = {744, 961, 0, 4090, 110, 313, 0, SEL_HEL, -1};
+
+cf HELP_T[12] = {520, 73, 0, 4196, 137, 760, 0, HELP, -1};
+cf HELP_SB[12] = {84, 398, 0, 4333, 285, 1632, 0, HELP, -1};
 
 node_img *next_img(dfd *df, node_img *node)
 {
@@ -63,6 +66,8 @@ node_img *next_img(dfd *df, node_img *node)
     add_to_list_img(&node, setup_a_anim_img(df, PLANE_D_2));
     add_to_list_img(&node, setup_a_anim_img(df, DLC));
     add_to_list_img(&node, setup_a_anim_img(df, NAME));
+    add_to_list_img(&node, setup_a_anim_img(df, HELP_SB));
+    add_to_list_img(&node, setup_a_anim_img(df, HELP_T));
     return node;
 }
 

@@ -24,4 +24,8 @@ void select_normal(my_defender_pointer *defender);
 
 void select_RU_UK(my_defender_pointer *defender);
 
+void help_menu(my_defender_pointer *defender);
+
+void home_menu(my_defender_pointer *defender);
+
 #endif

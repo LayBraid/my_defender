@@ -7,6 +7,7 @@
 
 #include "actions.h"
 #include "utils.h"
+#include "game.h"
 
 void select_normal(my_defender_pointer *defender)
 {
@@ -16,4 +17,14 @@ void select_normal(my_defender_pointer *defender)
 void select_RU_UK(my_defender_pointer *defender)
 {
     select_RU_UK_texture((dfd *) defender);
+}
+
+void help_menu(my_defender_pointer *defender)
+{
+    switch_step((dfd *) defender, HELP);
+}
+
+void home_menu(my_defender_pointer *defender)
+{
+    switch_step((dfd *) defender, OPEN);
 }
