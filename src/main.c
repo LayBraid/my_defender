@@ -15,7 +15,7 @@
 int help_message(void)
 {
     my_putstr("--- MyDefender [HELP] ---\n\n");
-    my_putstr("./mydefender >> launch game\n\n");
+    my_putstr("./mydefender [path_texture] [fps] >> launch game\n\n");
     my_putstr("Click on '?' in main menu\nto get more help.\n");
     my_putstr("--- Thanks for playing ---\n");
     return 1;
