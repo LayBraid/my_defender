@@ -25,5 +25,6 @@ int exit_finder(int ** map)
                 //return 0;
                 return 0;
             }
+            return 1;
     }
 }
