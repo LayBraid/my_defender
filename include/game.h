@@ -28,6 +28,7 @@ enum Steps {
     NEVER,
     PAUSE_GAME,
     ENEMY,
+    SELECT,
 };
 
 enum All_building {

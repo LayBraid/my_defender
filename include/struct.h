@@ -154,6 +154,7 @@ typedef struct my_defender_data {
     node_flying_build *flying_build;
     node_movement *movement;
     node_movement_clock *move_clock;
+    node_movement_clock *laser_clock;
     node_enemy *enemies;
     build_t *tmp_create;
     int step;
@@ -161,12 +162,12 @@ typedef struct my_defender_data {
     int emeralds;
     int wave;
     clocks_t *clock_enemy;
+    clocks_t *clock_lasers;
     int fps;
     int best_score;
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
-    int test;
 } my_defender_t;
 
 typedef my_defender_t dfd;

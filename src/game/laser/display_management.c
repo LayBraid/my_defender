@@ -5,19 +5,19 @@
 ** No file there , just an epitech header example
 */
 
-#include "enemies.h"
+#include "lasers.h"
 #include "my.h"
 
-void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector)
+void add_anim_laser(dfd *df, sfSprite *sprite, sfVector2f vector)
 {
     node_movement_clock *new = malloc(sizeof(node_movement_clock));
-    node_movement_clock *tmp = df->move_clock;
+    node_movement_clock *tmp = df->laser_clock;
     new->sprite = sprite;
     new->position = vector;
     new->next = NULL;
 
-    if (df->move_clock == NULL) {
-        df->move_clock = new;
+    if (df->laser_clock == NULL) {
+        df->laser_clock = new;
         return;
     }
     while (tmp->next != NULL)
@@ -25,11 +25,11 @@ void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector)
     tmp->next = new;
 }
 
-void exe_movement_enemy(dfd *df)
+void exe_laser_anim(dfd *df)
 {
-    if (df->move_clock == NULL)
+    if (df->laser_clock == NULL)
         return;
-    node_movement_clock *move = df->move_clock;
-    df->move_clock = df->move_clock->next;
+    node_movement_clock *move = df->laser_clock;
+    df->laser_clock = df->laser_clock->next;
     sfSprite_setPosition(move->sprite, move->position);
 }
