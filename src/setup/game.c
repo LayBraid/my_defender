@@ -22,7 +22,7 @@
 void next_setup(dfd *df)
 {
     df->list_buttons = setup_buttons(df);
-    df->step = OPEN;
+    df->step = SELECT;
     df->enemies = NULL;
     df->move_clock = NULL;
     df->laser_clock = NULL;
@@ -52,6 +52,6 @@ void setup_game(dfd *df)
     df->drag->x_correction = 0;
     df->drag->y_correction = 0;
     df->last_unclick = -1;
-    df->texture = sfTexture_createFromFile("resources/global.png", NULL);
+    df->texture = sfTexture_createFromFile("resources/normal.png", NULL);
     next_setup(df);
 }

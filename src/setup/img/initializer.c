@@ -49,6 +49,9 @@ cf MISSILE_D_4[9] = {1441, 755, 1570, 1843, 110, 110, 0, NEVER, -1};
 cf PLANE_D_1[9] = {1441, 906, 1680, 1403, 110, 110, 0, NEVER, -1};
 cf PLANE_D_2[9] = {1541, 906, 1680, 1513, 110, 110, 0, NEVER, -1};
 
+cf DLC[12] = {390, 63, 0, 3603, 157, 1020, 0, SELECT, -1};
+cf NAME[12] = {711, 961, 0, 4090, 110, 313, 0, SELECT, -1};
+
 node_img *next_img(dfd *df, node_img *node)
 {
     add_to_list_img(&node, setup_a_anim_img(df, TANK_D_2));
@@ -58,6 +61,8 @@ node_img *next_img(dfd *df, node_img *node)
     add_to_list_img(&node, setup_a_anim_img(df, MISSILE_D_4));
     add_to_list_img(&node, setup_a_anim_img(df, PLANE_D_1));
     add_to_list_img(&node, setup_a_anim_img(df, PLANE_D_2));
+    add_to_list_img(&node, setup_a_anim_img(df, DLC));
+    add_to_list_img(&node, setup_a_anim_img(df, NAME));
     return node;
 }
 

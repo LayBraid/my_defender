@@ -88,9 +88,20 @@ cf P_14_9[12] = {1261, 771, 0, 2805, 110, 110, 2, 1276, 776, 80, 80, DRAG_1};
 cf P_START[12] = {-83, 387, 0, 2805, 110, 110, 2, -68, 392, 80, 80, ENEMY};
 cf P_END[12] = {1357, 387, 0, 2805, 110, 110, 2, 1372, 392, 80, 80, ENEMY};
 
+cf DLC_1[12] = {728, 390, 0, 3760, 110, 344, 2, 758, 414, 284, 61, SELECT};
+cf DLC_2[12] = {544, 486, 0, 3870, 110, 712, 2, 574, 510, 652, 61, SELECT};
+cf DLC_3[12] = {665, 582, 0, 3980, 110, 470, 2, 695, 606, 409, 61, SELECT};
+
 /*
  * Suite de l'initialisation des boutons
  */
+
+node_button *re7_next_buttons(dfd *df, node_button *node)
+{
+    add_button(&node, setup_button(df, DLC_2, select_RU_UK));
+    add_button(&node, setup_button(df, DLC_3, nothing));
+    return node;
+}
 
 node_button *re6_next_buttons(dfd *df, node_button *node)
 {
@@ -112,7 +123,8 @@ node_button *re6_next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, P_14_9, drag_unclick));
     add_button(&node, setup_button(df, P_START, nothing));
     add_button(&node, setup_button(df, P_END, nothing));
-    return node;
+    add_button(&node, setup_button(df, DLC_1, select_normal));
+    return re7_next_buttons(df, node);
 }
 
 /*
