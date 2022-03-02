@@ -30,6 +30,7 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/roads/*.c) \
 	  $(wildcard src/game/roads/array/*.c) \
 	  $(wildcard src/game/roads/logs/*.c) \
+	  $(wildcard src/game/roads/solver/*.c) \
 
 TESTS =
 
