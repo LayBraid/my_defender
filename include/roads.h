@@ -32,4 +32,6 @@ void convert_board(dfd *df);
 
 int exit_finder(int ** map);
 
+int check_road(dfd *df, int **map);
+
 #endif

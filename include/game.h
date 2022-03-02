@@ -31,6 +31,8 @@ enum Steps {
     SELECT,
     SEL_OP,
     SEL_HEL,
+    MAIN_POP,
+    POP,
 };
 
 enum All_building {
@@ -66,6 +68,11 @@ enum DD_State {
 enum Enemies_Type {
     NONE,
     SIMPLE,
+};
+
+enum Bool {
+    FALSE,
+    TRUE,
 };
 
 void game_launch(char *path_texture, int fps);

@@ -26,7 +26,9 @@ void global_steps(dfd *df)
     check_on_hover(df);
     clock_movement_enemies(df);
     clock_lasers_animation(df);
-    if (df->step == MAIN)
+    if (df->step == POP)
+        clock_pop_up(df);
+    if (display(MAINA, df->step))
         exe_step_main(df);
     if (df->drag->state == BUILDING)
         draw_my_drag(df);

@@ -29,9 +29,16 @@ void next_setup(dfd *df)
     df->coins = 0;
     df->emeralds = 0;
     df->wave = 0;
+    df->placing = FALSE;
     df->fps = 130;
     df->list_img = setup_img(df);
     df->click = sfMusic_createFromFile("resources/click.ogg");
+    df->drag = malloc(sizeof(d_d_t));
+    df->drag->id_building = -1;
+    df->drag->state = NOTHING;
+    df->drag->x_correction = 0;
+    df->drag->y_correction = 0;
+    df->last_unclick = -1;
 }
 
 void setup_game(dfd *df)
@@ -40,6 +47,8 @@ void setup_game(dfd *df)
     df->clock_enemy->clock = sfClock_create();
     df->clock_lasers = malloc(sizeof(clocks_t));
     df->clock_lasers->clock = sfClock_create();
+    df->clock_popup = malloc(sizeof(clocks_t));
+    df->clock_popup->clock = sfClock_create();
     df->tmp_create = malloc(sizeof(build_t));
     df->window = setup_window(df);
     df->list_img = malloc(sizeof(node_img));
@@ -48,12 +57,6 @@ void setup_game(dfd *df)
     df->flying_build = malloc(sizeof(node_flying_build));
     df->movement = malloc(sizeof(node_movement));
     setup_first_movement(&df->movement, START);
-    df->drag = malloc(sizeof(d_d_t));
-    df->drag->id_building = -1;
-    df->drag->state = NOTHING;
-    df->drag->x_correction = 0;
-    df->drag->y_correction = 0;
-    df->last_unclick = -1;
     df->texture = sfTexture_createFromFile("resources/normal.png", NULL);
     next_setup(df);
 }

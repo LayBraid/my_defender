@@ -28,8 +28,10 @@ int display(int step, int actual)
 {
     if (step == actual)
         return 1;
-    if (step == MAINA &&
-        (actual == MAIN || actual == DRAG_1 || actual == DRAG_2))
+    if (step == MAINA && (actual == MAIN ||
+        actual == DRAG_1 || actual == DRAG_2 || actual == POP))
+        return 1;
+    if (step == MAIN_POP && (actual == POP))
         return 1;
     if (step == SEL_OP && (actual == SELECT || actual == OPEN))
         return 1;

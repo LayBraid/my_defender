@@ -145,6 +145,13 @@ typedef struct drag_and_drop_struct {
     float y_correction;
 } d_d_t;
 
+typedef struct solver_data {
+    int **map;
+    int lines;
+    int length;
+    int solving;
+} solver_t;
+
 typedef struct my_defender_data {
     window_t *window;
     cursor_t *cursor;
@@ -161,14 +168,19 @@ typedef struct my_defender_data {
     int coins;
     int emeralds;
     int wave;
+    int placing;
     clocks_t *clock_enemy;
     clocks_t *clock_lasers;
+    clocks_t *clock_popup;
     int fps;
     int best_score;
     sfTexture *texture;
     d_d_t *drag;
     int last_unclick;
     sfMusic *click;
+    int x;
+    int y;
+    solver_t *solver;
 } my_defender_t;
 
 typedef my_defender_t dfd;

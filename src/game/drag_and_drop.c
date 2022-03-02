@@ -30,6 +30,11 @@ void drag_and_drop(dfd *df)
     sfVector2i mu = sfMouse_getPositionRenderWindow(df->window->window);
     node_button *tmp = df->list_buttons;
 
+    if (df->placing == FALSE) {
+        sfClock_restart(df->clock_popup->clock);
+        switch_step(df, POP);
+        return;
+    }
     if (df->drag->state != NOTHING)
         return;
     while (tmp->id < tmp->next->id) {
