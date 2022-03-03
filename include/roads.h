@@ -32,6 +32,6 @@ void convert_board(dfd *df);
 
 int exit_finder(int ** map);
 
-void solver(dfd *df)
+void solver(dfd *df);
 
 #endif

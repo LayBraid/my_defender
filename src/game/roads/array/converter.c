@@ -52,11 +52,27 @@ void add_towers(dfd *df, int **array)
     array[positions[0] + 1][positions[1] + 1] = 2;
 }
 
+void add_enemies(dfd *df, int **array)
+{
+    int *positions;
+    node_enemy *tmp = df->enemies;
+
+    while (tmp->id < tmp->next->id) {
+        positions = get_positions_box(tmp->enemy->id_box);
+        array[positions[0] + 1][positions[1] + 1] = 6;
+        tmp = tmp->next;
+    }
+    positions = get_positions_box(tmp->enemy->id_box);
+    array[positions[0] + 1][positions[1] + 1] = 6;
+}
+
 void convert_board(dfd *df)
 {
     int **tmp = init_my_array();
     if (df->earthly_build->build != NULL)
         add_towers(df, tmp);
+    if (df->enemies != NULL)
+        add_enemies(df, tmp);
     printf("\n");
     for (int i = 0; i < 11; i++) {
         for (int j = 0; j < 16; j++) {
@@ -64,5 +80,4 @@ void convert_board(dfd *df)
         }
         printf("\n");
     }
-    printf("result: %d\n", check_road(df, tmp));
 }
