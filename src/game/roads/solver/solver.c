@@ -39,18 +39,16 @@ int checking_end(solver_t *solver, int x, int y, int type)
         case 1:
             if (solver->map[y][x - 2] == 0)
                 return 0;
-            return 1;
         case 2:
             if (solver->map[y - 1][x + 1] == 0)
                 return 0;
-            return 1;
         case 3:
             if (solver->map[y + 1][x + 1] == 0)
                 return 0;
-            return 1;
         case 4:
             if (solver->map[y][x + 2] == 0)
                 return 0;
+        default:
             return 1;
     }
 }
