@@ -33,6 +33,7 @@ enum Steps {
     SEL_HEL,
     MAIN_POP,
     POP,
+    M_N_START,
 };
 
 enum All_building {

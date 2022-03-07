@@ -95,6 +95,7 @@ cf DLC_3[12] = {665, 582, 0, 3980, 110, 470, 2, 695, 606, 409, 61, SELECT};
 cf HOME_2[12] = {1660, 1005, 0, 1563, 80, 80, 2, 1675, 1020, 50, 50, HELP};
 cf QUIT_2[12] = {1720, 1005, 0, 1643, 80, 80, 2, 1735, 1020, 50, 50,HELP};
 cf BACK[12] = {1600, 1005, 0, 4623, 80, 80, 2, 1615, 1020, 50, 50,HELP};
+cf LAUNCH[12] = {0, 914, 305, 2191, 80, 270, 2, 20, 934, 230, 40,M_N_START};
 
 /*
  * Suite de l'initialisation des boutons
@@ -107,6 +108,7 @@ node_button *re7_next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, HOME_2, home_menu));
     add_button(&node, setup_button(df, QUIT_2, quit_button));
     add_button(&node, setup_button(df, BACK, play_button));
+    add_button(&node, setup_button(df, LAUNCH, nothing));
     return node;
 }
 
