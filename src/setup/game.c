@@ -39,6 +39,7 @@ void next_setup(dfd *df)
     df->drag->x_correction = 0;
     df->drag->y_correction = 0;
     df->last_unclick = -1;
+    df->wave_status = STOP;
 }
 
 void setup_game(dfd *df)

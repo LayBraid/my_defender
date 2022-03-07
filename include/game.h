@@ -76,6 +76,11 @@ enum Bool {
     TRUE,
 };
 
+enum Wave_Status {
+    STOP,
+    IN_PROGRESS,
+};
+
 void game_launch(char *path_texture, int fps);
 
 void drag_and_drop(dfd *defender);
