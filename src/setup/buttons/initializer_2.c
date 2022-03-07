@@ -108,7 +108,7 @@ node_button *re7_next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, HOME_2, home_menu));
     add_button(&node, setup_button(df, QUIT_2, quit_button));
     add_button(&node, setup_button(df, BACK, play_button));
-    add_button(&node, setup_button(df, LAUNCH, nothing));
+    add_button(&node, setup_button(df, LAUNCH, round_launch));
     return node;
 }
 

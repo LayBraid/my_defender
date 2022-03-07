@@ -28,4 +28,6 @@ void help_menu(my_defender_pointer *defender);
 
 void home_menu(my_defender_pointer *defender);
 
+void round_launch(my_defender_pointer *defender);
+
 #endif

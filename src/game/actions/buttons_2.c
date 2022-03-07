@@ -8,6 +8,7 @@
 #include "actions.h"
 #include "utils.h"
 #include "game.h"
+#include "rounds.h"
 
 void select_normal(my_defender_pointer *defender)
 {
@@ -27,4 +28,9 @@ void help_menu(my_defender_pointer *defender)
 void home_menu(my_defender_pointer *defender)
 {
     switch_step((dfd *) defender, OPEN);
+}
+
+void round_launch(my_defender_pointer *defender)
+{
+    start_round((dfd *) defender);
 }
