@@ -55,7 +55,7 @@ void add_towers(dfd *df, int **array)
     array[positions[0] + 1][positions[1] + 2] = -4;
 }
 
-void add_enemies(dfd *df, int **array, int id)
+void add_enemies(dfd *df, int **array)
 {
     int *positions;
     node_enemy *tmp = df->enemies;
@@ -69,7 +69,7 @@ void add_enemies(dfd *df, int **array, int id)
     array[positions[0] + 1][positions[1] + 2] = -5;
 }
 
-void convert_board(dfd *df)
+int get_action_enemy(dfd *df, node_enemy *enemy)
 {
     int **tmp = init_my_array();
     int action;
@@ -77,7 +77,7 @@ void convert_board(dfd *df)
     if (df->earthly_build->build != NULL)
         add_towers(df, tmp);
     if (df->enemies != NULL)
-        add_enemies(df, tmp, 0);
-    action = solver(df, tmp, df->enemies->enemy->id_box);
-    printf("%d\n", action);
+        add_enemies(df, tmp);
+    action = solver(df, tmp, enemy->enemy->id_box);
+    return action;
 }

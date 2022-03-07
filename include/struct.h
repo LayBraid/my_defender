@@ -172,6 +172,7 @@ typedef struct my_defender_data {
     clocks_t *clock_enemy;
     clocks_t *clock_lasers;
     clocks_t *clock_popup;
+    clocks_t *enemies_move;
     int fps;
     int best_score;
     sfTexture *texture;

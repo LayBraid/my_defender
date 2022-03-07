@@ -21,6 +21,4 @@ void my_key_cheat_code(dfd *df)
         move_enemy_up(df, 0);
     if (sfKeyboard_isKeyPressed(sfKeyS))
         move_enemy_down(df, 0);
-    if (sfKeyboard_isKeyPressed(sfKeyP))
-        convert_board(df);
 }

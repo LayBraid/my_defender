@@ -49,6 +49,8 @@ void setup_game(dfd *df)
     df->clock_lasers->clock = sfClock_create();
     df->clock_popup = malloc(sizeof(clocks_t));
     df->clock_popup->clock = sfClock_create();
+    df->enemies_move = malloc(sizeof(clocks_t));
+    df->enemies_move->clock = sfClock_create();
     df->tmp_create = malloc(sizeof(build_t));
     df->window = setup_window(df);
     df->list_img = malloc(sizeof(node_img));

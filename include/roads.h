@@ -28,7 +28,7 @@ void add_movement(dfd *df, int type);
 
 int get_delete_last(dfd *df);
 
-void convert_board(dfd *df);
+int get_action_enemy(dfd *df, node_enemy *enemy);
 
 int exit_finder(int ** map);
 
@@ -40,6 +40,6 @@ int **init_my_array(void);
 
 void add_towers(dfd *df, int **array);
 
-void add_enemies(dfd *df, int **array, int id);
+void add_enemies(dfd *df, int **array);
 
 #endif
