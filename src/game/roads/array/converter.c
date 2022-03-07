@@ -72,16 +72,12 @@ void add_enemies(dfd *df, int **array, int id)
 void convert_board(dfd *df)
 {
     int **tmp = init_my_array();
+    int action;
+
     if (df->earthly_build->build != NULL)
         add_towers(df, tmp);
     if (df->enemies != NULL)
         add_enemies(df, tmp, 0);
-    printf("\n");
-    /*for (int i = 0; i < 11; i++) {
-        for (int j = 0; j < 18; j++) {
-            printf("%5d", tmp[i][j]);
-        }
-        printf("\n");
-    }*/
-    printf("result: %d\n", solver(df, tmp, df->enemies->enemy->id_box));
+    action = solver(df, tmp, df->enemies->enemy->id_box);
+    printf("%d\n", action);
 }

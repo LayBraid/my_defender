@@ -20,45 +20,59 @@ sfVector2i array_to_vector(const int *array)
 
 int get_next_move(int **map, sfVector2i start)
 {
-
-    if (map[start.y - 1][start.x] == (map[start.y][start.x] + 1))
+    if (map[start.x + 1][start.y] == (map[start.x][start.y] - 1))
         return DOWN;
-    if (map[start.y + 1][start.x] == (map[start.y][start.x] + 1))
+    if (map[start.x - 1][start.y] == (map[start.x][start.y] - 1))
         return UP;
-    if (map[start.y][start.x + 1] == (map[start.y][start.x] + 1))
+    if (map[start.x][start.y + 1] == (map[start.x][start.y] - 1))
         return RIGHT;
-    if (map[start.y][start.x - 1] == (map[start.y][start.x] + 1))
+    if (map[start.x][start.y - 1] == (map[start.x][start.y] - 1))
         return LEFT;
     return -1;
 }
 
+int checking_end(solver_t *solver, int x, int y, int type)
+{
+    if (solver->solving == 0)
+        return 0;
+    switch (type) {
+        case 1:
+            if (solver->map[y][x - 2] == 0)
+                return 0;
+            return 1;
+        case 2:
+            if (solver->map[y - 1][x + 1] == 0)
+                return 0;
+            return 1;
+        case 3:
+            if (solver->map[y + 1][x + 1] == 0)
+                return 0;
+            return 1;
+        case 4:
+            if (solver->map[y][x + 2] == 0)
+                return 0;
+            return 1;
+    }
+}
+
 void calc_up(solver_t *solver, int x, int y, sfVector2i vector)
 {
-    printf("exe:\n\tx: %d\ty: %d\n\tvector.y: %d\tvector.x: %d\n\tvector.y + 2: %d\tvector.x + 1: %d\n", x, y, vector.y, vector.x, vector.y + 2, vector.x + 1);
     if (x == (vector.y + 1) && y == (vector.x)) {
         solver->solving = 1;
     }
-    if (solver->map[y][x - 1] == 1 && solver->solving == 0) {
-        if (solver->map[y][x - 2] == 0)
-            return;
+    if (solver->map[y][x - 1] == 1 && checking_end(solver, x, y, 1)) {
         solver->map[y][x - 1] = solver->map[y][x] + solver->map[y][x - 1];
         calc_up(solver, x - 1, y, vector);
     }
-    if (solver->map[y - 1][x] == 1 && solver->solving == 0) {
-        if (solver->map[y - 1][x + 1] == 0)
-            return;
+    if (solver->map[y - 1][x] == 1 && checking_end(solver, x, y, 2)) {
         solver->map[y - 1][x] = solver->map[y][x] + solver->map[y - 1][x];
         calc_up(solver, x, y - 1, vector);
     }
-    if (solver->map[y + 1][x] == 1 && solver->solving == 0) {
-        if (solver->map[y + 1][x + 1] == 0)
-            return;
+    if (solver->map[y + 1][x] == 1 && checking_end(solver, x, y, 3)) {
         solver->map[y + 1][x] = solver->map[y][x] + solver->map[y + 1][x];
         calc_up(solver, x, y + 1, vector);
     }
-    if (solver->map[y][x + 1] == 1 && solver->solving == 0) {
-        if (solver->map[y][x + 2] == 0)
-            return;
+    if (solver->map[y][x + 1] == 1 && checking_end(solver, x, y, 4)) {
         solver->map[y][x + 1] = solver->map[y][x] + solver->map[y][x + 1];
         calc_up(solver, x + 1, y, vector);
     }
@@ -74,19 +88,7 @@ int solver(dfd *df, int **map, int id_box)
     vector.y++;
     df->solver->map[vector.x][vector.y + 1] = 1;
 
-    for (int i = 0; i < 11; i++) {
-        for (int j = 0; j < 18; j++) {
-            printf("%5d", df->solver->map[i][j]);
-        }
-        printf("\n");
-    }
     calc_up(df->solver, 16, 5, vector);
-    printf("\n");
-    for (int i = 0; i < 11; i++) {
-        for (int j = 0; j < 18; j++) {
-            printf("%5d", df->solver->map[i][j]);
-        }
-        printf("\n");
-    }
+    vector.y++;
     return get_next_move(df->solver->map, vector);
 }
