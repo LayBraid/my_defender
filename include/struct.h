@@ -15,9 +15,9 @@
     #include <SFML/Audio.h>
 
 /*
- * Deuxieme typedef de la struct globale pour l'utiliser
- * dans les pointeurs de fonction (à cause de l'ordre de déclaration)
- */
+* Deuxieme typedef de la struct globale pour l'utiliser
+* dans les pointeurs de fonction (à cause de l'ordre de déclaration)
+*/
 
 typedef struct my_defender_t my_defender_pointer;
 
@@ -66,8 +66,8 @@ typedef struct node_img_struct {
 } node_img;
 
 /*
- * Contenu d'un batiment
- */
+* Contenu d'un batiment
+*/
 
 typedef struct build_struct {
     anim_img *img;
@@ -79,8 +79,8 @@ typedef struct build_struct {
 } build_t;
 
 /*
- * Structure de node des batiments terrestres
- */
+* Structure de node des batiments terrestres
+*/
 
 typedef struct node_earthly_build_struct {
     int id;
@@ -89,8 +89,8 @@ typedef struct node_earthly_build_struct {
 } node_earthly_build;
 
 /*
- * Structure de node des batiments aériens
- */
+* Structure de node des batiments aériens
+*/
 
 typedef struct node_flying_build_struct {
     int id;
@@ -99,9 +99,9 @@ typedef struct node_flying_build_struct {
 } node_flying_build;
 
 /*
- * Structure pour les logs des mouvements
- * Pour l'algo de labyrinthe
- */
+* Structure pour les logs des mouvements
+* Pour l'algo de labyrinthe
+*/
 
 typedef struct node_movement_struct {
     int id;
@@ -110,8 +110,8 @@ typedef struct node_movement_struct {
 } node_movement;
 
 /*
- * Structure pour que les mouvements soient executés avec une clock
- */
+* Structure pour que les mouvements soient executés avec une clock
+*/
 
 typedef struct node_movement_clock_struct {
     sfSprite *sprite;

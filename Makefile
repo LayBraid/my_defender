@@ -78,6 +78,7 @@ clean:
 	rm -f src/game/roads/*.o
 	rm -f src/game/roads/array/*.o
 	rm -f src/game/roads/logs/*.o
+	rm -f src/game/roads/solver/*.o
 	rm -f src/clocks/*.o
 	rm -f src/setup/*.o
 	rm -f src/setup/buttons/*.o
