@@ -5,7 +5,6 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "rounds.h"
 #include "game.h"
 
@@ -13,5 +12,7 @@ void start_round(dfd *df)
 {
     if (df->wave_status != STOP)
         return;
-    printf("teer\n");
+    df->wave++;
+    df->spawning = TRUE;
+    df->wave_status = IN_PROGRESS;
 }

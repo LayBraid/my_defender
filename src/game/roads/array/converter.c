@@ -5,6 +5,7 @@
 ** No file there , just an epitech header example
 */
 
+#include <printf.h>
 #include "roads.h"
 #include "my.h"
 
@@ -35,6 +36,11 @@ int *get_positions_box(int id_box)
 {
     int *pos = malloc(sizeof(int) * 2);
 
+    if (id_box == 147) {
+        pos[0] = 5;
+        pos[1] = 1;
+        return pos;
+    }
     pos[0] = (id_box - 21) / 14;
     pos[1] = (id_box - 21) % 14;
     return pos;
@@ -61,22 +67,23 @@ void add_enemies(dfd *df, int **array)
 
     while (tmp->id < tmp->next->id) {
         positions = get_positions_box(tmp->enemy->id_box);
-        array[positions[0] + 1][positions[1] + 2] = -5;
+        array[positions[0] + 1][positions[1] + 2] = tmp->id * 100;
         tmp = tmp->next;
     }
     positions = get_positions_box(tmp->enemy->id_box);
-    array[positions[0] + 1][positions[1] + 2] = -5;
+    array[positions[0] + 1][positions[1] + 2] = tmp->id * 100;
 }
 
 int get_action_enemy(dfd *df, node_enemy *enemy)
 {
     int **tmp = init_my_array();
-    int action;
+    int action = RIGHT;
 
     if (df->earthly_build->build != NULL)
         add_towers(df, tmp);
     if (df->enemies != NULL)
         add_enemies(df, tmp);
-    action = solver(df, tmp, enemy->enemy->id_box);
+    if (enemy->enemy->id_box != 147)
+        action = solver(df, tmp, enemy->enemy->id_box);
     return action;
 }

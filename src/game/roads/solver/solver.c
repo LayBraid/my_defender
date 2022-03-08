@@ -5,6 +5,7 @@
 ** No file there , just an epitech header example
 */
 
+#include <printf.h>
 #include "roads.h"
 #include "my.h"
 
@@ -30,48 +31,38 @@ int get_next_move(int **map, sfVector2i start)
     return -1;
 }
 
-int checking_end(solver_t *solver, int x, int y, int type)
+int end(solver_t *solver, int x, int y, int type)
 {
-    if (solver->solving == 0)
-        return 0;
-    switch (type) {
-        case 1:
-            if (solver->map[y][x - 2] == 0)
-                return 0;
-        case 2:
-            if (solver->map[y - 1][x + 1] == 0)
-                return 0;
-        case 3:
-            if (solver->map[y + 1][x + 1] == 0)
-                return 0;
-        case 4:
-            if (solver->map[y][x + 2] == 0)
-                return 0;
-        default:
-            return 1;
-    }
+    if (type == 1 && solver->map[y][x - 2] == 0)
+        return 1;
+    if (type == 2 && solver->map[y - 1][x + 1] == 0)
+        return 1;
+    if (type == 3 && solver->map[y + 1][x + 1] == 0)
+        return 1;
+    if (type == 4 && solver->map[y][x + 2] == 0)
+        return 1;
+    return 0;
 }
 
-void calc_up(solver_t *solver, int x, int y, sfVector2i vector)
+void calc_up(solver_t *s, int x, int y, sfVector2i vector)
 {
-    if (x == (vector.y + 1) && y == (vector.x)) {
-        solver->solving = 1;
+    if (x == (vector.y + 1) && y == (vector.x))
+        s->solving = 1;
+    if (s->map[y][x - 1] == 1 && s->solving == 0 && !end(s, x, y, 1)) {
+        s->map[y][x - 1] = s->map[y][x] + s->map[y][x - 1];
+        calc_up(s, x - 1, y, vector);
     }
-    if (solver->map[y][x - 1] == 1 && checking_end(solver, x, y, 1)) {
-        solver->map[y][x - 1] = solver->map[y][x] + solver->map[y][x - 1];
-        calc_up(solver, x - 1, y, vector);
+    if (s->map[y - 1][x] == 1 && s->solving == 0 && !end(s, x, y, 2)) {
+        s->map[y - 1][x] = s->map[y][x] + s->map[y - 1][x];
+        calc_up(s, x, y - 1, vector);
     }
-    if (solver->map[y - 1][x] == 1 && checking_end(solver, x, y, 2)) {
-        solver->map[y - 1][x] = solver->map[y][x] + solver->map[y - 1][x];
-        calc_up(solver, x, y - 1, vector);
+    if (s->map[y + 1][x] == 1 && s->solving == 0 && !end(s, x, y, 3)) {
+        s->map[y + 1][x] = s->map[y][x] + s->map[y + 1][x];
+        calc_up(s, x, y + 1, vector);
     }
-    if (solver->map[y + 1][x] == 1 && checking_end(solver, x, y, 3)) {
-        solver->map[y + 1][x] = solver->map[y][x] + solver->map[y + 1][x];
-        calc_up(solver, x, y + 1, vector);
-    }
-    if (solver->map[y][x + 1] == 1 && checking_end(solver, x, y, 4)) {
-        solver->map[y][x + 1] = solver->map[y][x] + solver->map[y][x + 1];
-        calc_up(solver, x + 1, y, vector);
+    if (s->map[y][x + 1] == 1 && s->solving == 0 && !end(s, x, y, 4)) {
+        s->map[y][x + 1] = s->map[y][x] + s->map[y][x + 1];
+        calc_up(s, x + 1, y, vector);
     }
 }
 
@@ -84,7 +75,6 @@ int solver(dfd *df, int **map, int id_box)
     vector.x++;
     vector.y++;
     df->solver->map[vector.x][vector.y + 1] = 1;
-
     calc_up(df->solver, 16, 5, vector);
     vector.y++;
     return get_next_move(df->solver->map, vector);

@@ -30,4 +30,6 @@ void spawn_enemy(dfd *df);
 
 void exe_movement_enemy(dfd *df);
 
+void move_all_enemies(dfd *df);
+
 #endif

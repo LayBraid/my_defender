@@ -30,7 +30,7 @@ int display(int step, int actual)
         return 1;
     if ((step == MAINA || step == M_N_START) && (actual == MAIN ||
         actual == DRAG_1 || actual == DRAG_2 || actual == POP ||
-        actual == M_N_START))
+        actual == M_N_START || actual == POP_MONEY))
         return 1;
     if (step == MAIN_POP && (actual == POP))
         return 1;

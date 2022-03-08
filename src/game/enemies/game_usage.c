@@ -52,6 +52,8 @@ void move_enemy_left(dfd *df, int id_enemy)
     sfVector2f vector;
     sfVector2f vector_2;
 
+    if (tmp->enemy->id_box == 147)
+        return;
     while (tmp->id != id_enemy)
         tmp = tmp->next;
     while (button->id != tmp->enemy->id_box)

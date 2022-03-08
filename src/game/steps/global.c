@@ -26,7 +26,9 @@ void global_steps(dfd *df)
     check_on_hover(df);
     clock_movement_enemies(df);
     clock_lasers_animation(df);
-    if (df->step == POP)
+    clock_spawn_enemies(df);
+    clock_enemies_move(df);
+    if (df->step == POP || df->step == POP_MONEY)
         clock_pop_up(df);
     if (display(MAINA, df->step))
         exe_step_main(df);

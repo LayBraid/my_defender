@@ -56,6 +56,7 @@ cf HELP_T[12] = {520, 73, 0, 4196, 137, 760, 0, HELP, -1};
 cf HELP_SB[12] = {84, 398, 0, 4333, 285, 1632, 0, HELP, -1};
 
 cf NO_BUILD[12] = {510, 931, 220, 2270, 90, 380, 0, MAIN_POP, -1};
+cf NO_MONEY[12] = {510, 931, 600, 2270, 90, 380, 0, POP_MONEY, -1};
 
 node_img *next_img(dfd *df, node_img *node)
 {
@@ -71,6 +72,7 @@ node_img *next_img(dfd *df, node_img *node)
     add_to_list_img(&node, setup_a_anim_img(df, HELP_SB));
     add_to_list_img(&node, setup_a_anim_img(df, HELP_T));
     add_to_list_img(&node, setup_a_anim_img(df, NO_BUILD));
+    add_to_list_img(&node, setup_a_anim_img(df, NO_MONEY));
     return node;
 }
 

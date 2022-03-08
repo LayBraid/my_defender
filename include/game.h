@@ -32,6 +32,7 @@ enum Steps {
     SEL_OP,
     SEL_HEL,
     MAIN_POP,
+    POP_MONEY,
     POP,
     M_N_START,
 };

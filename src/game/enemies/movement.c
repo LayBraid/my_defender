@@ -7,6 +7,7 @@
 
 #include "enemies.h"
 #include "my.h"
+#include "roads.h"
 
 void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector)
 {
@@ -32,4 +33,37 @@ void exe_movement_enemy(dfd *df)
     node_movement_clock *move = df->move_clock;
     df->move_clock = df->move_clock->next;
     sfSprite_setPosition(move->sprite, move->position);
+}
+
+void add_deplacement(dfd *df, node_enemy *enemy, int action)
+{
+    switch (action) {
+        case UP:
+            move_enemy_up(df, enemy->id);
+            break;
+        case DOWN:
+            move_enemy_down(df, enemy->id);
+            break;
+        case LEFT:
+            move_enemy_left(df, enemy->id);
+            break;
+        case RIGHT:
+            move_enemy_right(df, enemy->id);
+            break;
+        default:
+            break;
+    }
+}
+
+void move_all_enemies(dfd *df)
+{
+    node_enemy *tmp= df->enemies;
+
+    if (df->enemies == NULL)
+        return;
+    while (tmp->id < tmp->next->id) {
+        add_deplacement(df, tmp, get_action_enemy(df, tmp));
+        tmp = tmp->next;
+    }
+    add_deplacement(df, tmp, get_action_enemy(df, tmp));
 }

@@ -55,4 +55,10 @@ void select_normal_texture(dfd *df);
 
 void select_RU_UK_texture(dfd *df);
 
+int get_initial_price(int id_build);
+
+int count_enemies(dfd *df);
+
+int max_enemies(dfd *df);
+
 #endif

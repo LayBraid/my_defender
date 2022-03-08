@@ -31,6 +31,12 @@ int numbers_earthly(dfd *df)
         return get_max_build(&df->earthly_build);
 }
 
+void no_money(dfd *df)
+{
+    sfClock_restart(df->clock_popup->clock);
+    switch_step(df, POP_MONEY);
+}
+
 void add_building(dfd *df)
 {
     cf info[8] = {get_x_box(df, df->tmp_create->id_box),
@@ -38,13 +44,15 @@ void add_building(dfd *df)
     get_r_x_build(df->tmp_create->id_build),
     get_r_y_build(df->tmp_create->id_build),110,110,0,MAINA};
     build_t *build = malloc(sizeof(build_t));
+
+    if (get_initial_price(df->tmp_create->id_build) > df->coins)
+        return no_money(df);
     build->id_build = df->tmp_create->id_build;
     build->id_box = df->tmp_create->id_box;
     build->type = df->tmp_create->type;
     build->img = setup_a_anim_img(df, info);
     build->life = get_initial_life(build->id_build);
     build->level = 0;
-
     if (df->earthly_build->build == NULL)
         setup_first_build(&df->earthly_build, build);
     else

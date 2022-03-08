@@ -19,6 +19,11 @@
 * Définition du step au démarrage du jeu
 */
 
+void other_setup(dfd *df)
+{
+    df->spawning = FALSE;
+}
+
 void next_setup(dfd *df)
 {
     df->list_buttons = setup_buttons(df);
@@ -26,7 +31,7 @@ void next_setup(dfd *df)
     df->enemies = NULL;
     df->move_clock = NULL;
     df->laser_clock = NULL;
-    df->coins = 0;
+    df->coins = 20;
     df->emeralds = 0;
     df->wave = 0;
     df->placing = FALSE;
@@ -40,6 +45,7 @@ void next_setup(dfd *df)
     df->drag->y_correction = 0;
     df->last_unclick = -1;
     df->wave_status = STOP;
+    other_setup(df);
 }
 
 void setup_game(dfd *df)
@@ -52,6 +58,8 @@ void setup_game(dfd *df)
     df->clock_popup->clock = sfClock_create();
     df->enemies_move = malloc(sizeof(clocks_t));
     df->enemies_move->clock = sfClock_create();
+    df->enem_spawn = malloc(sizeof(clocks_t));
+    df->enem_spawn->clock = sfClock_create();
     df->tmp_create = malloc(sizeof(build_t));
     df->window = setup_window(df);
     df->list_img = malloc(sizeof(node_img));

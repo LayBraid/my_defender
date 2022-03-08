@@ -7,6 +7,7 @@
 
 #include "clocks.h"
 #include "enemies.h"
+#include "game.h"
 
 void clock_movement_enemies(dfd *df)
 {
@@ -20,10 +21,12 @@ void clock_movement_enemies(dfd *df)
 
 void clock_enemies_move(dfd *df)
 {
+    if (df->wave_status == STOP || df->enemies == NULL)
+        return;
     df->enemies_move->time = sfClock_getElapsedTime(df->enemies_move->clock);
     df->enemies_move->seconds = df->enemies_move->time.microseconds / 1000000.0;
     if (df->enemies_move->seconds > 2.5) {
-        exe_movement_enemy(df);
+        move_all_enemies(df);
         sfClock_restart(df->enemies_move->clock);
     }
 }
