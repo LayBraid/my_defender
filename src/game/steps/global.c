@@ -13,9 +13,9 @@
 #include "clocks.h"
 
 /*
- * Première fonction appelée pour appeler seulement les fonctions
- * que l'on a besoin à tel moment du jeu
- */
+* Première fonction appelée pour appeler seulement les fonctions
+* que l'on a besoin à tel moment du jeu
+*/
 
 void global_steps(dfd *df)
 {

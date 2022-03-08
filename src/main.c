@@ -9,8 +9,8 @@
 #include "my.h"
 
 /*
- * Message d'help du jeu
- */
+* Message d'help du jeu
+*/
 
 int help_message(void)
 {
@@ -22,11 +22,11 @@ int help_message(void)
 }
 
 /*
- * Fonction main
- *
- * Vérification du nombre d'argument
- * Vérification du '-h'
- */
+* Fonction main
+*
+* Vérification du nombre d'argument
+* Vérification du '-h'
+*/
 
 int main(int ac, char **av)
 {

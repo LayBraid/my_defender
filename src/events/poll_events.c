@@ -8,9 +8,9 @@
 #include "events.h"
 
 /*
- * Récupération des events de la window
- * Puis appelle à toutes les fonctions de vérifications des events
- */
+* Récupération des events de la window
+* Puis appelle à toutes les fonctions de vérifications des events
+*/
 
 void poll_events(my_defender_t *my_defender, sfRenderWindow *window)
 {

@@ -5,7 +5,6 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "game.h"
 #include "utils.h"
 

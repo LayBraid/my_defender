@@ -9,11 +9,11 @@
 #include "game.h"
 
 /*
- * Fonction qui nous permet de switch de step
- *
- * Si changement de cursor activé, il faut retiré la partie en commentaire
- * dans la fonction
- */
+* Fonction qui nous permet de switch de step
+*
+* Si changement de cursor activé, il faut retiré la partie en commentaire
+* dans la fonction
+*/
 
 void switch_step(my_defender_t *my_defender, int x)
 {

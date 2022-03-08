@@ -8,8 +8,8 @@
 #include "events.h"
 
 /*
- * Vérification si l'event actuel correspond à la fermeture de la window
- */
+* Vérification si l'event actuel correspond à la fermeture de la window
+*/
 
 void close_event(window_t* window, sfEvent event)
 {

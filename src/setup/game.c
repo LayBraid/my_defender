@@ -11,13 +11,13 @@
 #include "roads.h"
 
 /*
- * Fonction appelée pour setup là game au début du programme
- *
- * Setup de la window
- * Setup des images
- * Setup des boutons
- * Définition du step au démarrage du jeu
- */
+* Fonction appelée pour setup là game au début du programme
+*
+* Setup de la window
+* Setup des images
+* Setup des boutons
+* Définition du step au démarrage du jeu
+*/
 
 void next_setup(dfd *df)
 {

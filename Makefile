@@ -68,6 +68,8 @@ clean:
 	rm -f src/game/display/enemies/*.o
 	rm -f src/game/display/*.o
 	rm -f src/game/steps/*.o
+	rm -f src/game/laser/*.o
+	rm -f src/game/rounds/*.o
 	rm -f src/game/actions/*.o
 	rm -f src/game/enemies/*.o
 	rm -f src/game/buildings/*.o

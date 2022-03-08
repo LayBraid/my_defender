@@ -9,24 +9,24 @@
 #include "my.h"
 
 /*
- * Création d'une image animée
- *
- * Utilisée aussi pour les 'hovered_button'
- *
- * Arguments:
- * - path de la resource
- * - informations de l'image
- *
- * Informations de l'image:
- * 0: Position de l'image en X une fois display
- * 1: Position de l'image en Y une fois display
- * 2: Position du rect de l'image en position X
- * 3: Position du rect de l'image en position Y
- * 4: Height du rect
- * 5: Width du rect
- * 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
- * 7: step pour display
- */
+* Création d'une image animée
+*
+* Utilisée aussi pour les 'hovered_button'
+*
+* Arguments:
+* - path de la resource
+* - informations de l'image
+*
+* Informations de l'image:
+* 0: Position de l'image en X une fois display
+* 1: Position de l'image en Y une fois display
+* 2: Position du rect de l'image en position X
+* 3: Position du rect de l'image en position Y
+* 4: Height du rect
+* 5: Width du rect
+* 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
+* 7: step pour display
+*/
 
 //TODO Gérer le '-1' dans le max de l'animations >> cancel l'animations
 //TODO Vérifier si enfaite mettre 0 ne cancel déjà pas l'annimation

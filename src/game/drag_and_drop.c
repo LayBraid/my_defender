@@ -15,9 +15,9 @@ node_button *button, sfVector2i mouse)
 {
     if (display(button->button->step_display, df->step) &&
         ((float) mouse.x > button->button->x_click &&
-         (float) mouse.x < button->button->x_click + button->button->x_max &&
-         (float) mouse.y > button->button->y_click &&
-         (float) mouse.y < button->button->y_click + button->button->y_max)) {
+        (float) mouse.x < button->button->x_click + button->button->x_max &&
+        (float) mouse.y > button->button->y_click &&
+        (float) mouse.y < button->button->y_click + button->button->y_max)) {
         df->drag->id_building = button->id + 3;
         df->drag->x_correction = button->button->x_click - (float) mouse.x;
         df->drag->y_correction = button->button->y_click - (float) mouse.y;

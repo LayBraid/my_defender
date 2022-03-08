@@ -12,16 +12,16 @@
 #include "my.h"
 
 /*
- * Informations de l'image:
- * 0: Position de l'image en X une fois display
- * 1: Position de l'image en Y une fois display
- * 2: Position du rect de l'image en position X
- * 3: Position du rect de l'image en position Y
- * 4: Height du rect
- * 5: Width du rect
- * 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
- * 7: step pour display
- */
+* Informations de l'image:
+* 0: Position de l'image en X une fois display
+* 1: Position de l'image en Y une fois display
+* 2: Position du rect de l'image en position X
+* 3: Position du rect de l'image en position Y
+* 4: Height du rect
+* 5: Width du rect
+* 6: Position max de l'animations (Mettre à -1 pour annuler l'animations)
+* 7: step pour display
+*/
 
 int numbers_earthly(dfd *df)
 {

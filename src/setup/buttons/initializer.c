@@ -11,19 +11,19 @@
 #include "actions.h"
 
 /*
- * Informations d'un bouton:
- * 0: Position de l'image en X une fois display
- * 1: Position de l'image en Y une fois display
- * 2: Position du rect de l'image en position X
- * 3: Position du rect de l'image en position Y
- * 4: Height du rect
- * 5: Width du rect
- * 6: Position max de l'animations
- * 7: Position X de la zone cliquable du bouton
- * 8: Position Y de la zone cliquable du bouton
- * 9: Taille max en X pour la zone cliquable
- * 10: Taille max en Y pour la zone cliquable
- * 11: Step où il va être display
+* Informations d'un bouton:
+* 0: Position de l'image en X une fois display
+* 1: Position de l'image en Y une fois display
+* 2: Position du rect de l'image en position X
+* 3: Position du rect de l'image en position Y
+* 4: Height du rect
+* 5: Width du rect
+* 6: Position max de l'animations
+* 7: Position X de la zone cliquable du bouton
+* 8: Position Y de la zone cliquable du bouton
+* 9: Taille max en X pour la zone cliquable
+* 10: Taille max en Y pour la zone cliquable
+* 11: Step où il va être display
 */
 
 // Box de 21 à 146
@@ -129,8 +129,8 @@ cf P_1_6[12] = {13, 483, 0, 2805, 110, 110, 2, 28, 488, 80, 80, DRAG_1};
 cf P_2_6[12] = {109, 483, 0, 2805, 110, 110, 2, 124, 488, 80, 80, DRAG_1};
 
 /*
- * Suite de l'initialisation des boutons
- */
+* Suite de l'initialisation des boutons
+*/
 
 node_button *re3_next_buttons(dfd *df, node_button *node)
 {
@@ -157,8 +157,8 @@ node_button *re3_next_buttons(dfd *df, node_button *node)
 }
 
 /*
- * Suite de l'initialisation des boutons
- */
+* Suite de l'initialisation des boutons
+*/
 
 node_button *re2_next_buttons(dfd *df, node_button *node)
 {
@@ -185,8 +185,8 @@ node_button *re2_next_buttons(dfd *df, node_button *node)
 }
 
 /*
- * Suite de l'initialisation des boutons
- */
+* Suite de l'initialisation des boutons
+*/
 
 node_button *re_next_buttons(dfd *df, node_button *node)
 {
@@ -213,8 +213,8 @@ node_button *re_next_buttons(dfd *df, node_button *node)
 }
 
 /*
- * Suite de l'initialisation des boutons
- */
+* Suite de l'initialisation des boutons
+*/
 
 node_button *next_buttons(dfd *df, node_button *node)
 {
@@ -241,16 +241,16 @@ node_button *next_buttons(dfd *df, node_button *node)
 }
 
 /*
- * Explication de la fonction:
- *
- * Pour le premier bouton il faut utiliser la fonction 'setup_first'
- * et pour les autres 'add_to_list'.
- *
- * Premier paramètre à passer à chaque fois c'est l'adresse de node '&node'
- * Ensuite le retour de la fonction 'setup_button'.
- *
- * Voir explication 'setup_button' pour les arguments
- */
+* Explication de la fonction:
+*
+* Pour le premier bouton il faut utiliser la fonction 'setup_first'
+* et pour les autres 'add_to_list'.
+*
+* Premier paramètre à passer à chaque fois c'est l'adresse de node '&node'
+* Ensuite le retour de la fonction 'setup_button'.
+*
+* Voir explication 'setup_button' pour les arguments
+*/
 
 node_button *setup_buttons(dfd *df)
 {

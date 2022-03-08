@@ -10,11 +10,11 @@
 #include "display.h"
 
 /*
- * Fonction appelée à la step main du jeu
- *
- * Elle sert à display seulement ce qu'on a besoin
- * C'est ici qu'on appelle les fonctions des clocks
- */
+* Fonction appelée à la step main du jeu
+*
+* Elle sert à display seulement ce qu'on a besoin
+* C'est ici qu'on appelle les fonctions des clocks
+*/
 
 void exe_step_main(my_defender_t *defender)
 {

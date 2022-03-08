@@ -13,9 +13,9 @@ node_button *button, sfVector2i mouse)
 {
     if (display(button->button->step_display, defender->step) &&
         ((float) mouse.x > button->button->x_click &&
-         (float) mouse.x < button->button->x_click + button->button->x_max &&
-         (float) mouse.y > button->button->y_click &&
-         (float) mouse.y < button->button->y_click + button->button->y_max)) {
+        (float) mouse.x < button->button->x_click + button->button->x_max &&
+        (float) mouse.y > button->button->y_click &&
+        (float) mouse.y < button->button->y_click + button->button->y_max)) {
         if (button->button->button->anim_pos == 2) {
             defender->last_unclick = button->id;
             button->button->function((my_defender_pointer *) defender);

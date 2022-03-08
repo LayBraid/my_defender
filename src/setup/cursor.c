@@ -11,16 +11,16 @@
 #include "utils.h"
 
 /*
- * Setup automatique du curseur si on active l'option dans le fichier 'game.h'
- */
+* Setup automatique du curseur si on active l'option dans le fichier 'game.h'
+*/
 
 void setup_cursor(my_defender_t *my_defender)
 {
     my_defender->cursor = malloc(sizeof(cursor_t));
     my_defender->cursor->sprite = sfSprite_create();
     my_defender->cursor->texture = sfTexture_createFromFile(PATH_CURSOR,
-                                                          NULL);
+    NULL);
     sfSprite_setTexture(my_defender->cursor->sprite,
-                        my_defender->cursor->texture, sfFalse);
+    my_defender->cursor->texture, sfFalse);
     switch_cursor(my_defender, 0);
 }

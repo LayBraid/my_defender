@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2022
 ** my_df
 ** File description:
-** Find a exit in the map 
+** Find a exit in the map
 */
 
 #include <SFML/Graphics/Transform.h>

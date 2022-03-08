@@ -8,8 +8,8 @@
 #include "utils.h"
 
 /*
- * Ferme la window et met fin au process
- */
+* Ferme la window et met fin au process
+*/
 
 void quit_game(my_defender_t *defender)
 {

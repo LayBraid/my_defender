@@ -12,18 +12,18 @@
 #include "steps.h"
 
 /*
- * Fonction principale de notre jeu
- *
- * On commence par setup la game >> voir explications 'setup_game'
- *
- * Boucle de la fenêtre
- *  - Clear
- *  - Appel des events
- *  - Appel des fonctions par rapport au step du jeu
- *  - Display
- *
- * Destroy tout à la fin
- */
+* Fonction principale de notre jeu
+*
+* On commence par setup la game >> voir explications 'setup_game'
+*
+* Boucle de la fenêtre
+*  - Clear
+*  - Appel des events
+*  - Appel des fonctions par rapport au step du jeu
+*  - Display
+*
+* Destroy tout à la fin
+*/
 
 void update_with_argument(dfd *df, char *path_texture, int fps)
 {
