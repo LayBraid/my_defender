@@ -35,6 +35,7 @@ enum Steps {
     POP_MONEY,
     POP,
     M_N_START,
+    ROADS,
 };
 
 enum All_building {

@@ -14,5 +14,6 @@ void start_round(dfd *df)
         return;
     df->wave++;
     df->spawning = TRUE;
+    df->placing = TRUE;
     df->wave_status = IN_PROGRESS;
 }
