@@ -25,7 +25,7 @@
 
 int numbers_earthly(dfd *df)
 {
-    if (df->earthly_build->build == NULL)
+    if (df->earthly_build == NULL)
         return -1;
     else
         return get_max_build(&df->earthly_build);

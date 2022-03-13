@@ -64,8 +64,8 @@ void setup_game(dfd *df)
     df->window = setup_window(df);
     df->list_img = malloc(sizeof(node_img));
     df->list_buttons = malloc(sizeof(node_button));
-    df->earthly_build = malloc(sizeof(node_earthly_build));
-    df->flying_build = malloc(sizeof(node_flying_build));
+    df->earthly_build = NULL;
+    df->flying_build = NULL;
     df->movement = malloc(sizeof(node_movement));
     setup_first_movement(&df->movement, START);
     df->texture = sfTexture_createFromFile("resources/normal.png", NULL);

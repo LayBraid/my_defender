@@ -5,6 +5,7 @@
 ** No file there , just an epitech header example
 */
 
+#include <printf.h>
 #include "enemies.h"
 #include "my.h"
 #include "roads.h"
@@ -62,8 +63,8 @@ void move_all_enemies(dfd *df)
     if (df->enemies == NULL)
         return;
     while (tmp->id < tmp->next->id) {
-        add_deplacement(df, tmp, get_action_enemy(df, tmp));
+        add_deplacement(df, tmp, get_next_move_hard(tmp->enemy->id_box));
         tmp = tmp->next;
     }
-    add_deplacement(df, tmp, get_action_enemy(df, tmp));
+    add_deplacement(df, tmp, get_next_move_hard(tmp->enemy->id_box));
 }
