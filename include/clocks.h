@@ -20,4 +20,6 @@ void clock_spawn_enemies(dfd *df);
 
 void clock_enemies_move(dfd *df);
 
+void clock_enemy_anim(dfd *df);
+
 #endif

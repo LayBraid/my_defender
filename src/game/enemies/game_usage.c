@@ -9,7 +9,6 @@
 #include "game.h"
 #include "my.h"
 #include "setup.h"
-#include "utils.h"
 
 /*
 * Informations de l'image:
@@ -115,7 +114,7 @@ void move_enemy_down(dfd *df, int id_enemy)
 void spawn_enemy(dfd *df)
 {
     enemy_t *tmp= malloc(sizeof(enemy_t));
-    cf info[8] = {-83, 387, 0, 3478, 110, 110, 0, MAINA};
+    cf info[8] = {-83, 387, 1363, 2001, 110, 110, 0, MAINA};
     tmp->img = setup_a_anim_img(df, info);
     tmp->type = SIMPLE;
     tmp->life = 20;
