@@ -12,29 +12,37 @@
 
     #define LIFE_INIT_TOWER_1 15
     #define PRICE_INIT_TOWER_1 5
+
     #define LIFE_INIT_TOWER_2 25
     #define PRICE_INIT_TOWER_2 5
+
     #define LIFE_INIT_TOWER_3 40
     #define PRICE_INIT_TOWER_3 5
+
     #define LIFE_INIT_TOWER_4 60
     #define PRICE_INIT_TOWER_4 5
 
     #define LIFE_INIT_TANK_1 20
     #define PRICE_INIT_TANK_1 5
+
     #define LIFE_INIT_TANK_2 35
     #define PRICE_INIT_TANK_2 5
 
     #define LIFE_INIT_MISSILE_1 20
     #define PRICE_INIT_MISSILE_1 5
+
     #define LIFE_INIT_MISSILE_2 35
     #define PRICE_INIT_MISSILE_2 5
+
     #define LIFE_INIT_MISSILE_3 50
     #define PRICE_INIT_MISSILE_3 5
+
     #define LIFE_INIT_MISSILE_4 70
     #define PRICE_INIT_MISSILE_4 5
 
     #define LIFE_INIT_PLANE_1 35
     #define PRICE_INIT_PLANE_1 5
+
     #define LIFE_INIT_PLANE_2 50
     #define PRICE_INIT_PLANE_2 5
 

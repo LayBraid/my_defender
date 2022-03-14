@@ -63,4 +63,6 @@ int max_enemies(dfd *df);
 
 int in_range(int tower, int enemy, int range);
 
+float get_hits(int type, int level);
+
 #endif
