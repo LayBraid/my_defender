@@ -89,4 +89,6 @@ void drag_and_drop(dfd *defender);
 
 void drag_and_drop_launch(dfd *df);
 
+void loose_game(dfd *df);
+
 #endif

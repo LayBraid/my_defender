@@ -28,4 +28,6 @@ void mouse_unpressed_event(dfd *df, sfEvent event);
 
 void my_key_cheat_code(dfd *df);
 
+void towers_key(dfd *df);
+
 #endif

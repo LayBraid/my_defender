@@ -18,7 +18,7 @@ void clock_spawn_enemies(dfd *df)
         return;
     df->enem_spawn->time = sfClock_getElapsedTime(df->enem_spawn->clock);
     df->enem_spawn->seconds = df->enem_spawn->time.microseconds / 1000000.0;
-    if (df->enem_spawn->seconds > 2.5 / (df->wave / 0.33)) {
+    if (df->enem_spawn->seconds > 2.75) {
         spawn_enemy(df);
         sfClock_restart(df->enem_spawn->clock);
     }

@@ -42,6 +42,6 @@ void add_towers(dfd *df, int **array);
 
 void add_enemies(dfd *df, int **array);
 
-int get_next_move_hard(int id);
+int get_next_move_hard(dfd* df, int id);
 
 #endif

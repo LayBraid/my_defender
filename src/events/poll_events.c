@@ -20,7 +20,9 @@ void poll_events(my_defender_t *my_defender, sfRenderWindow *window)
         mouse_pressed_event(my_defender, event);
         if (event.type == sfEvtMouseButtonReleased)
             check_on_un_click(my_defender);
-        if (event.type == sfEvtKeyPressed)
+        if (event.type == sfEvtKeyPressed) {
             my_key_cheat_code(my_defender);
+            towers_key(my_defender);
+        }
     }
 }

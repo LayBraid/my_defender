@@ -53,7 +53,7 @@ void add_building(dfd *df)
     build->img = setup_a_anim_img(df, info);
     build->life = get_initial_life(build->id_build);
     build->level = 0;
-    if (df->earthly_build->build == NULL)
+    if (df->earthly_build == NULL)
         setup_first_build(&df->earthly_build, build);
     else
         add_to_list_build(&df->earthly_build, build);

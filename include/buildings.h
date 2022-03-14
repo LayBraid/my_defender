@@ -48,4 +48,6 @@ void add_building(dfd *df);
 
 int numbers_earthly(dfd *df);
 
+void launch_towers(dfd *df, int type);
+
 #endif

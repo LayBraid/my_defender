@@ -37,6 +37,7 @@ void add_to_list_build(node_earthly_build **node, build_t *build)
 
 void setup_first_build(node_earthly_build **node, build_t *build)
 {
+    (*node) = malloc(sizeof(node_earthly_build));
     (*node)->id = 0;
     (*node)->build = build;
     (*node)->next = (*node);

@@ -11,8 +11,6 @@
 
 void my_key_cheat_code(dfd *df)
 {
-    if (sfKeyboard_isKeyPressed(sfKeyE))
-        spawn_enemy(df);
     if (sfKeyboard_isKeyPressed(sfKeyD))
         move_enemy_right(df, 0);
     if (sfKeyboard_isKeyPressed(sfKeyQ))

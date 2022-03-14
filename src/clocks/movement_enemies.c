@@ -25,7 +25,7 @@ void clock_enemies_move(dfd *df)
         return;
     df->enemies_move->time = sfClock_getElapsedTime(df->enemies_move->clock);
     df->enemies_move->seconds = df->enemies_move->time.microseconds / 1000000.0;
-    if (df->enemies_move->seconds > 2.5) {
+    if (df->enemies_move->seconds > 2.75) {
         move_all_enemies(df);
         sfClock_restart(df->enemies_move->clock);
     }
