@@ -75,6 +75,7 @@ typedef struct build_struct {
     int id_build;
     int id_box;
     int level;
+    float hit;
     float life;
 } build_t;
 

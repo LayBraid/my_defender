@@ -32,4 +32,7 @@ void exe_movement_enemy(dfd *df);
 
 void move_all_enemies(dfd *df);
 
+void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly,
+node_flying_build *flying);
+
 #endif
