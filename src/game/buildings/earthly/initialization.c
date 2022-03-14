@@ -54,6 +54,7 @@ void add_building(dfd *df)
     build->life = get_initial_life(build->id_build);
     build->level = 0;
     build->hit = get_hits(build->type, 0);
+    build->range = get_range(build->id_build, build->level);
     if (df->earthly_build == NULL)
         setup_first_build(&df->earthly_build, build);
     else

@@ -7,9 +7,7 @@
 
 #include "enemies.h"
 
-void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly,
-node_flying_build *flying)
+void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly)
 {
-    (void) flying;
     enemy->enemy->life -= earthly->build->hit;
 }

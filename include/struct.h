@@ -77,6 +77,7 @@ typedef struct build_struct {
     int level;
     float hit;
     float life;
+    int range;
 } build_t;
 
 /*
@@ -117,6 +118,8 @@ typedef struct node_movement_struct {
 typedef struct node_movement_clock_struct {
     sfSprite *sprite;
     sfVector2f position;
+    int id;
+    int type;
     struct node_movement_clock_struct *next;
 } node_movement_clock;
 

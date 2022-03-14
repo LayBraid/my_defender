@@ -16,7 +16,8 @@ void add_to_list_enemy(node_enemy **node, enemy_t *enemy);
 
 void setup_first_enemy(node_enemy **node, enemy_t *enemy);
 
-void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector);
+void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector,
+const int *info);
 
 void move_enemy_right(dfd *df, int id_enemy);
 
@@ -32,7 +33,6 @@ void exe_movement_enemy(dfd *df);
 
 void move_all_enemies(dfd *df);
 
-void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly,
-node_flying_build *flying);
+void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly);
 
 #endif

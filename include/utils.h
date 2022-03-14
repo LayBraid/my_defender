@@ -65,4 +65,6 @@ int in_range(int tower, int enemy, int range);
 
 float get_hits(int type, int level);
 
+int get_range(int type, int level);
+
 #endif
