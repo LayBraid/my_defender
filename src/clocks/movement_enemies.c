@@ -13,7 +13,7 @@ void clock_movement_enemies(dfd *df)
 {
     df->clock_enemy->time = sfClock_getElapsedTime(df->clock_enemy->clock);
     df->clock_enemy->seconds = df->clock_enemy->time.microseconds / 1000000.0;
-    if (df->clock_enemy->seconds > 0.05) {
+    if (df->clock_enemy->seconds > 0.05 / 5) {
         exe_movement_enemy(df);
         sfClock_restart(df->clock_enemy->clock);
     }

@@ -61,6 +61,6 @@ int count_enemies(dfd *df);
 
 int max_enemies(dfd *df);
 
-int in_range(int tower, int enemy);
+int in_range(int tower, int enemy, int range);
 
 #endif
