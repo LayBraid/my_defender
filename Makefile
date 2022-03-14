@@ -20,6 +20,7 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/display/buildings/*.c) \
 	  $(wildcard src/game/display/enemies/*.c) \
 	  $(wildcard src/game/enemies/*.c) \
+	  $(wildcard src/game/enemies/clocks/*.c) \
 	  $(wildcard src/game/actions/*.c) \
 	  $(wildcard src/utils/*.c) \
 	  $(wildcard src/utils/animations/*.c) \

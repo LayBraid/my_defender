@@ -35,4 +35,8 @@ void move_all_enemies(dfd *df);
 
 void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly);
 
+void add_to_list_clock_ene(node_anim_enemy_t **node);
+
+void setup_first_clock_ene(node_anim_enemy_t **node);
+
 #endif

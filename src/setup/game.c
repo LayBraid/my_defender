@@ -22,6 +22,7 @@
 void other_setup(dfd *df)
 {
     df->spawning = FALSE;
+    df->enemies_clocks = NULL;
 }
 
 void next_setup(dfd *df)

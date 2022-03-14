@@ -120,8 +120,11 @@ void spawn_enemy(dfd *df)
     tmp->type = SIMPLE;
     tmp->life = 20;
     tmp->id_box = 147;
-    if (df->enemies == NULL)
+    if (df->enemies == NULL) {
+        setup_first_clock_ene(&df->enemies_clocks);
         setup_first_enemy(&df->enemies, tmp);
-    else
+    } else {
         add_to_list_enemy(&df->enemies, tmp);
+        add_to_list_clock_ene(&df->enemies_clocks);
+    }
 }

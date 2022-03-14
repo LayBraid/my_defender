@@ -111,6 +111,12 @@ typedef struct node_movement_struct {
     struct node_movement_struct *next;
 } node_movement;
 
+typedef struct node_anim_enemy {
+    int id;
+    sfClock *clock;
+    struct node_anim_enemy *next;
+} node_anim_enemy_t;
+
 /*
 * Structure pour que les mouvements soient executés avec une clock
 */
@@ -167,6 +173,7 @@ typedef struct my_defender_data {
     node_movement_clock *move_clock;
     node_movement_clock *laser_clock;
     node_enemy *enemies;
+    node_anim_enemy_t *enemies_clocks;
     build_t *tmp_create;
     int step;
     int coins;
