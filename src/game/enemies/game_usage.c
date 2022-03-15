@@ -42,7 +42,7 @@ void move_enemy_right(dfd *df, int id_enemy)
         tmp->enemy->id_box++;
     while (vector.x + 95 >= vector_2.x) {
         vector_2.x += 2;
-        add_movement_enemy(df, tmp->enemy->img->sprite, vector_2,
+        add_movement_enemy(df, tmp, vector_2,
         simple_id(0, tmp->id));
     }
 }
@@ -65,7 +65,7 @@ void move_enemy_left(dfd *df, int id_enemy)
     tmp->enemy->id_box--;
     while (vector.x - 95 <= vector_2.x) {
         vector_2.x -= 2;
-        add_movement_enemy(df, tmp->enemy->img->sprite, vector_2,
+        add_movement_enemy(df, tmp, vector_2,
         simple_id(0, tmp->id));
     }
 }
@@ -86,7 +86,7 @@ void move_enemy_up(dfd *df, int id_enemy)
     tmp->enemy->id_box -= 14;
     while (vector.y - 95 <= vector_2.y) {
         vector_2.y -= 2;
-        add_movement_enemy(df, tmp->enemy->img->sprite, vector_2,
+        add_movement_enemy(df, tmp, vector_2,
         simple_id(0, tmp->id));
     }
 }
@@ -107,7 +107,7 @@ void move_enemy_down(dfd *df, int id_enemy)
     tmp->enemy->id_box += 14;
     while (vector.y + 95 >= vector_2.y) {
         vector_2.y += 2;
-        add_movement_enemy(df, tmp->enemy->img->sprite, vector_2,
+        add_movement_enemy(df, tmp, vector_2,
         simple_id(0, tmp->id));
     }
 }
@@ -124,7 +124,7 @@ void spawn_enemy(dfd *df)
         setup_first_clock_ene(&df->enemies_clocks);
         setup_first_enemy(&df->enemies, tmp);
     } else {
-        add_to_list_enemy(&df->enemies, tmp);
         add_to_list_clock_ene(&df->enemies_clocks);
+        add_to_list_enemy(&df->enemies, tmp);
     }
 }

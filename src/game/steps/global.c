@@ -24,7 +24,7 @@ void global_steps(dfd *df)
     display_buildings(df);
     display_enemies(df);
     check_on_hover(df);
-    clock_movement_enemies(df);
+    //clock_movement_enemies(df);
     clock_lasers_animation(df);
     clock_spawn_enemies(df);
     clock_enemy_anim(df);

@@ -5,30 +5,8 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "enemies.h"
-#include "my.h"
 #include "roads.h"
-
-void add_movement_enemy(dfd *df, sfSprite *sprite, sfVector2f vector,
-const int *info)
-{
-    node_movement_clock *new = malloc(sizeof(node_movement_clock));
-    node_movement_clock *tmp = df->move_clock;
-    new->sprite = sprite;
-    new->position = vector;
-    new->type = info[0];
-    new->id = info[1];
-    new->next = NULL;
-
-    if (df->move_clock == NULL) {
-        df->move_clock = new;
-        return;
-    }
-    while (tmp->next != NULL)
-        tmp = tmp->next;
-    tmp->next = new;
-}
 
 void exe_movement_enemy(dfd *df)
 {

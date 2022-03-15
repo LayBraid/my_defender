@@ -128,6 +128,7 @@ typedef struct node_anim_enemy {
     node_movement_clock *hit;
     node_movement_clock *movement;
     sfClock *clock;
+    sfClock *clock_move;
     struct node_anim_enemy *next;
 } node_anim_enemy_t;
 
