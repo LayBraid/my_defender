@@ -21,6 +21,8 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/display/enemies/*.c) \
 	  $(wildcard src/game/enemies/*.c) \
 	  $(wildcard src/game/enemies/clocks/*.c) \
+	  $(wildcard src/game/enemies/clocks/hits/*.c) \
+	  $(wildcard src/game/enemies/clocks/movements/*.c) \
 	  $(wildcard src/game/actions/*.c) \
 	  $(wildcard src/utils/*.c) \
 	  $(wildcard src/utils/animations/*.c) \
@@ -74,6 +76,8 @@ clean:
 	rm -f src/game/actions/*.o
 	rm -f src/game/enemies/*.o
 	rm -f src/game/enemies/clocks/*.o
+	rm -f src/game/enemies/clocks/hits/*.o
+	rm -f src/game/enemies/clocks/movements/*.o
 	rm -f src/game/buildings/*.o
 	rm -f src/game/buildings/earthly/*.o
 	rm -f src/game/buildings/flying/*.o
