@@ -111,23 +111,24 @@ typedef struct node_movement_struct {
     struct node_movement_struct *next;
 } node_movement;
 
-typedef struct node_anim_enemy {
-    int id;
-    sfClock *clock;
-    struct node_anim_enemy *next;
-} node_anim_enemy_t;
-
 /*
 * Structure pour que les mouvements soient executés avec une clock
 */
 
 typedef struct node_movement_clock_struct {
+    int id;
     sfSprite *sprite;
     sfVector2f position;
-    int id;
     int type;
     struct node_movement_clock_struct *next;
 } node_movement_clock;
+
+typedef struct node_anim_enemy {
+    int id;
+    node_movement_clock *hit;
+    sfClock *clock;
+    struct node_anim_enemy *next;
+} node_anim_enemy_t;
 
 typedef struct enemy_struct {
     int type;

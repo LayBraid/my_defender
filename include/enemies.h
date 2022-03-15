@@ -39,4 +39,8 @@ void add_to_list_clock_ene(node_anim_enemy_t **node);
 
 void setup_first_clock_ene(node_anim_enemy_t **node);
 
+void add_hit_enemy(dfd *df, node_enemy *enemy, const int *info);
+
+void exe_one_hit(node_anim_enemy_t *node);
+
 #endif

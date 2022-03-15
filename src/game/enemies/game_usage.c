@@ -9,6 +9,7 @@
 #include "game.h"
 #include "my.h"
 #include "setup.h"
+#include "utils.h"
 
 /*
 * Informations de l'image:

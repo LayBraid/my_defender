@@ -32,11 +32,9 @@ const int *info)
 
 void exe_movement_enemy(dfd *df)
 {
-    if (df->move_clock == NULL)
-        return;
     node_movement_clock *move = df->move_clock;
 
-    if (move->sprite == NULL)
+    if (df->move_clock == NULL)
         return;
     df->move_clock = df->move_clock->next;
     sfSprite_setPosition(move->sprite, move->position);

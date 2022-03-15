@@ -31,6 +31,7 @@ void add_to_list_clock_ene(node_anim_enemy_t **node)
         tmp = tmp->next;
     new->id = get_max_clocks_ene(node) + 1;
     new->clock = sfClock_create();
+    new->hit = NULL;
     new->next = (*node);
     tmp->next = new;
 }
@@ -40,5 +41,6 @@ void setup_first_clock_ene(node_anim_enemy_t **node)
     (*node) = malloc(sizeof(node_anim_enemy_t));
     (*node)->id = 0;
     (*node)->clock = sfClock_create();
+    (*node)->hit = NULL;
     (*node)->next = (*node);
 }

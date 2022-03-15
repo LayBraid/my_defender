@@ -67,4 +67,6 @@ float get_hits(int type, int level);
 
 int get_range(int type, int level);
 
+int *simple_id(int type, int id);
+
 #endif

@@ -145,6 +145,4 @@ char *my_strdup(char const *src);
 
 int my_str_isnumber(char const *str);
 
-int *simple_id(int type, int id);
-
 #endif
