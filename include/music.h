@@ -10,7 +10,7 @@
 
     #include "struct.h"
 
-void music_player (void);
+void music_player(void);
 
 void clock_music(dfd *df);
 

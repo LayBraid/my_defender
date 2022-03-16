@@ -13,8 +13,8 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/clocks/*.c) \
 	  $(wildcard src/game/steps/*.c) \
-	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/buildings/earthly/*.c) \
+	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/display/*.c) \
 	  $(wildcard src/game/rounds/*.c) \
 	  $(wildcard src/game/display/buildings/*.c) \
@@ -35,7 +35,7 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/roads/array/*.c) \
 	  $(wildcard src/game/roads/logs/*.c) \
 	  $(wildcard src/game/roads/solver/*.c) \
-	  $(wildcard src/music/*.c)	\
+	  $(wildcard src/game/music/*.c) \
 
 TESTS =
 
