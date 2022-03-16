@@ -26,8 +26,7 @@ void exe_clock_move(node_anim_enemy_t *node)
     double diff = time.microseconds / 1000000.0;
 
     if (diff > 0.05) {
-        printf("%f\n", node->movement->position.x);
-        //exe_one_move(node);
+        exe_one_move(node);
         sfClock_restart(node->clock_move);
     }
 }

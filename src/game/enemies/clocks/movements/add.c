@@ -14,6 +14,7 @@ const int *info)
 {
     node_movement_clock *new = malloc(sizeof(node_movement_clock));
     node_anim_enemy_t *tmp = df->enemies_clocks;
+    node_movement_clock *update;
 
     while(tmp->id != enemy->id)
         tmp = tmp->next;
@@ -21,14 +22,13 @@ const int *info)
     new->position = vector;
     new->id = info[1];
     new->next = NULL;
+    update = tmp->movement;
 
-    printf("add %f %f\n", vector.x, vector.y);
     if (tmp->movement == NULL) {
         tmp->movement = new;
         return;
     }
-    while (tmp->movement->next != NULL)
-        tmp->movement = tmp->movement->next;
-    tmp->movement->next = new;
-    printf("ça: %f\n", df->enemies_clocks->movement->position.x);
+    while (update->next != NULL)
+        update = update->next;
+    update->next = new;
 }
