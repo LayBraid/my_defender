@@ -37,18 +37,18 @@ cf QUIT2[12] = {185, 1005, 0, 1643, 80, 80, 2, 220, 1020, 50, 50,MAINA};
 cf TIME_DOWN[12] = {612, 1005, 0, 1883, 80, 80, 2, 633, 1033, 38, 24,MAINA};
 cf TIME_UP[12] = {698, 1005, 0, 1963, 80, 80, 2, 719, 1033, 38, 24,MAINA};
 cf PAUSE[12] = {655, 1005, 0, 1723, 80, 80, 2, 683, 1029, 32, 24,MAINA};
-cf TOWER_1[12] = {1441, 253,250, 1403, 110, 110, 2, 1456, 268, 80, 80,MAINA};
-cf TOWER_2[12] = {1541, 253,250, 1513, 110, 110, 2, 1556, 268, 80, 80,MAINA};
-cf TOWER_3[12] = {1641, 253,250, 1623, 110, 110, 2, 1656, 268, 80, 80,MAINA};
-cf TOWER_4[12] = {1441, 353,250, 1733, 110, 110, 2, 1456, 368, 80, 80,MAINA};
-cf TANK_1[12] = {1441, 504,250, 1843, 110, 110, 2, 1456, 519, 80, 80,MAINA};
-cf TANK_2[12] = {1541, 504,580, 1403, 110, 110, 2, 1556, 519, 80, 80,MAINA};
-cf MISSILE_1[12] = {1441, 655,580, 1513, 110, 110, 2, 1456, 670, 80, 80,MAINA};
-cf MISSILE_2[12] = {1541, 655,580, 1623, 110, 110, 2, 1556, 670, 80, 80,MAINA};
-cf MISSILE_3[12] = {1641, 655,580, 1733, 110, 110, 2, 1656, 670, 80, 80,MAINA};
-cf MISSILE_4[12] = {1441, 755,580, 1843, 110, 110, 2, 1456, 770, 80, 80,MAINA};
-cf PLANE_1[12] = {1441, 906,910, 1403, 110, 110, 2, 1456, 921, 80, 80,MAINA};
-cf PLANE_2[12] = {1541, 906,910, 1513, 110, 110, 2, 1556, 921, 80, 80,MAINA};
+cf TOWER_1[12] = {1441, 253,7, 4813, 140, 110, 2, 1456, 268, 80, 80,MAINA};
+cf TOWER_2[12] = {1541, 253,7, 4953, 140, 110, 2, 1556, 268, 80, 80,MAINA};
+cf TOWER_3[12] = {1641, 253,7, 5093, 140, 110, 2, 1656, 268, 80, 80,MAINA};
+cf TOWER_4[12] = {1441, 353,7, 5233, 140, 110, 2, 1456, 368, 80, 80,MAINA};
+cf TANK_1[12] = {1441, 504,7, 5373, 140, 110, 2, 1456, 519, 80, 80,MAINA};
+cf TANK_2[12] = {1541, 504,339, 4813, 140, 110, 2, 1556, 519, 80, 80,MAINA};
+cf MISSILE_1[12] = {1441, 655,339, 4953, 140, 110, 2, 1456, 670, 80, 80,MAINA};
+cf MISSILE_2[12] = {1541, 655,339, 5093, 140, 110, 2, 1556, 670, 80, 80,MAINA};
+cf MISSILE_3[12] = {1641, 655,339, 5233, 140, 110, 2, 1656, 670, 80, 80,MAINA};
+cf MISSILE_4[12] = {1441, 755,339, 5373, 140, 110, 2, 1456, 770, 80, 80,MAINA};
+cf PLANE_1[12] = {1441, 906,667, 4813, 140, 110, 2, 1456, 921, 80, 80,MAINA};
+cf PLANE_2[12] = {1541, 906,667, 4953, 140, 110, 2, 1556, 921, 80, 80,MAINA};
 
 cf P_1_1[12] = {13, 3, 0, 2805, 110, 110, 2, 28, 18, 80, 80, DRAG_1};
 cf P_2_1[12] = {109, 3, 0, 2805, 110, 110, 2, 124, 18, 80, 80, DRAG_1};
@@ -218,8 +218,8 @@ node_button *re_next_buttons(dfd *df, node_button *node)
 
 node_button *next_buttons(dfd *df, node_button *node)
 {
+    add_button(&node, setup_button(df, MISSILE_2, d_and_d));
     add_button(&node, setup_button(df, MISSILE_3, d_and_d));
-    add_button(&node, setup_button(df, MISSILE_4, d_and_d));
     add_button(&node, setup_button(df, PLANE_1, d_and_d));
     add_button(&node, setup_button(df, PLANE_2, d_and_d));
     add_button(&node, setup_button(df, P_1_1, drag_unclick));
@@ -265,13 +265,13 @@ node_button *setup_buttons(dfd *df)
     add_button(&node, setup_button(df, TIME_DOWN, nothing));
     add_button(&node, setup_button(df, TIME_UP, nothing));
     add_button(&node, setup_button(df, PAUSE, nothing));
+    add_button(&node, setup_button(df, TOWER_4, d_and_d));
     add_button(&node, setup_button(df, TOWER_1, d_and_d));
     add_button(&node, setup_button(df, TOWER_2, d_and_d));
     add_button(&node, setup_button(df, TOWER_3, d_and_d));
-    add_button(&node, setup_button(df, TOWER_4, d_and_d));
     add_button(&node, setup_button(df, TANK_1, d_and_d));
     add_button(&node, setup_button(df, TANK_2, d_and_d));
+    add_button(&node, setup_button(df, MISSILE_4, d_and_d));
     add_button(&node, setup_button(df, MISSILE_1, d_and_d));
-    add_button(&node, setup_button(df, MISSILE_2, d_and_d));
     return next_buttons(df, node);
 }
