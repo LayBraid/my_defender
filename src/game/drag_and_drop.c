@@ -10,6 +10,19 @@
 #include "utils.h"
 #include "buildings.h"
 
+int get_id(int id)
+{
+    if (id == 12)
+        return id + 3;
+    if (id == 15 || id == 14 || id == 13)
+        return id - 1;
+    if (id == 18)
+        return id + 3;
+    if (id == 21 || id == 20 || id == 19)
+        return id - 1;
+    return id;
+}
+
 void check_on_button(dfd *df,
 node_button *button, sfVector2i mouse)
 {
@@ -18,7 +31,7 @@ node_button *button, sfVector2i mouse)
         (float) mouse.x < button->button->x_click + button->button->x_max &&
         (float) mouse.y > button->button->y_click &&
         (float) mouse.y < button->button->y_click + button->button->y_max)) {
-        df->drag->id_building = button->id + 3;
+        df->drag->id_building = get_id(button->id + 3);
         df->drag->x_correction = button->button->x_click - (float) mouse.x;
         df->drag->y_correction = button->button->y_click - (float) mouse.y;
         return;

@@ -259,7 +259,7 @@ node_button *setup_buttons(dfd *df)
     setup_first_button(&node, setup_button(df, PLAY, play_button));
     add_button(&node, setup_button(df, QUIT, quit_button));
     add_button(&node, setup_button(df, HELPER, help_menu));
-    add_button(&node, setup_button(df, SETTING, nothing));
+    add_button(&node, setup_button(df, SETTING, settings_menu));
     add_button(&node, setup_button(df, HOME, nothing));
     add_button(&node, setup_button(df, QUIT2, quit_button));
     add_button(&node, setup_button(df, TIME_DOWN, nothing));
