@@ -5,10 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "clocks.h"
 #include "music.h"
-#include <stdio.h>
-#include <struct.h>
 
 void music_player(void)
 {
