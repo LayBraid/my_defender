@@ -165,6 +165,21 @@ typedef struct solver_data {
     int solving;
 } solver_t;
 
+typedef struct shop_struct {
+    int tower_1;
+    int tower_2;
+    int tower_3;
+    int tower_4;
+    int tank_1;
+    int tank_2;
+    int missile_1;
+    int missile_2;
+    int missile_3;
+    int missile_4;
+    int plane_1;
+    int plane_2;
+} shop_t;
+
 typedef struct my_defender_data {
     window_t *window;
     cursor_t *cursor;
@@ -199,6 +214,7 @@ typedef struct my_defender_data {
     int x;
     int y;
     solver_t *solver;
+    shop_t *shop;
 } my_defender_t;
 
 typedef my_defender_t dfd;

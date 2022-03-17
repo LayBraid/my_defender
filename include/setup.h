@@ -39,4 +39,6 @@ void setup_first_img(node_img **node, anim_img *img);
 
 node_button *re4_next_buttons(dfd *df, node_button *node);
 
+void init_shop(dfd *df);
+
 #endif

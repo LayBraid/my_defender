@@ -10,6 +10,7 @@ MAIN = src/main.c
 SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/setup/buttons/*.c) \
 	  $(wildcard src/setup/img/*.c) \
+	  $(wildcard src/setup/shop/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/clocks/*.c) \
 	  $(wildcard src/game/steps/*.c) \
@@ -17,6 +18,7 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/buildings/earthly/*.c) \
 	  $(wildcard src/game/display/*.c) \
 	  $(wildcard src/game/rounds/*.c) \
+	  $(wildcard src/game/shop/*.c) \
 	  $(wildcard src/game/display/buildings/*.c) \
 	  $(wildcard src/game/display/enemies/*.c) \
 	  $(wildcard src/game/enemies/*.c) \
