@@ -9,6 +9,7 @@
 #include "game.h"
 #include "utils.h"
 #include "buildings.h"
+#include "shop.h"
 
 int get_id(int id)
 {
@@ -43,6 +44,8 @@ void drag_and_drop(dfd *df)
     sfVector2i mu = sfMouse_getPositionRenderWindow(df->window->window);
     node_button *tmp = df->list_buttons;
 
+    if (check_item(df))
+        return buy_item(df);
     if (df->placing == FALSE) {
         sfClock_restart(df->clock_popup->clock);
         switch_step(df, POP);

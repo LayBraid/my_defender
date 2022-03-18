@@ -12,13 +12,13 @@
 void init_shop(dfd *df)
 {
     df->shop = malloc(sizeof(shop_t));
-    df->shop->tower_1 = TRUE;
+    df->shop->tower_1 = FALSE;
     df->shop->tower_2 = FALSE;
     df->shop->tower_3 = FALSE;
     df->shop->tower_4 = FALSE;
     df->shop->tank_1 = FALSE;
     df->shop->tank_2 = FALSE;
-    df->shop->missile_1 = TRUE;
+    df->shop->missile_1 = FALSE;
     df->shop->missile_2 = FALSE;
     df->shop->missile_3 = FALSE;
     df->shop->missile_4 = FALSE;

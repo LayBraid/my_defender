@@ -10,4 +10,10 @@
 
     #include "struct.h"
 
+void buy_item(dfd *df);
+
+int check_item(dfd *df);
+
+void buy_tower_1(dfd *df);
+
 #endif
