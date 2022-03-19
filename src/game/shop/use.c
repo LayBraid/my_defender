@@ -19,6 +19,10 @@ int check_item(dfd *df)
         return 1;
     if (df->last_unclick == 9 && df->shop->tower_4 == FALSE)
         return 1;
+    if (df->last_unclick == 13 && df->shop->tank_1 == FALSE)
+        return 1;
+    if (df->last_unclick == 14 && df->shop->tank_2 == FALSE)
+        return 1;
     return 0;
 }
 
@@ -32,4 +36,8 @@ void buy_item(dfd *df)
         buy_tower_3(df);
     if (df->last_unclick == 9)
         buy_tower_4(df);
+    if (df->last_unclick == 13)
+        buy_tank_1(df);
+    if (df->last_unclick == 14)
+        buy_tank_2(df);
 }

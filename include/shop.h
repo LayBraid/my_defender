@@ -22,4 +22,8 @@ void buy_tower_3(dfd *df);
 
 void buy_tower_4(dfd *df);
 
+void buy_tank_1(dfd *df);
+
+void buy_tank_2(dfd *df);
+
 #endif
