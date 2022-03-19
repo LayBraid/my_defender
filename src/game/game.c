@@ -44,7 +44,7 @@ void game_launch(char *path_texture, int fps)
     setup_game(my_defender);
     update_with_argument(my_defender, path_texture, fps);
     sfColor color = sfColor_fromRGB(60, 63, 78);
-    music_player();
+    //music_player();
     while (sfRenderWindow_isOpen(my_defender->window->window)) {
         sfRenderWindow_clear(my_defender->window->window, color);
         global_steps(my_defender);

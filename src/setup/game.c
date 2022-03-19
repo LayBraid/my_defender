@@ -34,7 +34,7 @@ void next_setup(dfd *df)
     df->move_clock = NULL;
     df->laser_clock = NULL;
     df->coins = 20;
-    df->emeralds = 0;
+    df->emeralds = 20;
     df->wave = 0;
     df->placing = FALSE;
     df->fps = 130;

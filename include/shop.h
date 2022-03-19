@@ -16,4 +16,10 @@ int check_item(dfd *df);
 
 void buy_tower_1(dfd *df);
 
+void buy_tower_2(dfd *df);
+
+void buy_tower_3(dfd *df);
+
+void buy_tower_4(dfd *df);
+
 #endif
