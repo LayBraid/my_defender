@@ -71,4 +71,6 @@ int *simple_id(int type, int id);
 
 int count_enemies_life(dfd *df);
 
+void draw_fps(dfd *df);
+
 #endif
