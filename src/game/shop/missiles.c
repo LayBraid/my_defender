@@ -24,7 +24,7 @@ void buy_missile_1(dfd *df)
         return;
     df->shop->missile_1 = TRUE;
     df->emeralds -= PRICE_7;
-    while (tmp->id != 18)
+    while (tmp->id != 16)
         tmp = tmp->next;
     rect = sfSprite_getTextureRect(tmp->button->button->sprite);
     rect.top += 700;
@@ -42,7 +42,7 @@ void buy_missile_2(dfd *df)
         return;
     df->shop->missile_2 = TRUE;
     df->emeralds -= PRICE_8;
-    while (tmp->id != 15)
+    while (tmp->id != 17)
         tmp = tmp->next;
     rect = sfSprite_getTextureRect(tmp->button->button->sprite);
     rect.top += 700;
@@ -60,7 +60,7 @@ void buy_missile_3(dfd *df)
         return;
     df->shop->missile_3 = TRUE;
     df->emeralds -= PRICE_9;
-    while (tmp->id != 16)
+    while (tmp->id != 18)
         tmp = tmp->next;
     rect = sfSprite_getTextureRect(tmp->button->button->sprite);
     rect.top += 700;
@@ -78,7 +78,7 @@ void buy_missile_4(dfd *df)
         return;
     df->shop->missile_4 = TRUE;
     df->emeralds -= PRICE_10;
-    while (tmp->id != 17)
+    while (tmp->id != 15)
         tmp = tmp->next;
     rect = sfSprite_getTextureRect(tmp->button->button->sprite);
     rect.top += 700;

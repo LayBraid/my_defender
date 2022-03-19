@@ -11,7 +11,7 @@
 
 int check_item_next(dfd *df)
 {
-    if (df->last_unclick == 17 && df->shop->missile_4 == FALSE)
+    if (df->last_unclick == 15 && df->shop->missile_4 == FALSE)
         return 1;
     return 0;
 }
@@ -30,18 +30,18 @@ int check_item(dfd *df)
         return 1;
     if (df->last_unclick == 14 && df->shop->tank_2 == FALSE)
         return 1;
-    if (df->last_unclick == 18 && df->shop->missile_1 == FALSE)
+    if (df->last_unclick == 16 && df->shop->missile_1 == FALSE)
         return 1;
-    if (df->last_unclick == 15 && df->shop->missile_2 == FALSE)
+    if (df->last_unclick == 17 && df->shop->missile_2 == FALSE)
         return 1;
-    if (df->last_unclick == 16 && df->shop->missile_3 == FALSE)
+    if (df->last_unclick == 18 && df->shop->missile_3 == FALSE)
         return 1;
     return check_item_next(df);
 }
 
 void buy_item_next(dfd *df)
 {
-    if (df->last_unclick == 17)
+    if (df->last_unclick == 15)
         return buy_missile_4(df);
 }
 
@@ -59,11 +59,11 @@ void buy_item(dfd *df)
         return buy_tank_1(df);
     if (df->last_unclick == 14)
         return buy_tank_2(df);
-    if (df->last_unclick == 18)
-        return buy_missile_1(df);
-    if (df->last_unclick == 15)
-        return buy_missile_2(df);
     if (df->last_unclick == 16)
+        return buy_missile_1(df);
+    if (df->last_unclick == 17)
+        return buy_missile_2(df);
+    if (df->last_unclick == 18)
         return buy_missile_3(df);
     buy_item_next(df);
 }
