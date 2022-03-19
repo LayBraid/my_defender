@@ -14,7 +14,7 @@ void exe_clock(node_anim_enemy_t *node)
     sfTime time = sfClock_getElapsedTime(node->clock);
     double diff = time.microseconds / 1000000.0;
 
-    if (diff > 0.2) {
+    if (diff > 0.08) {
         exe_one_hit(node);
         sfClock_restart(node->clock);
     }
