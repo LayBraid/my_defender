@@ -23,6 +23,7 @@ void other_setup(dfd *df)
 {
     df->spawning = FALSE;
     df->enemies_clocks = NULL;
+    df->hit = sfMusic_createFromFile("resources/click.ogg");
     init_shop(df);
 }
 

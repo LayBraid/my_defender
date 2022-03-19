@@ -58,6 +58,11 @@ cf HELP_SB[12] = {84, 398, 0, 4333, 285, 1632, 0, HELP, -1};
 cf NO_BUILD[12] = {510, 931, 220, 2270, 90, 380, 0, MAIN_POP, -1};
 cf NO_MONEY[12] = {510, 931, 600, 2270, 90, 380, 0, POP_MONEY, -1};
 
+cf CLICK[12] = {115, 263, 240, 1396, 131, 311, 0, SETTINGS, -1};
+cf HIT[12] = {115, 384, 240, 1528, 131, 311, 0, SETTINGS, -1};
+cf FPS[12] = {505, 265, 561, 1397, 129, 261, 0, SETTINGS, -1};
+cf SETT[12] = {520, 73, 1030, 3613, 137, 760, 0, SETTINGS, -1};
+
 node_img *next_img(dfd *df, node_img *node)
 {
     add_to_list_img(&node, setup_a_anim_img(df, TANK_D_2));
@@ -73,6 +78,10 @@ node_img *next_img(dfd *df, node_img *node)
     add_to_list_img(&node, setup_a_anim_img(df, HELP_T));
     add_to_list_img(&node, setup_a_anim_img(df, NO_BUILD));
     add_to_list_img(&node, setup_a_anim_img(df, NO_MONEY));
+    add_to_list_img(&node, setup_a_anim_img(df, CLICK));
+    add_to_list_img(&node, setup_a_anim_img(df, HIT));
+    add_to_list_img(&node, setup_a_anim_img(df, FPS));
+    add_to_list_img(&node, setup_a_anim_img(df, SETT));
     return node;
 }
 

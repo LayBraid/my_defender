@@ -10,6 +10,8 @@
 
 void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly)
 {
+    sfMusic_stop(df->hit);
+    sfMusic_play(df->hit);
     enemy->enemy->life -= earthly->build->hit;
     if (enemy->enemy->life < 0)
         enemy->enemy->life = 0;

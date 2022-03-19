@@ -28,6 +28,8 @@ void global_steps(dfd *df)
     clock_spawn_enemies(df);
     clock_enemy_anim(df);
     clock_enemies_move(df);
+    if (df->step == SETTINGS)
+        draw_fps(df);
     if (df->step == POP || df->step == POP_MONEY)
         clock_pop_up(df);
     if (display(MAINA, df->step))

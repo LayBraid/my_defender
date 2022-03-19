@@ -32,4 +32,14 @@ void round_launch(my_defender_pointer *defender);
 
 void settings_menu(my_defender_pointer *defender);
 
+void hit_1(my_defender_pointer *df);
+
+void hit_2(my_defender_pointer *df);
+
+void click_1(my_defender_pointer *df);
+
+void click_2(my_defender_pointer *df);
+
+void change_fps(my_defender_pointer *df);
+
 #endif

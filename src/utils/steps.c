@@ -18,10 +18,6 @@
 void switch_step(my_defender_t *my_defender, int x)
 {
     my_defender->step = x;
-    /*if (x == 0 || x == 1 || x == 4 || x == 5 || x == 6)
-        switch_cursor(my_defender, 64);
-    if (x == 2 || x == 3)
-        switch_cursor(my_defender, 64);*/
 }
 
 int display(int step, int actual)
@@ -31,6 +27,8 @@ int display(int step, int actual)
     if ((step == MAINA || step == M_N_START) && (actual == MAIN ||
         actual == DRAG_1 || actual == DRAG_2 || actual == POP ||
         actual == M_N_START || actual == POP_MONEY))
+        return 1;
+    if (step == S_H && (actual == SETTINGS || actual == HELP))
         return 1;
     if (step == MAIN_POP && (actual == POP))
         return 1;

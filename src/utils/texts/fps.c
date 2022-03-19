@@ -11,7 +11,7 @@
 void draw_fps(dfd *df)
 {
     sfFont* font = sfFont_createFromFile("resources/font.otf");
-    sfColor color = sfColor_fromRGB(227, 249, 255);
+    sfColor color = sfColor_fromRGB(34, 225, 241);
     sfText* text = sfText_create();
     sfVector2f vector2F;
     char *str = my_itoa(df->fps);

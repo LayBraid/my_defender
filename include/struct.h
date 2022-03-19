@@ -211,6 +211,7 @@ typedef struct my_defender_data {
     d_d_t *drag;
     int last_unclick;
     sfMusic *click;
+    sfMusic *hit;
     int x;
     int y;
     solver_t *solver;

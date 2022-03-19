@@ -92,10 +92,18 @@ cf DLC_1[12] = {728, 390, 0, 3760, 110, 344, 2, 758, 414, 284, 61, SELECT};
 cf DLC_2[12] = {544, 486, 0, 3870, 110, 712, 2, 574, 510, 652, 61, SELECT};
 cf DLC_3[12] = {665, 582, 0, 3980, 110, 470, 2, 695, 606, 409, 61, SELECT};
 
-cf HOME_2[12] = {1660, 1005, 0, 1563, 80, 80, 2, 1675, 1020, 50, 50, HELP};
-cf QUIT_2[12] = {1720, 1005, 0, 1643, 80, 80, 2, 1735, 1020, 50, 50,HELP};
-cf BACK[12] = {1600, 1005, 0, 4623, 80, 80, 2, 1615, 1020, 50, 50,HELP};
+cf HOME_2[12] = {1660, 1005, 0, 1563, 80, 80, 2, 1675, 1020, 50, 50, S_H};
+cf QUIT_2[12] = {1720, 1005, 0, 1643, 80, 80, 2, 1735, 1020, 50, 50,S_H};
+cf BACK[12] = {1600, 1005, 0, 4623, 80, 80, 2, 1615, 1020, 50, 50,S_H};
 cf LAUNCH[12] = {0, 914, 305, 2191, 80, 270, 2, 20, 934, 230, 40,MAINA};
+
+cf CLICK_1[12] = {125, 304, 250, 1653, 80, 153, 2, 140, 319, 123, 50,SETTINGS};
+cf CLICK_2[12] = {263, 304, 250, 1733, 80, 153, 2, 278, 319, 123, 50,SETTINGS};
+
+cf HIT_1[12] = {125, 420, 250, 1653, 80, 153, 2, 140, 435, 123, 50,SETTINGS};
+cf HIT_2[12] = {263, 420, 250, 1733, 80, 153, 2, 278, 435, 123, 50,SETTINGS};
+
+cf FPS_C[12] = {603, 304, 250, 1813, 80, 153, 2, 618, 319, 123, 50,SETTINGS};
 
 /*
 * Suite de l'initialisation des boutons
@@ -109,6 +117,11 @@ node_button *re7_next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, QUIT_2, quit_button));
     add_button(&node, setup_button(df, BACK, play_button));
     add_button(&node, setup_button(df, LAUNCH, round_launch));
+    add_button(&node, setup_button(df, CLICK_1, click_1));
+    add_button(&node, setup_button(df, CLICK_2, click_2));
+    add_button(&node, setup_button(df, HIT_1, hit_1));
+    add_button(&node, setup_button(df, HIT_2, hit_2));
+    add_button(&node, setup_button(df, FPS_C, change_fps));
     return node;
 }
 
