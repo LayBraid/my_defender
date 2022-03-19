@@ -45,17 +45,17 @@ int in_range(int tower, int enemy, int range)
 
 int get_range(int type)
 {
-    if (type == TOWER_n1)
+    if (type == TOWER_n1 || type == MISSILE_n1)
         return TOWER_R[0];
-    if (type == TOWER_n2)
+    if (type == TOWER_n2 || type == MISSILE_n2)
         return TOWER_R[1];
-    if (type == TOWER_n3)
+    if (type == TOWER_n3 || type == MISSILE_n3)
         return TOWER_R[2];
-    if (type == TOWER_n4)
+    if (type == TOWER_n4 || type == MISSILE_n4)
         return TOWER_R[3];
-    if (type == TANK_n1)
+    if (type == TANK_n1 || type == PLANE_n1)
         return TANK_R[0];
-    if (type == TANK_n2)
+    if (type == TANK_n2 || type == PLANE_n2)
         return TANK_R[1];
     return 0;
 }
