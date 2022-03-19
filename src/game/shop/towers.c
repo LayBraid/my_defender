@@ -38,6 +38,8 @@ void buy_tower_2(dfd *df)
 
     if (df->shop->tower_2 == TRUE)
         return;
+    if (df->shop->tower_1 == FALSE)
+        return;
     if (df->emeralds < PRICE_2)
         return;
     df->shop->tower_2 = TRUE;
@@ -56,6 +58,8 @@ void buy_tower_3(dfd *df)
 
     if (df->shop->tower_3 == TRUE)
         return;
+    if (df->shop->tower_2 == FALSE)
+        return;
     if (df->emeralds < PRICE_3)
         return;
     df->shop->tower_3 = TRUE;
@@ -73,6 +77,8 @@ void buy_tower_4(dfd *df)
     sfIntRect rect;
 
     if (df->shop->tower_4 == TRUE)
+        return;
+    if (df->shop->tower_3 == FALSE)
         return;
     if (df->emeralds < PRICE_4)
         return;

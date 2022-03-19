@@ -38,6 +38,8 @@ void buy_missile_2(dfd *df)
 
     if (df->shop->missile_2 == TRUE)
         return;
+    if (df->shop->missile_1 == FALSE)
+        return;
     if (df->emeralds < PRICE_8)
         return;
     df->shop->missile_2 = TRUE;
@@ -56,6 +58,8 @@ void buy_missile_3(dfd *df)
 
     if (df->shop->missile_3 == TRUE)
         return;
+    if (df->shop->missile_2 == FALSE)
+        return;
     if (df->emeralds < PRICE_9)
         return;
     df->shop->missile_3 = TRUE;
@@ -73,6 +77,8 @@ void buy_missile_4(dfd *df)
     sfIntRect rect;
 
     if (df->shop->missile_4 == TRUE)
+        return;
+    if (df->shop->missile_3 == FALSE)
         return;
     if (df->emeralds < PRICE_10)
         return;

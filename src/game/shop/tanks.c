@@ -36,6 +36,8 @@ void buy_tank_2(dfd *df)
 
     if (df->shop->tank_2 == TRUE)
         return;
+    if (df->shop->tank_1 == FALSE)
+        return;
     if (df->emeralds < PRICE_6)
         return;
     df->shop->tank_2 = TRUE;
