@@ -28,10 +28,12 @@
 * 7: step pour display
 */
 
-//TODO Gérer le '-1' dans le max de l'animations >> cancel l'animations
-//TODO Vérifier si enfaite mettre 0 ne cancel déjà pas l'annimation
-
-//TODO Reduire
+void update(dfd *df, sfSprite *sprite, sfIntRect rect, sfVector2f vector)
+{
+    sfSprite_setTexture(sprite,df->texture, sfTrue);
+    sfSprite_setTextureRect(sprite, rect);
+    sfSprite_setPosition(sprite, vector);
+}
 
 anim_img *setup_a_anim_img(my_defender_t *df, const float info[8])
 {
@@ -40,7 +42,6 @@ anim_img *setup_a_anim_img(my_defender_t *df, const float info[8])
     anim_img *img = malloc(sizeof(anim_img));
 
     img->sprite = sfSprite_create();
-    sfSprite_setTexture(img->sprite,df->texture, sfTrue);
     vector.x = info[0];
     vector.y = info[1];
     rect.left = (int) info[2];
@@ -54,7 +55,6 @@ anim_img *setup_a_anim_img(my_defender_t *df, const float info[8])
     img->step_display = (int) info[7];
     img->init_rect_x = (int) info[2];
     img->init_rect_y = (int) info[3];
-    sfSprite_setTextureRect(img->sprite, rect);
-    sfSprite_setPosition(img->sprite, vector);
+    update(df, img->sprite, rect, vector);
     return img;
 }
