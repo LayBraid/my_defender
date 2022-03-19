@@ -53,5 +53,3 @@ void game_launch(char *path_texture, int fps)
     }
     sfRenderWindow_destroy(my_defender->window->window);
 }
-
-//TODO rajouter un free global de toutes les variables
