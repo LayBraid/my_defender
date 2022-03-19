@@ -69,4 +69,6 @@ int get_range(int type, int level);
 
 int *simple_id(int type, int id);
 
+int count_enemies_life(dfd *df);
+
 #endif
