@@ -20,7 +20,7 @@ void add_hit_enemy(dfd *df, node_enemy *enemy, const int *info)
     new->type = info[0];
     new->id = info[1];
     new->next = NULL;
-    update = tmp->movement;
+    update = tmp->hit;
 
     if (tmp->hit == NULL) {
         tmp->hit = new;
