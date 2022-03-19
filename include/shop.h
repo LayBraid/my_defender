@@ -26,4 +26,12 @@ void buy_tank_1(dfd *df);
 
 void buy_tank_2(dfd *df);
 
+void buy_missile_1(dfd *df);
+
+void buy_missile_2(dfd *df);
+
+void buy_missile_3(dfd *df);
+
+void buy_missile_4(dfd *df);
+
 #endif
