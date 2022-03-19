@@ -5,11 +5,11 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "utils.h"
 #include "game.h"
 
-const int TOWER_1_R[3] = {1, 3, 5};
+const int TOWER_R[4] = {1, 3, 5, 7};
+const int TANK_R[2] = {2, 4};
 
 int range_next(int tower, int enemy, int range)
 {
@@ -43,11 +43,19 @@ int in_range(int tower, int enemy, int range)
     return range_next(tower, enemy, range);
 }
 
-//TODO add all towers
-
-int get_range(int type, int level)
+int get_range(int type)
 {
     if (type == TOWER_n1)
-        return TOWER_1_R[level];
+        return TOWER_R[0];
+    if (type == TOWER_n2)
+        return TOWER_R[1];
+    if (type == TOWER_n3)
+        return TOWER_R[2];
+    if (type == TOWER_n4)
+        return TOWER_R[3];
+    if (type == TANK_n1)
+        return TANK_R[0];
+    if (type == TANK_n2)
+        return TANK_R[1];
     return 0;
 }

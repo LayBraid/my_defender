@@ -38,5 +38,5 @@ void launch_towers(dfd *df, int type)
         tmp = tmp->next;
     }
     if (tmp->build->type == type)
-        checking_range(df, tmp->build->id_box, tmp);//TODO replace 1 by the range
+        checking_range(df, tmp->build->id_box, tmp);
 }

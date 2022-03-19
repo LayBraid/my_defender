@@ -19,6 +19,8 @@
 * Définition du step au démarrage du jeu
 */
 
+//TODO Changer le son de hit par défaut
+
 void other_setup(dfd *df)
 {
     df->spawning = FALSE;
