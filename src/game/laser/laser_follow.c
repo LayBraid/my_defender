@@ -17,7 +17,7 @@
 void laser_follow(sfVector2f pos_a, sfVector2f pos_b)
 {
     if (pos_a.x > pos_b.x) {
-        while(pos_b.x != pos_a.x) {
+        while (pos_b.x != pos_a.x) {
             pos_a.x++;
         }
         if (pos_a.y > pos_b.x) {
@@ -27,7 +27,7 @@ void laser_follow(sfVector2f pos_a, sfVector2f pos_b)
         }
     }
     if (pos_b.x > pos_a.x) {
-        while(pos_b.x != pos_a.x) {
+        while (pos_b.x != pos_a.x) {
             pos_b.x++;
         }
         if (pos_a.y > pos_b.x) {
