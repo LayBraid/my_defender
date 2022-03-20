@@ -58,4 +58,6 @@ int numbers_earthly(dfd *df);
 
 void launch_towers(dfd *df, int type);
 
+void add_building_no_money(dfd *df);
+
 #endif

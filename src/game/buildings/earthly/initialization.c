@@ -31,6 +31,12 @@ int numbers_earthly(dfd *df)
         return get_max_build(&df->earthly_build);
 }
 
+void next_init(dfd *df, build_t *build)
+{
+    build->level = 0;
+    df->coins -= get_initial_price(df->tmp_create->id_build);
+}
+
 void no_money(dfd *df)
 {
     sfClock_restart(df->clock_popup->clock);
@@ -47,6 +53,28 @@ void add_building(dfd *df)
 
     if (get_initial_price(df->tmp_create->id_build) > df->coins)
         return no_money(df);
+    build->id_build = df->tmp_create->id_build;
+    build->id_box = df->tmp_create->id_box;
+    build->type = df->tmp_create->type;
+    build->img = setup_a_anim_img(df, info);
+    build->life = get_initial_life(build->id_build);
+    next_init(df, build);
+    build->hit = get_hits(build->type, 0);
+    build->range = get_range(build->id_build);
+    if (df->earthly_build == NULL)
+        setup_first_build(&df->earthly_build, build);
+    else
+        add_to_list_build(&df->earthly_build, build);
+}
+
+void add_building_no_money(dfd *df)
+{
+    cf info[8] = {get_x_box(df, df->tmp_create->id_box),
+    get_y_box(df, df->tmp_create->id_box),
+    get_r_x_build(df->tmp_create->id_build),
+    get_r_y_build(df->tmp_create->id_build),110,110,0,MAINA};
+    build_t *build = malloc(sizeof(build_t));
+
     build->id_build = df->tmp_create->id_build;
     build->id_box = df->tmp_create->id_box;
     build->type = df->tmp_create->type;
