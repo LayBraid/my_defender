@@ -75,4 +75,10 @@ char *extract_between_limits(char const *exp, int s1, int s2);
 
 int get_it_char(const char *str, char c, int index);
 
+void move_title(dfd *df);
+
+void draw_round(dfd *df);
+
+void draw_keys(dfd *df);
+
 #endif

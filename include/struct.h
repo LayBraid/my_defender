@@ -11,7 +11,6 @@
     #include <SFML/Graphics.h>
     #include <SFML/System.h>
     #include <SFML/Window.h>
-    #include <SFML/Graphics.h>
     #include <SFML/Audio.h>
 
 /*
@@ -201,6 +200,7 @@ typedef struct my_defender_data {
     int spawning;
     int placing;
     clocks_t *clock_enemy;
+    clocks_t *end;
     clocks_t *clock_lasers;
     clocks_t *clock_popup;
     clocks_t *enemies_move;
@@ -212,6 +212,7 @@ typedef struct my_defender_data {
     int last_unclick;
     sfMusic *click;
     sfMusic *hit;
+    sfMusic *music;
     int spawn_round;
     int x;
     int y;

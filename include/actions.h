@@ -44,4 +44,10 @@ void change_fps(my_defender_pointer *df);
 
 void pause_set(my_defender_pointer *df);
 
+void skip(my_defender_pointer *dfr);
+
+void disable_music(my_defender_pointer *dfr);
+
+void enable_music(my_defender_pointer *dfr);
+
 #endif

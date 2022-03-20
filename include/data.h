@@ -9,6 +9,7 @@
     #define MY_DEFENDER_DATA_H
 
     #include "struct.h"
+    #define DEFAULT "[0,0,15,10][0,0,0,0,0,0,0,0,0,0,0,0]"
 
 char *save_game(dfd *df);
 
@@ -49,5 +50,7 @@ void add_plane_1(dfd *df);
 void add_plane_2(dfd *df);
 
 void decrypt_buildings(dfd *df, char *data);
+
+void reset_data(dfd *df);
 
 #endif

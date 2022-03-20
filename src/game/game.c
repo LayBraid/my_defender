@@ -52,7 +52,7 @@ void game_launch(char *path_texture, int fps)
     update_with_argument(df, path_texture, fps);
     open_data(df);
     sfColor color = sfColor_fromRGB(60, 63, 78);
-    //music_player();//TODO REMETTRE LA MUSIQUE
+    music_player(df);
     while (sfRenderWindow_isOpen(df->window->window)) {
         sfRenderWindow_clear(df->window->window, color);
         global_steps(df);

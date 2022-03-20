@@ -26,6 +26,10 @@ int display_next(dfd *df, int step, int actual)
         return 1;
     if (step == SEL_HEL && (actual == SELECT || actual == HELP))
         return 1;
+    if (step == END && actual == END_SKIP)
+        return 1;
+    if (step == END_SKIP && actual == LOOSE)
+        return 1;
     return 0;
 }
 

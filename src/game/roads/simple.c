@@ -16,7 +16,7 @@ RIGHT, RIGHT, RIGHT, RIGHT};
 
 int get_next_move_hard(dfd* df, int id)
 {
-    if (id == 91)
+    if (id == 148)
         loose_game(df);
     for (int i = 0; i < 29; i++)
         if (FIRST[i] == id)
