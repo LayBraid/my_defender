@@ -9,7 +9,7 @@
 
 void music_player(dfd *df)
 {
-    df->music = sfMusic_createFromFile("resources/calm.wav");
+    df->music = sfMusic_createFromFile("resources/calm.ogg");
 
     sfMusic_setVolume(df->music, 50);
     sfMusic_play(df->music);
