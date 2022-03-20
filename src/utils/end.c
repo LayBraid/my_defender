@@ -22,4 +22,3 @@ void move_title(dfd *df)
     } else
         switch_step(df, END_SKIP);
 }
-
