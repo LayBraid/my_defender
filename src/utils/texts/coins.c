@@ -11,15 +11,15 @@
 float get_rect_x(dfd *defender, int length)
 {
     switch (length) {
-        default:
         case 1:
             anim_img_id(defender, 10, 2);
             return 1327;
         case 2:
-        case 3:
             anim_img_id(defender, 10, 1);
             return 1302;
+        case 3:
         case 4:
+        default:
             anim_img_id(defender, 10, 0);
             return 1284;
     }

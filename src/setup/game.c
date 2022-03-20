@@ -40,6 +40,8 @@ void other_setup(dfd *df)
     df->dlc = 0;
     init_shop(df);
     update_pause_bg(df);
+    df->end = malloc(sizeof(clocks_t));
+    df->end->clock = sfClock_create();
 }
 
 void next_setup(dfd *df)

@@ -9,5 +9,5 @@
 
 void loose_game(dfd *df)
 {
-    df->coins = 1000;
+    (void) df;
 }

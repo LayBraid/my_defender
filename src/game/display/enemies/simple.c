@@ -14,6 +14,8 @@ void display_enemies(dfd *df)
 
     if (df->enemies == NULL)
         return;
+    if (df->step == END || df->step == END_SKIP)
+        return;
     while (tmp->id < tmp->next->id) {
         if (tmp->enemy->life > 0)
             sfRenderWindow_drawSprite(df->window->window,

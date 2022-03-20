@@ -26,3 +26,17 @@ void pause_set(my_defender_pointer *df)
     else
         switch_step(d, MAIN);
 }
+
+void skip(my_defender_pointer *dfr)
+{
+    dfd *df = (dfd *) dfr;
+    node_img *tmp = df->list_img;
+    sfVector2f vector;
+
+    while (tmp->id != 36)
+        tmp = tmp->next;
+    vector = sfSprite_getPosition(tmp->img->sprite);
+    vector.y = 478;
+    sfSprite_setPosition(tmp->img->sprite, vector);
+    switch_step(df, END_SKIP);
+}

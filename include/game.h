@@ -38,6 +38,8 @@ enum Steps {
     M_N_START,
     ROADS,
     S_H,
+    END,
+    END_SKIP,
 };
 
 enum All_building {
@@ -74,6 +76,7 @@ enum Enemies_Type {
     NONE,
     SIMPLE,
     BOOST,
+    YELLOW,
 };
 
 enum Bool {

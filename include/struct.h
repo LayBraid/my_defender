@@ -201,6 +201,7 @@ typedef struct my_defender_data {
     int spawning;
     int placing;
     clocks_t *clock_enemy;
+    clocks_t *end;
     clocks_t *clock_lasers;
     clocks_t *clock_popup;
     clocks_t *enemies_move;

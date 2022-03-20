@@ -22,4 +22,6 @@ void clock_enemies_move(dfd *df);
 
 void clock_enemy_anim(dfd *df);
 
+void end_clock(dfd *df);
+
 #endif

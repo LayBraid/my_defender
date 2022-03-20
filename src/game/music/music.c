@@ -14,4 +14,5 @@ void music_player(void)
 
     sfMusic_setVolume(calm , 50);
     sfMusic_play(calm);
+    sfMusic_setLoop(calm, sfTrue);
 }

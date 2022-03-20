@@ -105,6 +105,8 @@ cf HIT_2[12] = {263, 420, 250, 1733, 80, 153, 2, 278, 435, 123, 50,SETTINGS};
 
 cf FPS_C[12] = {603, 304, 250, 1813, 80, 153, 2, 618, 319, 123, 50,SETTINGS};
 
+cf WI_Q[12] = {744, 614, 664, 4095, 79, 312, 2, 759, 629, 282, 49,END_SKIP};
+
 /*
 * Suite de l'initialisation des boutons
 */
@@ -122,6 +124,7 @@ node_button *re7_next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, HIT_1, hit_1));
     add_button(&node, setup_button(df, HIT_2, hit_2));
     add_button(&node, setup_button(df, FPS_C, change_fps));
+    add_button(&node, setup_button(df, WI_Q, quit_button));
     return node;
 }
 
