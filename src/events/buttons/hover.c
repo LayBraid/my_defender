@@ -8,9 +8,9 @@
 #include "events.h"
 #include "utils.h"
 
-void check_button(node_button *button, int step, sfVector2i mouse)
+void check_button(dfd *df, node_button *button, int step, sfVector2i mouse)
 {
-    if (display(button->button->step_display, step) &&
+    if (display(df, button->button->step_display, step) &&
         ((float) mouse.x > button->button->x_click &&
         (float) mouse.x < button->button->x_click + button->button->x_max &&
         (float) mouse.y > button->button->y_click &&
@@ -28,8 +28,8 @@ void check_on_hover(dfd *df)
     node_button *tmp = df->list_buttons;
 
     while (tmp->id < tmp->next->id) {
-        check_button(tmp, df->step, mu);
+        check_button(df, tmp, df->step, mu);
         tmp = tmp->next;
     }
-    check_button(tmp, df->step, mu);
+    check_button(df, tmp, df->step, mu);
 }

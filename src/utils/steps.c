@@ -20,13 +20,18 @@ void switch_step(my_defender_t *my_defender, int x)
     my_defender->step = x;
 }
 
-int display(int step, int actual)
+int display(dfd *df, int step, int actual)
 {
     if (step == actual)
         return 1;
     if ((step == MAINA || step == M_N_START) && (actual == MAIN ||
         actual == DRAG_1 || actual == DRAG_2 || actual == POP ||
         actual == M_N_START || actual == POP_MONEY))
+        return 1;
+    if ((step == MAINA_R || step == M_N_START) && (actual == MAIN ||
+        actual == DRAG_1 || actual == DRAG_2 || actual == POP ||
+        actual == M_N_START || actual == POP_MONEY)
+        && df->wave_status == STOP)
         return 1;
     if (step == S_H && (actual == SETTINGS || actual == HELP))
         return 1;

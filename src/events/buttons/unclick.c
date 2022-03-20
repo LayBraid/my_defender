@@ -8,17 +8,17 @@
 #include "events.h"
 #include "utils.h"
 
-void un_click_button(my_defender_t *defender,
+void un_click_button(my_defender_t *df,
 node_button *button, sfVector2i mouse)
 {
-    if (display(button->button->step_display, defender->step) &&
+    if (display(df, button->button->step_display, df->step) &&
         ((float) mouse.x > button->button->x_click &&
         (float) mouse.x < button->button->x_click + button->button->x_max &&
         (float) mouse.y > button->button->y_click &&
         (float) mouse.y < button->button->y_click + button->button->y_max)) {
         if (button->button->button->anim_pos == 2) {
-            defender->last_unclick = button->id;
-            button->button->function((my_defender_pointer *) defender);
+            df->last_unclick = button->id;
+            button->button->function((my_defender_pointer *) df);
             switch_anim_button(button, 0);
             return;
         }

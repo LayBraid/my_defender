@@ -32,7 +32,7 @@ void global_steps(dfd *df)
         draw_fps(df);
     if (df->step == POP || df->step == POP_MONEY)
         clock_pop_up(df);
-    if (display(MAINA, df->step))
+    if (display(df, MAINA, df->step))
         exe_step_main(df);
     if (df->drag->state == BUILDING)
         draw_my_drag(df);

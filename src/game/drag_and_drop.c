@@ -27,7 +27,7 @@ int get_id(int id)
 void check_on_button(dfd *df,
 node_button *button, sfVector2i mouse)
 {
-    if (display(button->button->step_display, df->step) &&
+    if (display(df, button->button->step_display, df->step) &&
         ((float) mouse.x > button->button->x_click &&
         (float) mouse.x < button->button->x_click + button->button->x_max &&
         (float) mouse.y > button->button->y_click &&

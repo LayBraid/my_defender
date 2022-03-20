@@ -7,7 +7,7 @@
 
 #include "utils.h"
 
-const int WAVES[5] = {3, 5, 10, 16, 24};
+const int WAVES[8] = {3, 5, 10, 16, 24, 30, 40, 50};
 
 int count_enemies(dfd *df)
 {

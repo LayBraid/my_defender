@@ -6,8 +6,13 @@
 */
 
 #include "rounds.h"
+#include "game.h"
 
-void my_function()
+void stop_round(dfd *df)
 {
-
+    if (df->wave_status != IN_PROGRESS)
+        return;
+    df->spawning = FALSE;
+    df->placing = FALSE;
+    df->wave_status = STOP;
 }

@@ -13,6 +13,7 @@ void start_round(dfd *df)
     if (df->wave_status != STOP)
         return;
     df->wave++;
+    df->spawn_round = 0;
     df->spawning = TRUE;
     df->placing = TRUE;
     df->wave_status = IN_PROGRESS;

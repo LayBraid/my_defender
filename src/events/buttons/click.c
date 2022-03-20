@@ -8,18 +8,18 @@
 #include "events.h"
 #include "utils.h"
 
-void click_button(my_defender_t *defender,
+void click_button(my_defender_t *df,
 node_button *button, sfVector2i mouse)
 {
-    if (display(button->button->step_display, defender->step) &&
+    if (display(df, button->button->step_display, df->step) &&
         ((float) mouse.x > button->button->x_click &&
         (float) mouse.x < button->button->x_click + button->button->x_max &&
         (float) mouse.y > button->button->y_click &&
         (float) mouse.y < button->button->y_click + button->button->y_max)) {
         if (button->button->button->anim_pos == 1) {
             switch_anim_button(button, 2);
-            sfMusic_stop(defender->click);
-            sfMusic_play(defender->click);
+            sfMusic_stop(df->click);
+            sfMusic_play(df->click);
         }
         return;
     }

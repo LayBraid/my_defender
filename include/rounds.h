@@ -12,4 +12,6 @@
 
 void start_round(dfd *df);
 
+void stop_round(dfd *df);
+
 #endif

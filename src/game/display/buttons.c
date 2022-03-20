@@ -13,12 +13,12 @@ void display_buttons(dfd *df)
     node_button *tmp = df->list_buttons;
 
     while (tmp->id < tmp->next->id) {
-        if (display(tmp->button->step_display, df->step))
+        if (display(df, tmp->button->step_display, df->step))
             sfRenderWindow_drawSprite(df->window->window,
             tmp->button->button->sprite, NULL);
         tmp = tmp->next;
     }
-    if (display(tmp->button->step_display, df->step))
+    if (display(df, tmp->button->step_display, df->step))
         sfRenderWindow_drawSprite(df->window->window,
         tmp->button->button->sprite, NULL);
 }

@@ -45,7 +45,7 @@ OBJ = $(MAIN:.c=.o) $(SRC:.c=.o)
 
 NAME = my_defender
 SRC_LIB = -Llib -lmy
-CFLAGS += -Wextra -Iinclude -g3
+CFLAGS += -Iinclude -g3
 C_SFML = -l csfml-audio -l csfml-graphics -l csfml-system -l csfml-window
 
 $(NAME): $(OBJ)
@@ -78,6 +78,8 @@ clean:
 	rm -f src/game/rounds/*.o
 	rm -f src/game/actions/*.o
 	rm -f src/game/enemies/*.o
+	rm -f src/game/shop/*.o
+	rm -f src/game/music/*.o
 	rm -f src/game/enemies/clocks/*.o
 	rm -f src/game/enemies/clocks/hits/*.o
 	rm -f src/game/enemies/clocks/movements/*.o
