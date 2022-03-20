@@ -1,3 +1,5 @@
+
+  
 /*
 ** EPITECH PROJECT, 2022
 ** my_defender
@@ -35,5 +37,5 @@ void click_1(my_defender_pointer *df)
 void click_2(my_defender_pointer *df)
 {
     dfd *d = (dfd *) df;
-    d->click = sfMusic_createFromFile("resources/click2.wav");
+    d->click = sfMusic_createFromFile("resources/click2.ogg");
 }
