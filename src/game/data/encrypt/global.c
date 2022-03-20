@@ -12,6 +12,8 @@ char *save_game(dfd *df)
 {
     char *data = "[";
 
+    if (df->wave == 7)
+        return DEFAULT;
     my_strcat_3(&data, my_itoa(df->dlc));
     my_strcat_3(&data, ",");
     my_strcat_3(&data, my_itoa(df->wave));

@@ -9,6 +9,7 @@
     #define MY_DEFENDER_DATA_H
 
     #include "struct.h"
+    #define DEFAULT "[0,0,15,10][0,0,0,0,0,0,0,0,0,0,0,0]"
 
 char *save_game(dfd *df);
 
