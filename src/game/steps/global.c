@@ -23,6 +23,8 @@ void next_steps(dfd *df)
         draw_my_drag(df);
     if (df->wave_status == IN_PROGRESS)
         draw_round(df);
+    if (df->step == HELP)
+        draw_keys(df);
     display_pause(df);
 }
 

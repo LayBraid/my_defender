@@ -79,4 +79,6 @@ void move_title(dfd *df);
 
 void draw_round(dfd *df);
 
+void draw_keys(dfd *df);
+
 #endif
