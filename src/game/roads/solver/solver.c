@@ -5,7 +5,6 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "roads.h"
 #include "my.h"
 
@@ -114,14 +113,5 @@ int solver(dfd *df, int **map, int id_box)
     df->solver->map[vector.x][vector.y + 1] = 1;
     calc_up(df->solver, 16, 5, vector);
     vector.y++;
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    for (int i = 0; i < 11; i++) {
-        for (int j = 0; j < 18; j++) {
-            printf("%5d", df->solver->map[i][j]);
-        }
-        printf("\n");
-    }
     return get_next_move(df->solver->map, vector);
 }

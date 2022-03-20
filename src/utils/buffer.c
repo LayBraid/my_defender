@@ -5,6 +5,7 @@
 ** No file there , just an epitech header example
 */
 
+#include <sys/fcntl.h>
 #include "utils.h"
 #include "my.h"
 
@@ -12,16 +13,13 @@ char *get_in_buffer(char *path)
 {
     int fd;
     char *buffer;
-    struct stat buf;
 
-    if (stat(path, &buf) == -1)
-        return "error";
-    buffer = malloc(sizeof(char) * (buf.st_size + 1));
+    buffer = malloc(sizeof(char) * (3000));
     fd = open(path, O_RDONLY);
     if (fd == -1)
         return "error";
-    read(fd, buffer, buf.st_size);
-    buffer[buf.st_size] = '\0';
+    read(fd, buffer, 3000);
+    buffer[3000] = '\0';
     close(fd);
     return buffer;
 }

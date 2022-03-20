@@ -15,7 +15,7 @@ void reset_data(dfd *df)
     FILE *input = fopen("data/data", "w");
 
     if (input == NULL) {
-        my_putstr("Cannot open file 'data/data'\n");
+        write(1, "Cannot open file 'data/data'\n", 29);
         return;
     }
     fwrite(data, 1, my_strlen(data), input);
@@ -28,7 +28,7 @@ void save_data(dfd *df)
     FILE *input = fopen("data/data", "w");
 
     if (input == NULL) {
-        my_putstr("Cannot open file 'data/data'\n");
+        write(1, "Cannot open file 'data/data'\n", 29);
         return;
     }
     fwrite(data, 1, my_strlen(data), input);

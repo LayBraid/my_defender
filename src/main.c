@@ -14,10 +14,10 @@
 
 int help_message(void)
 {
-    my_putstr("--- MyDefender [HELP] ---\n\n");
-    my_putstr("./mydefender [path_texture] [fps] >> launch game\n\n");
-    my_putstr("Click on '?' in main menu\nto get more help.\n");
-    my_putstr("--- Thanks for playing ---\n");
+    write(1, "--- MyDefender [HELP] ---\n\n", 27);
+    write(1, "./mydefender [path_texture] [fps] >> launch game\n\n", 50);
+    write(1, "Click on '?' in main menu\nto get more help.\n", 44);
+    write(1, "--- Thanks for playing ---\n", 27);
     return 1;
 }
 

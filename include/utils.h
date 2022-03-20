@@ -10,9 +10,6 @@
 
     #include "struct.h"
 
-    #include <sys/stat.h>
-    #include <sys/fcntl.h>
-
 int switch_cursor(dfd *my_defender, int nb);
 
 void switch_step(dfd *my_defender, int x);
