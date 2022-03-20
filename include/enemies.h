@@ -45,4 +45,6 @@ void exe_one_hit(node_anim_enemy_t *node);
 
 void exe_one_move(node_anim_enemy_t *node);
 
+void spawn_blue_enemy(dfd *df);
+
 #endif

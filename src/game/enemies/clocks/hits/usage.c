@@ -16,9 +16,9 @@ void exe_one_hit(node_anim_enemy_t *node)
         return;
     rect = sfSprite_getTextureRect(node->hit->sprite);
     if (tmp->type == 1)
-        rect.top = 2111;
+        rect.top += 110;
     else
-        rect.top = 2001;
+        rect.top -= 110;
     sfSprite_setTextureRect(node->hit->sprite, rect);
     node->hit = node->hit->next;
 }

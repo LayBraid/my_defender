@@ -73,6 +73,7 @@ enum DD_State {
 enum Enemies_Type {
     NONE,
     SIMPLE,
+    BOOST,
 };
 
 enum Bool {
