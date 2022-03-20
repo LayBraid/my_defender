@@ -20,13 +20,13 @@ void exe_clock(node_anim_enemy_t *node)
     }
 }
 
-void exe_clock_move(node_anim_enemy_t *node)
+void exe_clock_move(dfd *df, node_anim_enemy_t *node)
 {
     sfTime time = sfClock_getElapsedTime(node->clock_move);
     double diff = time.microseconds / 1000000.0;
 
     if (diff > 0.05) {
-        exe_one_move(node);
+        exe_one_move(df, node);
         sfClock_restart(node->clock_move);
     }
 }
@@ -42,9 +42,9 @@ void clock_enemy_anim(dfd *df)
         return;
     while (tmp->id < tmp->next->id) {
         exe_clock(tmp);
-        exe_clock_move(tmp);
+        exe_clock_move(df, tmp);
         tmp = tmp->next;
     }
     exe_clock(tmp);
-    exe_clock_move(tmp);
+    exe_clock_move(df, tmp);
 }

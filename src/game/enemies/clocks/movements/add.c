@@ -21,6 +21,7 @@ const int *info)
     new->sprite = enemy->enemy->img->sprite;
     new->position = vector;
     new->id = info[1];
+    new->type = info[0];
     new->next = NULL;
     update = tmp->movement;
 

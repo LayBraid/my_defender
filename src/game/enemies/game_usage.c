@@ -10,6 +10,7 @@
 #include "my.h"
 #include "setup.h"
 #include "utils.h"
+#include "roads.h"
 
 /*
 * Informations de l'image:
@@ -43,7 +44,7 @@ void move_enemy_right(dfd *df, int id_enemy)
     while (vector.x + 95 >= vector_2.x) {
         vector_2.x += 2;
         add_movement_enemy(df, tmp, vector_2,
-        simple_id(0, tmp->id));
+        simple_id(RIGHT, tmp->id));
     }
 }
 
@@ -66,7 +67,7 @@ void move_enemy_left(dfd *df, int id_enemy)
     while (vector.x - 95 <= vector_2.x) {
         vector_2.x -= 2;
         add_movement_enemy(df, tmp, vector_2,
-        simple_id(0, tmp->id));
+        simple_id(LEFT, tmp->id));
     }
 }
 
@@ -87,7 +88,7 @@ void move_enemy_up(dfd *df, int id_enemy)
     while (vector.y - 95 <= vector_2.y) {
         vector_2.y -= 2;
         add_movement_enemy(df, tmp, vector_2,
-        simple_id(0, tmp->id));
+        simple_id(UP, tmp->id));
     }
 }
 
@@ -108,7 +109,7 @@ void move_enemy_down(dfd *df, int id_enemy)
     while (vector.y + 95 >= vector_2.y) {
         vector_2.y += 2;
         add_movement_enemy(df, tmp, vector_2,
-        simple_id(0, tmp->id));
+        simple_id(DOWN, tmp->id));
     }
 }
 

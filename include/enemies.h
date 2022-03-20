@@ -43,8 +43,10 @@ void add_hit_enemy(dfd *df, node_enemy *enemy, const int *info);
 
 void exe_one_hit(node_anim_enemy_t *node);
 
-void exe_one_move(node_anim_enemy_t *node);
+void exe_one_move(dfd *df, node_anim_enemy_t *node);
 
 void spawn_blue_enemy(dfd *df);
+
+void rotate_enemy(node_enemy *enemy, int move);
 
 #endif
