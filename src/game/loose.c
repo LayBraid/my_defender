@@ -14,5 +14,6 @@ void loose_game(dfd *df)
 {
     stop_round(df);
     reset_data(df);
+    df->wave = 0;
     switch_step(df, LOOSE);
 }
