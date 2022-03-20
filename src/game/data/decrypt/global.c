@@ -14,6 +14,8 @@ void convert_data(dfd *df, char *data, int step)
     switch (step) {
         case 0:
             get_info_data(df, data);
+        case 1:
+            decrypt_shop(df, data);
         default:
             break;
     }

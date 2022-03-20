@@ -14,8 +14,8 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/clocks/*.c) \
 	  $(wildcard src/game/data/*.c) \
-	  $(wildcard src/game/data/decrypt/*.c) \
 	  $(wildcard src/game/data/encrypt/*.c) \
+	  $(wildcard src/game/data/decrypt/*.c) \
 	  $(wildcard src/game/steps/*.c) \
 	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/buildings/earthly/*.c) \
