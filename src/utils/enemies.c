@@ -11,7 +11,7 @@ const int WAVES[8] = {3, 5, 10, 16, 24, 30, 40, 50};
 
 int count_enemies(dfd *df)
 {
-    node_enemy *tmp= df->enemies;
+    node_enemy *tmp = df->enemies;
     int count = 0;
 
     if (df->enemies == NULL)
@@ -26,7 +26,7 @@ int count_enemies(dfd *df)
 
 int count_enemies_life(dfd *df)
 {
-    node_enemy *tmp= df->enemies;
+    node_enemy *tmp = df->enemies;
     int count = 0;
 
     if (df->enemies == NULL)
