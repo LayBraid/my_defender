@@ -15,4 +15,10 @@ void towers_key(dfd *df)
         return;
     if (sfKeyboard_isKeyPressed(sfKeyR))
         launch_towers(df, TOWER);
+    if (sfKeyboard_isKeyPressed(sfKeyT))
+        launch_towers(df, TANK);
+    if (sfKeyboard_isKeyPressed(sfKeyY))
+        launch_towers(df, MISSILE);
+    if (sfKeyboard_isKeyPressed(sfKeyU))
+        launch_towers(df, PLANE);
 }
