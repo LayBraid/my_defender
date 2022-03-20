@@ -19,13 +19,13 @@ void settings_menu(my_defender_pointer *defender)
 void hit_1(my_defender_pointer *df)
 {
     dfd *d = (dfd *) df;
-    d->hit = sfMusic_createFromFile("resources/laser.ogg");
+    d->hit = sfMusic_createFromFile("resources/kill.ogg");
 }
 
 void hit_2(my_defender_pointer *df)
 {
     dfd *d = (dfd *) df;
-    d->hit = sfMusic_createFromFile("resources/laser.ogg");
+    d->hit = sfMusic_createFromFile("resources/kill2.ogg");
 }
 
 void click_1(my_defender_pointer *df)
