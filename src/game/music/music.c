@@ -7,12 +7,11 @@
 
 #include "music.h"
 
-void music_player(void)
+void music_player(dfd *df)
 {
-    sfMusic *calm = sfMusic_createFromFile("resources/calm.wav");
-    sfMusic *royal = sfMusic_createFromFile("resources/royal.ogg");
+    df->music = sfMusic_createFromFile("resources/calm.wav");
 
-    sfMusic_setVolume(calm , 50);
-    sfMusic_play(calm);
-    sfMusic_setLoop(calm, sfTrue);
+    sfMusic_setVolume(df->music, 50);
+    sfMusic_play(df->music);
+    sfMusic_setLoop(df->music, sfTrue);
 }

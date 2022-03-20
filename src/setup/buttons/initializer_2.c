@@ -107,6 +107,9 @@ cf FPS_C[12] = {603, 304, 250, 1813, 80, 153, 2, 618, 319, 123, 50,SETTINGS};
 
 cf WI_Q[12] = {744, 614, 664, 4095, 79, 312, 2, 759, 629, 282, 49,END_SKIP};
 
+cf MUS_1[12] = {125, 536, 832, 1527, 80, 153, 2, 140, 551, 123, 50,SETTINGS};
+cf MUS_2[12] = {263, 536, 832, 1607, 80, 153, 2, 278, 551, 123, 50,SETTINGS};
+
 /*
 * Suite de l'initialisation des boutons
 */
@@ -125,6 +128,8 @@ node_button *re7_next_buttons(dfd *df, node_button *node)
     add_button(&node, setup_button(df, HIT_2, hit_2));
     add_button(&node, setup_button(df, FPS_C, change_fps));
     add_button(&node, setup_button(df, WI_Q, quit_button));
+    add_button(&node, setup_button(df, MUS_1, enable_music));
+    add_button(&node, setup_button(df, MUS_2, disable_music));
     return node;
 }
 

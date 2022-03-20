@@ -40,3 +40,15 @@ void skip(my_defender_pointer *dfr)
     sfSprite_setPosition(tmp->img->sprite, vector);
     switch_step(df, END_SKIP);
 }
+
+void disable_music(my_defender_pointer *dfr)
+{
+    dfd *df = (dfd *) dfr;
+    sfMusic_stop(df->music);
+}
+
+void enable_music(my_defender_pointer *dfr)
+{
+    dfd *df = (dfd *) dfr;
+    sfMusic_play(df->music);
+}

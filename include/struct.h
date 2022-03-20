@@ -212,6 +212,7 @@ typedef struct my_defender_data {
     int last_unclick;
     sfMusic *click;
     sfMusic *hit;
+    sfMusic *music;
     int spawn_round;
     int x;
     int y;

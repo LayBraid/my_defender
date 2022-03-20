@@ -70,11 +70,14 @@ cf WIN[12] = {398, -128, 1166, 4201, 127, 1006, 0, END, -1};
 cf LOOS[12] = {398, 478, 1002, 3288, 127, 1006, 0, LOOSE, -1};
 cf WIN_T[12] = {744, 961, 0, 4090, 110, 313, 0, END_SKIP, -1};
 
+cf MUSIC[12] = {115, 495, 831, 1396, 131, 311, 0, SETTINGS, -1};
+
 node_img *next_setup_img(dfd *df, node_img *node)
 {
     add_to_list_img(&node, setup_a_anim_img(df, WIN));
     add_to_list_img(&node, setup_a_anim_img(df, WIN_T));
     add_to_list_img(&node, setup_a_anim_img(df, LOOS));
+    add_to_list_img(&node, setup_a_anim_img(df, MUSIC));
     return node;
 }
 
