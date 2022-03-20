@@ -14,7 +14,7 @@ void add_hit_enemy(dfd *df, node_enemy *enemy, const int *info)
     node_anim_enemy_t *tmp = df->enemies_clocks;
     node_movement_clock *update;
 
-    while(tmp->id != enemy->id)
+    while (tmp->id != enemy->id)
         tmp = tmp->next;
     new->sprite = enemy->enemy->img->sprite;
     new->type = info[0];
