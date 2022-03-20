@@ -78,6 +78,7 @@ enum Enemies_Type {
     SIMPLE,
     BOOST,
     YELLOW,
+    GREEN,
 };
 
 enum Bool {

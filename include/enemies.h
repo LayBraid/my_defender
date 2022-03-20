@@ -49,4 +49,8 @@ void spawn_blue_enemy(dfd *df);
 
 void rotate_enemy(node_enemy *enemy, int move);
 
+void spawn_yellow_enemy(dfd *df);
+
+void spawn_green_enemy(dfd *df);
+
 #endif
