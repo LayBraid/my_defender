@@ -50,6 +50,7 @@ void game_launch(char *path_texture, int fps)
     my_defender_t *df = malloc(sizeof(my_defender_t));
     setup_game(df);
     update_with_argument(df, path_texture, fps);
+    open_data(df);
     sfColor color = sfColor_fromRGB(60, 63, 78);
     //music_player();//TODO REMETTRE LA MUSIQUE
     while (sfRenderWindow_isOpen(df->window->window)) {

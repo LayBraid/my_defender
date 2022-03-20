@@ -17,12 +17,6 @@ int switch_cursor(dfd *my_defender, int nb);
 
 void switch_step(dfd *my_defender, int x);
 
-void set_best_score(dfd *my_defender);
-
-void draw_best_score(dfd *my_defender);
-
-void get_best_score(dfd *my_defender, char *buffer);
-
 void quit_game(dfd *defender);
 
 void switch_anim_button(node_button *button, int anim);
@@ -74,5 +68,11 @@ int count_enemies_life(dfd *df);
 void draw_fps(dfd *df);
 
 void display_pause(dfd *df);
+
+char *get_in_buffer(char *path);
+
+char *extract_between_limits(char const *exp, int s1, int s2);
+
+int get_it_char(const char *str, char c, int index);
 
 #endif

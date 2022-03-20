@@ -18,4 +18,8 @@ char *add_shop(dfd *df);
 
 char *add_buildings(dfd *df);
 
+void open_data(dfd *df);
+
+void get_info_data(dfd *df, const char *data);
+
 #endif
