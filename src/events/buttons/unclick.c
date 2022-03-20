@@ -7,6 +7,7 @@
 
 #include "events.h"
 #include "utils.h"
+#include "game.h"
 
 void un_click_button(my_defender_t *df,
 node_button *button, sfVector2i mouse)
@@ -16,6 +17,8 @@ node_button *button, sfVector2i mouse)
         (float) mouse.x < button->button->x_click + button->button->x_max &&
         (float) mouse.y > button->button->y_click &&
         (float) mouse.y < button->button->y_click + button->button->y_max)) {
+        if (df->step == PAUSE_GAME && button->button->step_display != S_H)
+            return;
         if (button->button->button->anim_pos == 2) {
             df->last_unclick = button->id;
             button->button->function((my_defender_pointer *) df);

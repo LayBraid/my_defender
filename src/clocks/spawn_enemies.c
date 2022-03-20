@@ -16,6 +16,9 @@ void clock_spawn_enemies(dfd *df)
         return;
     if (df->spawn_round >= max_enemies(df))
         return;
+    if (df->step == PAUSE_GAME || df->step == OPEN || df->step == SETTINGS
+        || df->step == HELP)
+        return;
     df->enem_spawn->time = sfClock_getElapsedTime(df->enem_spawn->clock);
     df->enem_spawn->seconds = df->enem_spawn->time.microseconds / 1000000.0;
     if (df->enem_spawn->seconds > 2.75) {

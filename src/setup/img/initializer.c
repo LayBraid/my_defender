@@ -63,6 +63,9 @@ cf HIT[12] = {115, 384, 240, 1528, 131, 311, 0, SETTINGS, -1};
 cf FPS[12] = {505, 265, 561, 1397, 129, 261, 0, SETTINGS, -1};
 cf SETT[12] = {520, 73, 1030, 3613, 137, 760, 0, SETTINGS, -1};
 
+cf PAU_BG[12] = {0, 0, 864, 2385, 80, 80, 0, PAUSE_GAME, -1};
+cf PAU_TT[12] = {656, 472, 1165, 3431, 137, 489, 0, PAUSE_GAME, -1};
+
 node_img *next_img(dfd *df, node_img *node)
 {
     add_to_list_img(&node, setup_a_anim_img(df, TANK_D_2));
@@ -74,6 +77,8 @@ node_img *next_img(dfd *df, node_img *node)
     add_to_list_img(&node, setup_a_anim_img(df, PLANE_D_2));
     add_to_list_img(&node, setup_a_anim_img(df, DLC));
     add_to_list_img(&node, setup_a_anim_img(df, NAME));
+    add_to_list_img(&node, setup_a_anim_img(df, PAU_BG));
+    add_to_list_img(&node, setup_a_anim_img(df, PAU_TT));
     add_to_list_img(&node, setup_a_anim_img(df, HELP_SB));
     add_to_list_img(&node, setup_a_anim_img(df, HELP_T));
     add_to_list_img(&node, setup_a_anim_img(df, NO_BUILD));

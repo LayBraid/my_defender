@@ -264,7 +264,7 @@ node_button *setup_buttons(dfd *df)
     add_button(&node, setup_button(df, QUIT2, quit_button));
     add_button(&node, setup_button(df, TIME_DOWN, nothing));
     add_button(&node, setup_button(df, TIME_UP, nothing));
-    add_button(&node, setup_button(df, PAUSE, nothing));
+    add_button(&node, setup_button(df, PAUSE, pause_set));
     add_button(&node, setup_button(df, TOWER_4, d_and_d));
     add_button(&node, setup_button(df, TOWER_1, d_and_d));
     add_button(&node, setup_button(df, TOWER_2, d_and_d));

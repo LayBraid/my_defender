@@ -21,6 +21,16 @@
 
 //TODO Changer le son de hit par défaut
 
+void update_pause_bg(dfd *df)
+{
+    node_img *tmp = df->list_img;
+    sfVector2f vector = {30, 30};
+
+    while (tmp->id != 26)
+        tmp = tmp->next;
+    sfSprite_setScale(tmp->img->sprite, vector);
+}
+
 void other_setup(dfd *df)
 {
     df->spawning = FALSE;
@@ -28,6 +38,7 @@ void other_setup(dfd *df)
     df->hit = sfMusic_createFromFile("resources/click.ogg");
     df->spawn_round = 0;
     init_shop(df);
+    update_pause_bg(df);
 }
 
 void next_setup(dfd *df)

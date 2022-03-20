@@ -5,9 +5,9 @@
 ** No file there , just an epitech header example
 */
 
-#include <printf.h>
 #include "clocks.h"
 #include "enemies.h"
+#include "game.h"
 
 void exe_clock(node_anim_enemy_t *node)
 {
@@ -36,6 +36,9 @@ void clock_enemy_anim(dfd *df)
     node_anim_enemy_t *tmp = df->enemies_clocks;
 
     if (tmp == NULL)
+        return;
+    if (df->step == PAUSE_GAME || df->step == OPEN || df->step == SETTINGS
+        || df->step == HELP)
         return;
     while (tmp->id < tmp->next->id) {
         exe_clock(tmp);

@@ -73,4 +73,6 @@ int count_enemies_life(dfd *df);
 
 void draw_fps(dfd *df);
 
+void display_pause(dfd *df);
+
 #endif

@@ -42,4 +42,6 @@ void click_2(my_defender_pointer *df);
 
 void change_fps(my_defender_pointer *df);
 
+void pause_set(my_defender_pointer *df);
+
 #endif

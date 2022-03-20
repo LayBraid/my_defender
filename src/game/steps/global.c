@@ -36,4 +36,5 @@ void global_steps(dfd *df)
         exe_step_main(df);
     if (df->drag->state == BUILDING)
         draw_my_drag(df);
+    display_pause(df);
 }
