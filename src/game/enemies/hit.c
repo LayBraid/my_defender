@@ -14,6 +14,7 @@ void hit_enemy(dfd *df, node_enemy *enemy, node_earthly_build *earthly)
     enemy->enemy->life -= earthly->build->hit;
     if (enemy->enemy->life < 0 || enemy->enemy->life == 0) {
         enemy->enemy->life = 0;
+        df->emeralds += 3 + (df->wave * 2);
         sfMusic_stop(df->hit);
         sfMusic_play(df->hit);
     }
