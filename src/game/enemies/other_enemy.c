@@ -12,7 +12,7 @@
 
 void spawn_enemy(dfd *df)
 {
-    enemy_t *tmp= malloc(sizeof(enemy_t));
+    enemy_t *tmp = malloc(sizeof(enemy_t));
     cf info[8] = {-83, 387, 1363, 2001, 110, 110, 0, MAINA};
     tmp->img = setup_a_anim_img(df, info);
     tmp->type = SIMPLE;
@@ -30,7 +30,7 @@ void spawn_enemy(dfd *df)
 
 void spawn_blue_enemy(dfd *df)
 {
-    enemy_t *tmp= malloc(sizeof(enemy_t));
+    enemy_t *tmp = malloc(sizeof(enemy_t));
     cf info[8] = {-83, 387, 1363, 2221, 110, 110, 0, MAINA};
     tmp->img = setup_a_anim_img(df, info);
     tmp->type = BOOST;
@@ -48,7 +48,7 @@ void spawn_blue_enemy(dfd *df)
 
 void spawn_yellow_enemy(dfd *df)
 {
-    enemy_t *tmp= malloc(sizeof(enemy_t));
+    enemy_t *tmp = malloc(sizeof(enemy_t));
     cf info[8] = {-83, 387, 1363, 2441, 110, 110, 0, MAINA};
     tmp->img = setup_a_anim_img(df, info);
     tmp->type = YELLOW;
@@ -66,7 +66,7 @@ void spawn_yellow_enemy(dfd *df)
 
 void spawn_green_enemy(dfd *df)
 {
-    enemy_t *tmp= malloc(sizeof(enemy_t));
+    enemy_t *tmp = malloc(sizeof(enemy_t));
     cf info[8] = {-83, 387, 1363, 2661, 110, 110, 0, MAINA};
     tmp->img = setup_a_anim_img(df, info);
     tmp->type = GREEN;

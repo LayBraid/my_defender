@@ -40,7 +40,7 @@ void add_deplacement(dfd *df, node_enemy *enemy, int action)
 
 void move_all_enemies(dfd *df)
 {
-    node_enemy *tmp= df->enemies;
+    node_enemy *tmp = df->enemies;
 
     if (df->enemies == NULL)
         return;
