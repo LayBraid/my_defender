@@ -17,7 +17,10 @@ char *save_game(dfd *df)
         return DEFAULT;
     my_strcat_3(&data, my_itoa(df->dlc));
     my_strcat_3(&data, ",");
-    my_strcat_3(&data, my_itoa(df->wave));
+    if (df->wave == 0)
+        my_strcat_3(&data, "0");
+    else
+        my_strcat_3(&data, my_itoa(df->wave - 1));
     my_strcat_3(&data, ",");
     my_strcat_3(&data, my_itoa(df->coins));
     my_strcat_3(&data, ",");

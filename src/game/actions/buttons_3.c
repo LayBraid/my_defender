@@ -32,8 +32,6 @@ void click_1(my_defender_pointer *df)
     d->click = sfMusic_createFromFile("resources/click.ogg");
 }
 
-//TODO Changer le son
-
 void click_2(my_defender_pointer *df)
 {
     dfd *d = (dfd *) df;

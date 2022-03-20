@@ -19,8 +19,6 @@
 * Définition du step au démarrage du jeu
 */
 
-//TODO Changer le son de hit par défaut
-
 void update_pause_bg(dfd *df)
 {
     node_img *tmp = df->list_img;
@@ -35,7 +33,7 @@ void other_setup(dfd *df)
 {
     df->spawning = FALSE;
     df->enemies_clocks = NULL;
-    df->hit = sfMusic_createFromFile("resources/click.ogg");
+    df->hit = sfMusic_createFromFile("resources/laser.ogg");
     df->spawn_round = 0;
     df->dlc = 0;
     init_shop(df);
