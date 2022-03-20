@@ -92,6 +92,7 @@ clean:
 	rm -f src/game/roads/solver/*.o
 	rm -f src/clocks/*.o
 	rm -f src/setup/*.o
+	rm -f src/setup/shop/*.o
 	rm -f src/setup/buttons/*.o
 	rm -f src/setup/img/*.o
 	rm -f src/events/*.o
