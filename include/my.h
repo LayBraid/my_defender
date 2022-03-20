@@ -145,4 +145,6 @@ char *my_strdup(char const *src);
 
 int my_str_isnumber(char const *str);
 
+void my_strcat_3(char **dest, char const *src);
+
 #endif
