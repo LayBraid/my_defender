@@ -8,7 +8,7 @@
 #ifndef MY_DEFENDER_ROADS_H
     #define MY_DEFENDER_ROADS_H
 
-#include "struct.h"
+    #include "struct.h"
 
 enum Movements {
     UP,

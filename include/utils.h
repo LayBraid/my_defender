@@ -78,4 +78,6 @@ void draw_round(dfd *df);
 
 void draw_keys(dfd *df);
 
+sfVector2i array_to_vector(const int *array);
+
 #endif

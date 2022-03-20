@@ -7,15 +7,7 @@
 
 #include "roads.h"
 #include "my.h"
-
-sfVector2i array_to_vector(const int *array)
-{
-    sfVector2i vector;
-
-    vector.x = array[0];
-    vector.y = array[1];
-    return vector;
-}
+#include "utils.h"
 
 int get_next_move(int **map, sfVector2i start)
 {
@@ -78,28 +70,6 @@ void calc_up(solver_t *s, int x, int y, sfVector2i vector)
         s->map[y][x + 1] = s->map[y][x] + s->map[y][x + 1];
         calc_up(s, x + 1, y, vector);
     }
-}
-
-void calc_uping(solver_t *s, int x, int y, sfVector2i vector)
-{
-    if (x == (vector.y + 1) && y == (vector.x))
-        s->solving = 1;
-    if (s->map[y][x - 1] == 1 && s->solving == 0 && !end(s, x, y, 1))
-        s->map[y][x - 1] = s->map[y][x] + s->map[y][x - 1];
-    if (s->map[y - 1][x] == 1 && s->solving == 0 && !end(s, x, y, 2))
-        s->map[y - 1][x] = s->map[y][x] + s->map[y - 1][x];
-    if (s->map[y + 1][x] == 1 && s->solving == 0 && !end(s, x, y, 3))
-        s->map[y + 1][x] = s->map[y][x] + s->map[y + 1][x];
-    if (s->map[y][x + 1] == 1 && s->solving == 0 && !end(s, x, y, 4))
-        s->map[y][x + 1] = s->map[y][x] + s->map[y][x + 1];
-    if (s->map[y][x - 1] > 1 && s->solving == 0 && !end(s, x, y, 1))
-        calc_uping(s, x - 1, y, vector);
-    if (s->map[y - 1][x] > 0 && s->solving == 0 && !end(s, x, y, 2))
-        calc_uping(s, x, y - 1, vector);
-    if (s->map[y + 1][x] > 0 && s->solving == 0 && !end(s, x, y, 3))
-        calc_uping(s, x, y + 1, vector);
-    if (s->map[y][x + 1] > 0 && s->solving == 0 && !end(s, x, y, 4))
-        calc_uping(s, x + 1, y, vector);
 }
 
 int solver(dfd *df, int **map, int id_box)

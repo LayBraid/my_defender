@@ -11,7 +11,7 @@
 /*
 * Création d'une image animée
 *
-* Utilisée aussi pour les 'hovered_button'
+* Utilisée aussi pour les 'button'
 *
 * Arguments:
 * - path de la resource

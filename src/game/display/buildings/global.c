@@ -13,5 +13,4 @@ void display_buildings(dfd *df)
     if (numbers_earthly(df) != -1) {
         display_earthly_building(df);
     }
-    //display_flying_building(df);
 }

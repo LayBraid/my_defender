@@ -24,5 +24,5 @@ void get_info_data(dfd *df, const char *data)
     df->coins = my_atoi(extract_between_limits(data, get_it_char(data, ',', 1),
     get_it_char(data, ',', 2)));
     df->emeralds = my_atoi(extract_between_limits(data,
-   get_it_char(data, ',', 2),get_it_char(data, ']', 0)));
+    get_it_char(data, ',', 2),get_it_char(data, ']', 0)));
 }

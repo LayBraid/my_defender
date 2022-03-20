@@ -15,3 +15,12 @@ sfVector2f vector_if(sfVector2i vector)
     cast.y = (float) vector.y;
     return cast;
 }
+
+sfVector2i array_to_vector(const int *array)
+{
+    sfVector2i vector;
+
+    vector.x = array[0];
+    vector.y = array[1];
+    return vector;
+}

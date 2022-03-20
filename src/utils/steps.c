@@ -46,7 +46,8 @@ int display(dfd *df, int step, int actual)
         actual == M_N_START || actual == POP_MONEY || actual == PAUSE_GAME)
         && df->wave_status == STOP)
         return 1;
-    if (step == S_H && (actual == SETTINGS || actual == HELP || actual == PAUSE_GAME))
+    if (step == S_H && (actual == SETTINGS || actual == HELP ||
+        actual == PAUSE_GAME))
         return 1;
     if (step == MAIN_POP && (actual == POP))
         return 1;

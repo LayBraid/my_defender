@@ -14,7 +14,7 @@
 * - 'info' >> la variable globale qui correspond au bouton
 * - 'function' >> la fonction executée quand on click vu que c'est un bouton
 *
-* Ça retourne un objet 'hovered_button' setup auto
+* Ça retourne un objet 'button' setup auto
 */
 
 hovered_button *setup_button(dfd *df, const float info[12],
