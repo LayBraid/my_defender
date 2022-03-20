@@ -13,8 +13,8 @@ void change_fps(my_defender_pointer *df)
 {
     dfd *d = (dfd *) df;
     d->fps += 10;
-    if (d->fps > 130)
-        d->fps = 10;
+    if (d->fps > 100)
+        d->fps = 30;
 }
 
 void pause_set(my_defender_pointer *df)

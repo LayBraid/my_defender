@@ -14,7 +14,7 @@
     #define WIDTH 1800
     #define HEIGHT 1080
     #define PATH_CURSOR "resources/cursor.png"
-    #define FPS_MAX 130
+    #define FPS_MAX 100
     #define CUSTOM_CURSOR 0
 
 enum Steps {
