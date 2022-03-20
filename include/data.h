@@ -51,4 +51,6 @@ void add_plane_2(dfd *df);
 
 void decrypt_buildings(dfd *df, char *data);
 
+void reset_data(dfd *df);
+
 #endif

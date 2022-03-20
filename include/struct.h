@@ -11,7 +11,6 @@
     #include <SFML/Graphics.h>
     #include <SFML/System.h>
     #include <SFML/Window.h>
-    #include <SFML/Graphics.h>
     #include <SFML/Audio.h>
 
 /*

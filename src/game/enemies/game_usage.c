@@ -24,6 +24,16 @@
 * 7: step pour display
 */
 
+void update_id(node_enemy *enemy)
+{
+    if (enemy->enemy->id_box == 147)
+        enemy->enemy->id_box = 77;
+    else if (enemy->enemy->id_box == 90)
+        enemy->enemy->id_box = 148;
+    else
+        enemy->enemy->id_box++;
+}
+
 void move_enemy_right(dfd *df, int id_enemy)
 {
     node_enemy *tmp = df->enemies;
@@ -37,10 +47,7 @@ void move_enemy_right(dfd *df, int id_enemy)
         button = button->next;
     vector = sfSprite_getPosition(button->button->button->sprite);
     vector_2 = vector;
-    if (tmp->enemy->id_box == 147)
-        tmp->enemy->id_box = 77;
-    else
-        tmp->enemy->id_box++;
+    update_id(tmp);
     while (vector.x + 95 >= vector_2.x) {
         vector_2.x += 2;
         add_movement_enemy(df, tmp, vector_2,
@@ -110,23 +117,5 @@ void move_enemy_down(dfd *df, int id_enemy)
         vector_2.y += 2;
         add_movement_enemy(df, tmp, vector_2,
         simple_id(DOWN, tmp->id));
-    }
-}
-
-void spawn_enemy(dfd *df)
-{
-    enemy_t *tmp= malloc(sizeof(enemy_t));
-    cf info[8] = {-83, 387, 1363, 2001, 110, 110, 0, MAINA};
-    tmp->img = setup_a_anim_img(df, info);
-    tmp->type = SIMPLE;
-    tmp->life = 20;
-    tmp->id_box = 147;
-    df->spawn_round++;
-    if (df->enemies == NULL) {
-        setup_first_clock_ene(&df->enemies_clocks);
-        setup_first_enemy(&df->enemies, tmp);
-    } else {
-        add_to_list_clock_ene(&df->enemies_clocks);
-        add_to_list_enemy(&df->enemies, tmp);
     }
 }

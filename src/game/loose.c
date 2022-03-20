@@ -6,8 +6,13 @@
 */
 
 #include "game.h"
+#include "rounds.h"
+#include "utils.h"
+#include "data.h"
 
 void loose_game(dfd *df)
 {
-    (void) df;
+    stop_round(df);
+    reset_data(df);
+    switch_step(df, LOOSE);
 }

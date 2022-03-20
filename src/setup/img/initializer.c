@@ -66,13 +66,15 @@ cf SETT[12] = {520, 73, 1030, 3613, 137, 760, 0, SETTINGS, -1};
 cf PAU_BG[12] = {0, 0, 864, 2385, 80, 80, 0, PAUSE_GAME, -1};
 cf PAU_TT[12] = {656, 472, 1165, 3431, 137, 489, 0, PAUSE_GAME, -1};
 
-cf WIN[12] = {398, 128, 1166, 4201, 127, 1006, 0, END, -1};
+cf WIN[12] = {398, -128, 1166, 4201, 127, 1006, 0, END, -1};
+cf LOOS[12] = {398, 478, 1002, 3288, 127, 1006, 0, LOOSE, -1};
 cf WIN_T[12] = {744, 961, 0, 4090, 110, 313, 0, END_SKIP, -1};
 
 node_img *next_setup_img(dfd *df, node_img *node)
 {
     add_to_list_img(&node, setup_a_anim_img(df, WIN));
     add_to_list_img(&node, setup_a_anim_img(df, WIN_T));
+    add_to_list_img(&node, setup_a_anim_img(df, LOOS));
     return node;
 }
 

@@ -40,6 +40,7 @@ enum Steps {
     S_H,
     END,
     END_SKIP,
+    LOOSE,
 };
 
 enum All_building {
