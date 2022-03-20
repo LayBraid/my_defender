@@ -217,6 +217,7 @@ typedef struct my_defender_data {
     int y;
     solver_t *solver;
     shop_t *shop;
+    int dlc;
 } my_defender_t;
 
 typedef my_defender_t dfd;

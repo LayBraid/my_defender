@@ -13,6 +13,9 @@ SRC = $(wildcard src/setup/*.c) \
 	  $(wildcard src/setup/shop/*.c) \
 	  $(wildcard src/game/*.c) \
 	  $(wildcard src/clocks/*.c) \
+	  $(wildcard src/game/data/*.c) \
+	  $(wildcard src/game/data/encrypt/*.c) \
+	  $(wildcard src/game/data/decrypt/*.c) \
 	  $(wildcard src/game/steps/*.c) \
 	  $(wildcard src/game/buildings/flying/*.c) \
 	  $(wildcard src/game/buildings/earthly/*.c) \
@@ -73,6 +76,9 @@ clean:
 	rm -f src/game/display/buildings/*.o
 	rm -f src/game/display/enemies/*.o
 	rm -f src/game/display/*.o
+	rm -f src/game/data/*.o
+	rm -f src/game/data/encrypt/*.o
+	rm -f src/game/data/decrypt/*.o
 	rm -f src/game/steps/*.o
 	rm -f src/game/laser/*.o
 	rm -f src/game/rounds/*.o

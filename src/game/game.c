@@ -10,6 +10,7 @@
 #include "setup.h"
 #include "events.h"
 #include "steps.h"
+#include "data.h"
 #include "music.h"
 
 /*
@@ -31,6 +32,12 @@ void update_with_argument(dfd *df, char *path_texture, int fps)
     if (my_strcmp(path_texture, "none") != 0) {
         df->step = OPEN;
         df->texture = sfTexture_createFromFile(path_texture, NULL);
+        if (my_strcmp(path_texture, "resources/normal.png") == 0)
+            df->dlc = 0;
+        if (my_strcmp(path_texture, "resources/russia_ukraine.png") == 0)
+            df->dlc = 1;
+        if (my_strcmp(path_texture, "resources/colorblind.png") == 0)
+            df->dlc = 2;
     }
     if (fps != -1) {
         df->fps = fps;
@@ -40,16 +47,17 @@ void update_with_argument(dfd *df, char *path_texture, int fps)
 
 void game_launch(char *path_texture, int fps)
 {
-    my_defender_t *my_defender = malloc(sizeof(my_defender_t));
-    setup_game(my_defender);
-    update_with_argument(my_defender, path_texture, fps);
+    my_defender_t *df = malloc(sizeof(my_defender_t));
+    setup_game(df);
+    update_with_argument(df, path_texture, fps);
     sfColor color = sfColor_fromRGB(60, 63, 78);
-    //music_player();
-    while (sfRenderWindow_isOpen(my_defender->window->window)) {
-        sfRenderWindow_clear(my_defender->window->window, color);
-        global_steps(my_defender);
-        poll_events(my_defender, my_defender->window->window);
-        sfRenderWindow_display(my_defender->window->window);
+    //music_player();//TODO REMETTRE LA MUSIQUE
+    while (sfRenderWindow_isOpen(df->window->window)) {
+        sfRenderWindow_clear(df->window->window, color);
+        global_steps(df);
+        poll_events(df, df->window->window);
+        sfRenderWindow_display(df->window->window);
     }
-    sfRenderWindow_destroy(my_defender->window->window);
+    save_data(df);
+    sfRenderWindow_destroy(df->window->window);
 }
