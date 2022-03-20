@@ -7,12 +7,13 @@
 
 #include "data.h"
 #include "my.h"
+#include "game.h"
 
 char *save_game(dfd *df)
 {
     char *data = "[";
 
-    if (df->wave == 7)
+    if (df->step == END || df->step == END_SKIP)
         return DEFAULT;
     my_strcat_3(&data, my_itoa(df->dlc));
     my_strcat_3(&data, ",");
