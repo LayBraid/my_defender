@@ -5,14 +5,7 @@
 ** Find a exit in the map
 */
 
-#include <SFML/Graphics/Transform.h>
-#include <SFML/Graphics/Transformable.h>
-#include <SFML/Graphics/Vertex.h>
-#include <SFML/Graphics/VertexArray.h>
-#include <SFML/Graphics/VertexBuffer.h>
-#include <SFML/Graphics/View.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "lasers.h"
 
 void laser_follow(sfVector2f pos_a, sfVector2f pos_b)
 {
