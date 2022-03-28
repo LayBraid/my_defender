@@ -8,10 +8,6 @@
 #include "game.h"
 #include "my.h"
 
-/*
-* Message d'help du jeu
-*/
-
 int help_message(void)
 {
     write(1, "--- MyDefender [HELP] ---\n\n", 27);
