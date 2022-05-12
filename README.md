@@ -10,6 +10,5 @@ Then just type `./my_defender` and you're good to go !
 
 ## Developers
 
-| [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/LayBraid) | [<img src="https://github.com/Elieleche.png?size=85" width=85><br><sub>
-Elie Chardin/sub>](https://github.com/Elieleche) |
-| :---: | :---: |
+| [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/LayBraid) | [<img src="https://github.com/Elieleche.png?size=85" width=85><br><sub>Elie Chardin<sub>](https://github.com/Elieleche) |
+| :---: |:-----------------------------------------------------------------------------------------------------------------------:|
